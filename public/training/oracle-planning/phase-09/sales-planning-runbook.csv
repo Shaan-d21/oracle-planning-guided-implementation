@@ -1,0 +1,13 @@
+Step,Activity,Control,Evidence,Owner
+1,Confirm environment application cube and role,Match approved training scope,Run header,Builder
+2,Set Entity Product Customer Channel Month Scenario Version,Use Forecast Working only for input,POV screenshot,Planner
+3,Reconcile historical foundation,12120 total and no unexplained missing months,Source comparison,Data Owner
+4,Enter baseline assumptions,Weights total 100 percent and drivers approved,Saved input evidence,Demand Planner
+5,Run scoped baseline prototype,Expected 1208.13 and repeatable,Job details and workbook check,Builder
+6,Enter promotion and override evidence,Calculated cells protected and threshold controls pass,Form and approval,Sales and Marketing
+7,Calculate consensus,Weights total 100 percent and adjustment separate,Consensus bridge,S&OP Owner
+8,Enter pricing assumptions,Units and currency basis are explicit,Price source and form,Revenue Manager
+9,Calculate and reconcile revenue,Net price 430 and revenue 559000,Detail and aggregate checks,Finance Reviewer
+10,Review exceptions and approve,No unexplained blocking exceptions,Exception register and sign-off,Process Owner
+11,Archive evidence,Named files and job IDs stored together,Evidence index,Builder
+12,Hand off approved outputs,Consensus units and net revenue reconcile,Handoff record,Process Owner

@@ -1,0 +1,6 @@
+Dimension,ExpectedTotal,ExpectedRoots,ExpectedParents,ExpectedLeaves,ControlNote
+Product,7,1,3,3,Clean source only
+Plant,5,1,3,2,Clean source only
+Customer,5,1,3,2,Clean source only
+Account,6,1,3,3,Clean source only
+

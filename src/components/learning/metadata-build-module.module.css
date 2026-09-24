@@ -1,0 +1,25 @@
+.downloadGrid { display: grid; gap: 9px; grid-template-columns: repeat(3,1fr); margin: 16px 0; }
+.downloadGrid a { align-items: center; background: #f7fafc; border: 1px solid var(--color-border); border-radius: 9px; color: var(--color-primary); display: flex; gap: 9px; min-height: 55px; padding: 11px; text-decoration: none; }
+.downloadGrid a:hover { background: #eef6fd; border-color: #b9d5e9; }
+.downloadGrid svg { flex: 0 0 auto; }
+.downloadGrid strong,.downloadGrid small { display: block; }
+.downloadGrid strong { font-size: .61rem; }
+.downloadGrid small { color: var(--color-text-muted); font-size: .5rem; margin-top: 3px; }
+.runSheet { border: 1px solid var(--color-border); border-radius: 10px; counter-reset: run; display: grid; overflow: hidden; }
+.runSheet button { align-items: center; background: white; border: 0; border-bottom: 1px solid var(--color-border); color: #4f6274; cursor: pointer; display: grid; font: inherit; gap: 10px; grid-template-columns: 28px 1fr auto; padding: 11px 13px; text-align: left; }
+.runSheet button:last-child { border-bottom: 0; }
+.runSheet button::before { align-items: center; background: #edf4fa; border-radius: 50%; color: var(--color-primary); content: counter(run); counter-increment: run; display: flex; font-family: var(--font-mono); font-size: .5rem; height: 25px; justify-content: center; }
+.runSheet button strong { font-size: .61rem; }
+.runSheet button span { color: #8ba0b2; }
+.runSheet .confirmed { background: #eef8f4; color: #17634c; }
+.runSheet .confirmed span { color: #218764; }
+.controlStrip { background: #fff8ef; border: 1px solid #efd6ab; border-radius: 9px; color: #785d31; font-size: .58rem; line-height: 1.55; margin: 14px 0; padding: 11px 13px; }
+.countGrid { display: grid; gap: 9px; grid-template-columns: repeat(4,1fr); margin: 15px 0; }
+.countGrid article { background: #f7fafc; border: 1px solid var(--color-border); border-radius: 9px; padding: 12px; }
+.countGrid small,.countGrid strong,.countGrid span { display: block; }
+.countGrid small { color: var(--color-primary); font-family: var(--font-mono); font-size: .5rem; }
+.countGrid strong { font-size: .69rem; margin-top: 5px; }
+.countGrid span { color: var(--color-text-muted); font-size: .52rem; margin-top: 3px; }
+@media(max-width:1000px){.downloadGrid{grid-template-columns:repeat(2,1fr)}.countGrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){.downloadGrid,.countGrid{grid-template-columns:1fr}}
+

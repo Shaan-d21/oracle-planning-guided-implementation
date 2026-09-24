@@ -1,0 +1,9 @@
+ControlLevel,ControlMember,ExpectedRecords,ExpectedAmount
+File,Historical Sales Clean,8,800
+Entity,IN_WEST,4,400
+Entity,IN_NORTH,4,400
+Product,P100,4,455
+Product,P200,4,345
+Period,2026-01,8,800
+Scenario,ACT,8,800
+

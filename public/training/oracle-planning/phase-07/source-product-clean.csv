@@ -1,0 +1,9 @@
+Member,Parent,Alias,Description
+All_Products,,All Products,Root product hierarchy
+Appliances,All_Products,Appliances,Product family
+Refrigeration,Appliances,Refrigeration,Product line
+Cooking,Appliances,Cooking,Product line
+REF100,Refrigeration,100 L Refrigerator,Training SKU
+REF200,Refrigeration,200 L Refrigerator,Training SKU
+OVN100,Cooking,Compact Oven,Training SKU
+

@@ -1,0 +1,7 @@
+Member,Parent,Alias,Description
+All_Customers,,All Customers,Root customer hierarchy
+Retail,All_Customers,Retail,Retail channel group
+North_Retail,Retail,North Retail,Customer region
+CUST100,North_Retail,Metro Stores,Training customer
+CUST200,North_Retail,Value Mart,Training customer
+

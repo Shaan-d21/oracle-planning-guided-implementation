@@ -1,0 +1,14 @@
+Test_ID,Area,Test,Expected_Result,Evidence
+SP-T01,History,Compare all twelve months to controlled source,Values and 12120 total agree,Form and source comparison
+SP-T02,Security,Attempt entry in Actual Final,Cell is read-only,Access screenshot
+SP-T03,Baseline,Run approved assumptions,Baseline equals 1208.13,Calculation and job detail
+SP-T04,Baseline,Set weights to 110 percent,Calculation blocked or flagged,Negative-test screenshot
+SP-T05,Promotion,Run approved promotion drivers,Promotional demand equals 1273.36902,Bridge evidence
+SP-T06,Override,Attempt entry in calculated output,Calculated cell is read-only,Access screenshot
+SP-T07,Consensus,Run approved four-input weights and adjustment,Final consensus equals 1301.348,Consensus bridge
+SP-T08,Consensus,Set weights to 110 percent,Calculation blocked,Validation evidence
+SP-T09,Pricing,Run approved price waterfall,Net price 430 and net revenue 559000,Price bridge
+SP-T10,Repeatability,Rerun unchanged approved POV,No unexplained value change,Two job IDs and comparison
+SP-T11,Intersection,Select invalid combination,Input prevented or intersection suppressed,Negative-test evidence
+SP-T12,Handoff,Aggregate approved consensus and revenue,Downstream totals reconcile,Retrieval and sign-off
+

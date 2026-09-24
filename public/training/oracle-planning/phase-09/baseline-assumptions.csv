@@ -1,0 +1,7 @@
+Assumption,Value,Unit,Owner,Control
+3M Average Weight,20,Percent,Demand Planning,All recency weights total 100 percent
+6M Average Weight,30,Percent,Demand Planning,All recency weights total 100 percent
+12M Average Weight,50,Percent,Demand Planning,All recency weights total 100 percent
+Growth Rate,5,Percent,Sales Leadership,Approved driver
+Seasonality Index,1.10,Multiplier,Demand Planning,Approved period-specific index
+

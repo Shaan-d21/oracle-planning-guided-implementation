@@ -1,0 +1,42 @@
+.shell { min-height: 100vh; padding-left: 244px; padding-top: 72px; }
+.header { align-items: center; background: rgba(255,255,255,.96); border-bottom: 1px solid var(--color-border); display: grid; grid-template-columns: 1fr auto 1fr; height: 72px; left: 0; padding: 8px 28px; position: fixed; right: 0; top: 0; z-index: 40; }
+.brand { align-items: center; display: flex; gap: 14px; justify-self: start; }
+.logoCrop { display: block; height: 42px; overflow: hidden; position: relative; width: 112px; }
+.logoCrop img { height: auto; left: 0; position: absolute; top: 50%; transform: translateY(-50%); width: 112px; }
+.brandText { border-left: 1px solid var(--color-border); padding-left: 14px; }
+.brandText strong, .brandText small { display: block; }
+.brandText strong { font-family: var(--font-heading); font-size: .78rem; }
+.brandText small { color: var(--color-text-muted); font-size: .61rem; margin-top: 2px; }
+.courseContext { text-align: center; }
+.courseContext span, .courseContext strong { display: block; }
+.courseContext span { color: var(--color-text-muted); font-size: .56rem; letter-spacing: .08em; text-transform: uppercase; }
+.courseContext strong { font-family: var(--font-heading); font-size: .79rem; margin-top: 2px; }
+.profile { align-items: center; display: flex; gap: 9px; justify-self: end; }
+.profile > span { align-items: center; background: var(--color-primary-dark); border-radius: 50%; color: white; display: flex; font-size: .65rem; font-weight: 750; height: 34px; justify-content: center; width: 34px; }
+.profile strong, .profile small { display: block; }
+.profile strong { font-size: .7rem; }
+.profile small { color: var(--color-text-muted); font-size: .58rem; margin-top: 2px; }
+.sidebar { background: var(--color-navy); bottom: 0; color: white; display: flex; flex-direction: column; left: 0; padding: 24px 16px 18px; position: fixed; top: 72px; width: 244px; z-index: 30; }
+.sidebar nav { display: grid; gap: 5px; }
+.sidebar nav a, .exitLink { align-items: center; border-radius: 9px; color: #9fb1bf; display: flex; font-size: .72rem; font-weight: 650; gap: 10px; padding: 11px 12px; }
+.sidebar nav a:hover, .exitLink:hover { background: rgba(255,255,255,.06); color: white; }
+.sidebar nav .active { background: rgba(37,132,221,.2); color: #76bcfa; }
+.sidebarJourney { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.08); border-radius: 12px; margin-top: 30px; padding: 14px; }
+.sidebarJourney small, .sidebarJourney strong { display: block; }
+.sidebarJourney small { color: #8097a9; font-size: .56rem; letter-spacing: .08em; text-transform: uppercase; }
+.sidebarJourney strong { font-family: var(--font-heading); font-size: .72rem; line-height: 1.4; margin-top: 5px; }
+.sidebarJourney > div { background: rgba(255,255,255,.1); border-radius: 999px; height: 4px; margin-top: 13px; overflow: hidden; }
+.sidebarJourney > div span { background: #56a9f3; display: block; height: 100%; }
+.sidebarJourney p { color: #8ba0b1; font-size: .57rem; margin: 7px 0 10px; }
+.sidebarJourney a { align-items: center; color: #76bcfa; display: flex; font-size: .64rem; font-weight: 700; gap: 3px; }
+.exitLink { margin-top: auto; }
+.content { min-height: calc(100vh - 72px); }
+@media(max-width: 900px) {
+  .shell { padding-left: 0; }
+  .sidebar { display: none; }
+  .header { grid-template-columns: 1fr auto; padding: 8px 18px; }
+  .courseContext { display: none; }
+}
+@media(max-width: 560px) {
+  .brandText, .profile div { display: none; }
+}

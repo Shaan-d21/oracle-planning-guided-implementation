@@ -1,0 +1,26 @@
+:root {
+  --color-primary: #0b63b6;
+  --color-primary-dark: #083e73;
+  --color-primary-light: #e8f2fc;
+  --color-accent: #f04414;
+  --color-coral: #ff4d5a;
+  --color-navy: #0d2235;
+  --color-text: #182638;
+  --color-text-muted: #64748b;
+  --color-background: #f5f7fa;
+  --color-surface: #ffffff;
+  --color-surface-soft: #eef3f8;
+  --color-border: #d9e2ec;
+  --color-success: #12805c;
+  --color-warning: #b7791f;
+  --color-error: #c9362b;
+  --font-heading: "Manrope Variable", Manrope, ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter Variable", Inter, ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono Variable", "JetBrains Mono", ui-monospace, monospace;
+  --shadow-sm: 0 8px 24px rgba(13, 34, 53, 0.07);
+  --shadow-md: 0 20px 60px rgba(13, 34, 53, 0.12);
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --content-width: 1440px;
+}

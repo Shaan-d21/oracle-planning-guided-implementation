@@ -1,0 +1,9 @@
+Member,Parent,Alias,Description
+All_Products,,All Products,Root product hierarchy
+Appliances,All_Products,Appliances,Product family
+REF100,Refrigeration,100 L Refrigerator,Training SKU
+REF100,Refrigeration,Refrigerator 100,Conflicting duplicate
+REF300,Missing_Line,300 L Refrigerator,Unknown parent exercise
+,Refrigeration,Unnamed Refrigerator,Missing member exercise
+Cycle_SKU,Cycle_SKU,Cycle Product,Self-parent exercise
+

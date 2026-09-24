@@ -1,0 +1,12 @@
+Dimension,SourceValue,TargetValue,MappingType,ProcessingOrder,Rationale
+Account,SALES_QTY,Sales_Units,Explicit,10,Approved historical sales quantity measure
+Entity,IN_WEST,West_Region,Explicit,10,Approved sales responsibility mapping
+Entity,IN_NORTH,North_Region,Explicit,20,Approved sales responsibility mapping
+Product,P100,REF100,Explicit,10,Approved product cross-reference
+Product,P200,REF200,Explicit,20,Approved product cross-reference
+Customer,C100,CUST100,Explicit,10,Approved customer cross-reference
+Customer,C200,CUST200,Explicit,20,Approved customer cross-reference
+Channel,RTL,Retail,Explicit,10,Approved channel cross-reference
+Scenario,ACT,Actual,Explicit,10,Used only if the design maps Scenario as a member rather than category
+Currency,INR,INR,Explicit,10,Conformed currency value
+

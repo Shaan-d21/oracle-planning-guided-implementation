@@ -1,0 +1,10 @@
+Driver,Value,Unit,Owner
+Consensus units,1300,Units,Sales Planning
+List price,500,Currency per unit,Revenue Management
+Contract discount,5,Percent of list price,Sales Operations
+Promotion discount,3,Percent of list price,Marketing
+Volume discount,2,Percent of list price,Sales Operations
+Channel discount,1,Percent of list price,Channel Management
+Returns provision,10,Currency per unit,Finance
+Credits provision,5,Currency per unit,Finance
+

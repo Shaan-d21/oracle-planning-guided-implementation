@@ -1,0 +1,25 @@
+.page { margin: 0 auto; max-width: 1300px; padding: 27px clamp(18px,3.5vw,50px) 60px; }
+.breadcrumb { color: var(--color-text-muted); font-size: .61rem; margin-bottom: 16px; }
+.breadcrumb a { color: var(--color-primary); }
+.breadcrumb span { margin: 0 7px; }
+.hero { align-items: center; background: var(--color-navy); border-radius: 15px; color: white; display: grid; gap: 17px; grid-template-columns: 54px 1fr auto; padding: 22px 26px; }
+.phase { align-items: center; background: var(--color-primary); border-radius: 11px; display: flex; font-family: var(--font-mono); font-size: .82rem; height: 54px; justify-content: center; width: 54px; }
+.hero p { color: #7eb6e8; font-size: .56rem; font-weight: 750; letter-spacing: .09em; margin: 0 0 4px; text-transform: uppercase; }
+.hero h1 { font-family: var(--font-heading); font-size: clamp(1.15rem,2.4vw,1.7rem); letter-spacing: -.035em; margin: 0; }
+.hero > div:nth-child(2) > span { color: #9fb2c0; display: block; font-size: .65rem; margin-top: 5px; }
+.previewBadge { align-items: center; background: rgba(255,255,255,.09); border: 1px solid rgba(255,255,255,.13); border-radius: 999px; color: #9ed0fb; display: flex; font-size: .57rem; font-weight: 750; gap: 6px; padding: 7px 10px; }
+.notice { align-items: start; background: #fff8e8; border: 1px solid #ecd39b; border-radius: 11px; color: #855f16; display: flex; gap: 11px; margin-top: 15px; padding: 15px; }
+.notice strong { display: block; font-size: .7rem; }
+.notice p { color: #806a3c; font-size: .61rem; line-height: 1.5; margin: 4px 0 0; }
+.contentGrid { display: grid; gap: 16px; grid-template-columns: 1fr 1fr; margin-top: 16px; }
+.contentGrid article { background: white; border: 1px solid var(--color-border); border-radius: 13px; padding: 22px; }
+.contentGrid article > small { color: var(--color-primary); font-size: .54rem; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
+.contentGrid h2 { font-family: var(--font-heading); font-size: 1rem; margin: 5px 0 17px; }
+.definition > div { align-items: start; border-top: 1px solid var(--color-border); display: grid; gap: 14px; grid-template-columns: 115px 1fr; padding: 12px 0; }
+.definition span { align-items: center; color: var(--color-text-muted); display: flex; font-size: .58rem; gap: 6px; }
+.definition strong { color: #435466; font-size: .63rem; line-height: 1.45; }
+.testingScope ul { color: #536577; display: grid; font-size: .64rem; gap: 9px; line-height: 1.5; margin: 0; padding-left: 18px; }
+.phaseNavigation { display: flex; gap: 12px; justify-content: space-between; margin-top: 17px; }
+.phaseNavigation a { align-items: center; background: white; border: 1px solid var(--color-border); border-radius: 9px; color: var(--color-primary-dark); display: flex; font-size: .61rem; font-weight: 700; gap: 7px; max-width: 45%; padding: 10px 12px; }
+.phaseNavigation a:last-child { margin-left: auto; text-align: right; }
+@media(max-width:750px){.hero{align-items:start;grid-template-columns:45px 1fr;padding:18px}.phase{height:45px;width:45px}.previewBadge{grid-column:1/-1;justify-self:start}.contentGrid{grid-template-columns:1fr}.phaseNavigation{align-items:stretch;flex-direction:column}.phaseNavigation a{max-width:none}.phaseNavigation a:last-child{margin-left:0}}

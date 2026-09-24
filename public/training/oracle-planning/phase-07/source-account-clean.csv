@@ -1,0 +1,8 @@
+Member,Parent,Alias,Description
+Planning_Accounts,,Planning Accounts,Root planning-account hierarchy
+Sales_Drivers,Planning_Accounts,Sales Drivers,Planning driver group
+Production_Drivers,Planning_Accounts,Production Drivers,Planning driver group
+Sales_Units,Sales_Drivers,Sales Units,Unit demand measure
+Net_Price,Sales_Drivers,Net Price,Price measure
+Planned_Production,Production_Drivers,Planned Production,Production quantity measure
+
