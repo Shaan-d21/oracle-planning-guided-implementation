@@ -5,12 +5,18 @@ import { TESTING_UNLOCK_ALL_PHASES } from "@/config/learning-mode";
 import { getModuleBySlug, implementationModules } from "@/content/course-catalog";
 
 export const metadata: Metadata = {
-  title: "Phase Testing Preview",
-  description: "An unlocked navigation preview for a planned implementation phase.",
+  title: "Phase Curriculum Outline",
+  description: "Learning scope, deliverable, and exit gate for an implementation phase.",
 };
 
 export function generateStaticParams() {
-  return implementationModules.filter((module) => module.status === "planned").map((module) => ({ moduleSlug: module.slug }));
+  const plannedModules = implementationModules
+    .filter((module) => module.status === "planned")
+    .map((module) => ({ moduleSlug: module.slug }));
+
+  // Static export requires at least one generated parameter. This sentinel
+  // resolves through the existing not-found guard and never appears in navigation.
+  return plannedModules.length > 0 ? plannedModules : [{ moduleSlug: "_no-planned-phases" }];
 }
 
 export default async function PlannedPhasePage({ params }: { params: Promise<{ moduleSlug: string }> }) {

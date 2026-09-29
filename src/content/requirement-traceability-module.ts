@@ -15,13 +15,13 @@ export type RequirementTraceabilityLessonId = (typeof requirementTraceabilityLes
 export const requirementQualityCases = [
   {
     id: "REQ-SAL-001",
-    source: "Regional sales teams need controlled forecast overrides.",
-    correct: "Enable Regional Sales Managers to adjust unit demand by Product × Customer × Channel × Month in Working version, with reason comments and manager approval before Consensus publication; accepted when approved overrides recalculate and retain user, timestamp, old value, new value, and comment.",
+    source: "Market sales teams need controlled forecast overrides.",
+    correct: "Enable assigned Sales Managers to adjust Sales Units by Product × Market × Channel × Month in Working version, with reason comments and manager approval before Final publication; accepted when approved overrides recalculate Revenue and retain user, timestamp, old value, new value, and comment.",
   },
   {
     id: "REQ-PRD-004",
     source: "Production must respond to demand and inventory policy.",
-    correct: "Calculate production requirement by Product × Plant × Week as demand + target ending inventory − beginning inventory − confirmed receipts, and flag values above available capacity; accepted when the result matches the approved test dataset and every breach creates an owned exception.",
+    correct: "Calculate monthly production requirement by Product × Plant as allocated demand + target ending inventory − beginning inventory, and flag required hours above available capacity; accepted when the result matches the approved test dataset and every breach creates an owned exception.",
   },
   {
     id: "REQ-INT-002",
@@ -31,20 +31,20 @@ export const requirementQualityCases = [
   {
     id: "REQ-NFR-003",
     source: "The main sales form should be fast.",
-    correct: "For the agreed representative POV and data volume, open the Sales Forecast form within 5 seconds at the 95th percentile for 100 concurrent planners; accepted through the approved performance test protocol with no functional-result regression.",
+    correct: "For the agreed representative POV, data volume, and concurrent-user load, open the Sales Forecast form within the approved 95th-percentile response target; accepted through the approved performance test protocol with no functional-result regression.",
   },
 ] as const;
 
 export const requirementClassificationCases = [
   { id: "CL-01", statement: "Calculate capacity-aware production requirements and route exceptions.", correct: "Functional" },
   { id: "CL-02", statement: "Load ERP actuals with mappings, rejects, recovery, and reconciliation.", correct: "Data / Integration" },
-  { id: "CL-03", statement: "Limit planners to assigned entity, region, product, and workflow actions.", correct: "Security / Control" },
+  { id: "CL-03", statement: "Limit planners to assigned Entity, Market, Product, and workflow actions.", correct: "Security / Control" },
   { id: "CL-04", statement: "Open a representative form within the approved response-time and concurrency threshold.", correct: "Non-functional" },
   { id: "CL-05", statement: "Provide management variance, exception, and reconciliation views.", correct: "Reporting / Analytics" },
 ] as const;
 
 export const traceabilityCases = [
-  { id: "REQ-SAL-001", requirement: "Controlled regional forecast overrides", correct: "Outcome FS-01 → process design PD-SAL-01 → Sales Forecast form + approval rule → SIT-SAL-01 → UAT-SAL-01 → release R1" },
+  { id: "REQ-SAL-001", requirement: "Controlled Market forecast overrides", correct: "Outcome FS-01 → process design PD-SAL-01 → Sales Forecast form + approval rule → SIT-SAL-01 → UAT-SAL-01 → release R1" },
   { id: "REQ-PRD-004", requirement: "Capacity-aware production requirement", correct: "Finding AS03 → process design PD-PRD-02 → production rule + capacity exception view → SIT-PRD-04 → UAT-PRD-02 → release R1" },
   { id: "REQ-INT-002", requirement: "Controlled ERP actuals load and reconciliation", correct: "Control gap AS06 → integration design ID-ERP-01 → load rule + reject/reconciliation report → SIT-INT-02 → business reconciliation BR-02 → release R1" },
   { id: "REQ-NFR-003", requirement: "Sales form response time at representative concurrency", correct: "NFR target NFR-PERF-03 → performance design PERF-D-03 → optimized form/rule scope → PT-03 evidence → owner acceptance → release R1" },
@@ -54,7 +54,7 @@ export const priorityCases = [
   { id: "PR-01", requirement: "Capacity validation before production approval", correct: "Must", owner: "Production Planning Lead", release: "R1" },
   { id: "PR-02", requirement: "Optional alternate dashboard colour palette", correct: "Could", owner: "Reporting Product Owner", release: "Backlog" },
   { id: "PR-03", requirement: "Audit trail for forecast overrides and approvals", correct: "Must", owner: "Sales Planning Director", release: "R1" },
-  { id: "PR-04", requirement: "Supplier collaboration scenario for a later rollout", correct: "Won't this release", owner: "Procurement Planning Lead", release: "Future release" },
+  { id: "PR-04", requirement: "Detailed BOM, material, and supplier planning for a later rollout", correct: "Won't this release", owner: "Production Planning Lead", release: "Future release" },
 ] as const;
 
 export const coverageCases = [
@@ -87,7 +87,7 @@ export const rtmHomeworkMissions = [
 export type RtmHomeworkId = (typeof rtmHomeworkMissions)[number]["id"];
 
 export const homeworkTraceCases = [
-  { id: "HT-01", requirement: "Only assigned regional planners can edit Working forecast intersections.", correct: "Security design → access configuration → positive and negative security tests → business owner acceptance" },
+  { id: "HT-01", requirement: "Only assigned Market planners can edit Working forecast intersections.", correct: "Security design → access configuration → positive and negative security tests → business owner acceptance" },
   { id: "HT-02", requirement: "Unmapped ERP products are rejected and reconciled before dependent calculations.", correct: "Integration design → mapping/reject controls → SIT load and recovery evidence → business reconciliation acceptance" },
   { id: "HT-03", requirement: "Approved forecast overrides retain user, timestamp, comment, and old/new value.", correct: "Workflow/audit design → form and approval build → SIT audit evidence → UAT override and approval acceptance" },
 ] as const;

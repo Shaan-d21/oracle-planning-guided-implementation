@@ -1,0 +1,27 @@
+.sourceGrid,.cashGrid { display: grid; gap: 10px; margin: 16px 0; }
+.sourceGrid { grid-template-columns: repeat(4,1fr); }
+.cashGrid { grid-template-columns: repeat(5,1fr); padding: 0 15px 15px; }
+.sourceGrid article,.cashGrid article { background: linear-gradient(145deg,#f8fbfd,#f1f7fb); border: 1px solid var(--color-border); border-radius: 11px; padding: 14px; }
+.sourceGrid small,.sourceGrid strong,.sourceGrid span,.cashGrid small,.cashGrid strong,.cashGrid span { display: block; }
+.sourceGrid small,.cashGrid small { color: var(--color-primary); font-family: var(--font-mono); font-size: .58rem; font-weight: 800; }
+.sourceGrid strong,.cashGrid strong { font-size: .78rem; margin-top: 6px; }
+.sourceGrid span,.cashGrid span { color: var(--color-text-muted); font-size: .58rem; line-height: 1.45; margin-top: 4px; }
+.statementInputs { display: grid; gap: 13px; grid-template-columns: 1fr 1fr; padding: 15px; }
+.statementInputs fieldset { border: 1px solid var(--color-border); border-radius: 11px; display: grid; gap: 10px; grid-template-columns: repeat(2,1fr); padding: 13px; }
+.statementInputs legend { color: var(--color-primary); font-family: var(--font-mono); font-size: .62rem; font-weight: 800; padding: 0 5px; text-transform: uppercase; }
+.statementInputs label { color: var(--color-text-muted); display: grid; font-size: .58rem; font-weight: 700; gap: 5px; }
+.statementInputs input { background: white; border: 1px solid var(--color-border); border-radius: 7px; color: var(--color-text); min-width: 0; padding: 8px; }
+.balanceGrid { display: grid; gap: 12px; grid-template-columns: 1fr 1fr; padding: 0 15px 15px; }
+.balanceGrid article { background: white; border: 1px solid var(--color-border); border-radius: 11px; display: grid; gap: 6px; grid-template-columns: 1fr auto; padding: 14px; }
+.balanceGrid span,.balanceGrid em { grid-column: 1/-1; }
+.balanceGrid span { color: var(--color-primary); font-family: var(--font-mono); font-size: .6rem; font-weight: 800; }
+.balanceGrid strong,.balanceGrid b { font-size: .64rem; }
+.balanceGrid b { color: #17634c; text-align: right; }
+.balanceGrid em { border-top: 1px solid var(--color-border); font-size: .7rem; font-style: normal; font-weight: 800; margin-top: 5px; padding-top: 8px; }
+.exceptionSummary { align-items: flex-start; background: #fff7ed; border: 1px solid #f2c894; border-radius: 11px; color: #8a4d0f; display: flex; gap: 11px; margin: 15px 0; padding: 14px; }
+.exceptionSummary small,.exceptionSummary strong,.exceptionSummary span { display: block; }
+.exceptionSummary small { font-size: .58rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+.exceptionSummary strong { font-size: .72rem; margin-top: 4px; }
+.exceptionSummary span { color: #7a654b; font-size: .62rem; line-height: 1.55; margin-top: 5px; }
+@media(max-width:1100px){.sourceGrid,.cashGrid{grid-template-columns:repeat(2,1fr)}.statementInputs fieldset{grid-template-columns:1fr}}
+@media(max-width:720px){.sourceGrid,.cashGrid,.statementInputs,.balanceGrid{grid-template-columns:1fr}}

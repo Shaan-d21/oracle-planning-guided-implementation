@@ -1,0 +1,11 @@
+Test_ID,Area,Precondition,Action,Expected_Result,Evidence,Actual_Result,Tester,Reviewer,Status
+SCN-01,Baseline,Forecast Final approved and protected,Attempt planner edit,Edit denied and baseline unchanged,Role; POV; protected cell; before and after,,,,Not Run
+SCN-02,Copy,Approved copy request exists,Copy Final to Upside exact scope,Copy succeeds and target reconciles before changes,Request; selections; job; zero variances,,,,Not Run
+SCN-03,Copy,Final approval unit approved,Review target workflow state,Approval status is not copied automatically,Source and target status evidence,,,,Not Run
+SCN-04,Driver Validation,Upside open,Enter volume 20 percent,Input blocked or flagged outside maximum 15 percent,POV; input; validation message,,,,Not Run
+SCN-05,Dependency,Upside drivers approved,Run scenario ruleset,Sales through reporting execute in governed order,Rule versions; prompts; jobs; results,,,,Not Run
+SCN-06,Capacity,Upside calculated,Compare required and available hours,93.15 percent and within 95 percent threshold,Inputs; formula; output; threshold,,,,Not Run
+SCN-07,Comparison,Both versions calculated,Open dashboard common POV,Final Upside Downside values and variances reconcile,Filters; KPIs; drill; controls,,,,Not Run
+SCN-08,Smart View,Authorized workbook connected,Run one-driver sensitivity,Result changes then reconciles or is restored,Connection; POV; driver; result; disposition,,,,Not Run
+SCN-09,Promotion,Case selected and approved,Move coherent drivers to Working,Dependencies rerun and approval workflow starts,Decision; copy; jobs; workflow state,,,,Not Run
+SCN-10,Publish,Working plan approved,Publish to ApexPlan ASO,Plan1 and ASO controls equal zero difference,Job ID; source target POV; totals; sign-off,,,,Not Run

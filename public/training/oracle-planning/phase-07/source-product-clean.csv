@@ -1,9 +1,8 @@
-Member,Parent,Alias,Description
-All_Products,,All Products,Root product hierarchy
-Appliances,All_Products,Appliances,Product family
-Refrigeration,Appliances,Refrigeration,Product line
-Cooking,Appliances,Cooking,Product line
-REF100,Refrigeration,100 L Refrigerator,Training SKU
-REF200,Refrigeration,200 L Refrigerator,Training SKU
-OVN100,Cooking,Compact Oven,Training SKU
-
+Product, Parent, Alias: Default, Valid For Consolidations, Data Storage, Two Pass Calculation, Description, Formula, Formula Description, UDA, Smart List, Data Type, Hierarchy Type, Enable for Dynamic Children, Number of Possible Dynamic Children, Access Granted to Member Creator, Allow Upper Level Entity Input, Process Management Enabled, UUID, Data Id, Old Name, Old Unique Name, Plan Type (Plan1), Aggregation (Plan1), Data Storage (Plan1), Formula (Plan1), Solve Order (Plan1), Formula Description (Plan1), Plan Type (ApexPlan), Aggregation (ApexPlan), Data Storage (ApexPlan), Formula (ApexPlan), Solve Order (ApexPlan), Formula Description (ApexPlan), Operation
+No Product,Product,,FALSE,store,FALSE,,<none>,<none>,,,unspecified,none,,,,FALSE,TRUE,507dbbe0-8e38-4d3a-98df-244a44ac6761,2.92058E+15,No Product,<none>,TRUE,+,store,<none>,0,,TRUE,+,store,<none>,0,,
+All_Products,Product,All Products,FALSE,never share,FALSE,,<none>,<none>,,,unspecified,,,,,FALSE,TRUE,,,,<none>,TRUE,+,never share,<none>,0,,TRUE,+,never share,<none>,0,,
+Home_Appliances,All_Products,Home Appliances,FALSE,never share,FALSE,,<none>,<none>,,,unspecified,,,,,FALSE,TRUE,,,,<none>,TRUE,+,never share,<none>,0,,TRUE,+,never share,<none>,0,,
+MIXER_GRINDER,Home_Appliances,Mixer Grinder,FALSE,store,FALSE,,<none>,<none>,,,unspecified,,,,,FALSE,TRUE,,,,<none>,TRUE,+,store,<none>,0,,TRUE,+,store,<none>,0,,
+ELECTRIC_KETTLE,Home_Appliances,Electric Kettle,FALSE,store,FALSE,,<none>,<none>,,,unspecified,,,,,FALSE,TRUE,,,,<none>,TRUE,+,store,<none>,0,,TRUE,+,store,<none>,0,,
+AIR_FRYER,Home_Appliances,Air Fryer,FALSE,store,FALSE,,<none>,<none>,,,unspecified,,,,,FALSE,TRUE,,,,<none>,TRUE,+,store,<none>,0,,TRUE,+,store,<none>,0,,
+INDUCTION_COOKTOP,Home_Appliances,Induction Cooktop,FALSE,store,FALSE,,<none>,<none>,,,unspecified,,,,,FALSE,TRUE,,,,<none>,TRUE,+,store,<none>,0,,TRUE,+,store,<none>,0,,

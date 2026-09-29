@@ -1,0 +1,11 @@
+Test_ID,Test_Type,Precondition,Action,Expected_Result,Evidence,Status
+RT-01,Functional,Approved Forecast Working FY25 sources,Launch reviewed rule for one Entity and Period,Expected values match independent controls,Job ID and reconciliation,Not Run
+RT-02,Prompt negative,Scenario is Actual,Attempt launch,Rule rejects read-only Scenario before write,Prompt result and job message,Not Run
+RT-03,Prompt negative,Period is blank,Attempt launch,Rule rejects incomplete scope,Prompt result,Not Run
+RT-04,Security,Planner lacks access to Noida,Attempt Noida launch,Launch or write is blocked without broader access,Role and result,Not Run
+RT-05,Scope isolation,Approved Pune slice selected,Run rule,Noida Actual and unrelated products remain unchanged,Before and after extracts,Not Run
+RT-06,Missing prerequisite,Source control is failed,Launch ruleset,Downstream financial and reporting steps do not run,Step status and messages,Not Run
+RT-07,Repeatability,Successful first run,Run unchanged scope again,No duplicate movement and zero output variance,Two job IDs and comparison,Not Run
+RT-08,Performance,Representative hierarchy and data volume,Run bounded baseline and edited-cell rule,Duration remains within approved threshold with identical results,Performance baseline,Not Run
+RT-09,Recovery,Controlled step failure exists,Correct cause and restart at approved step,Results reconcile without full duplicate rerun,Recovery evidence,Not Run
+RT-10,Reporting,Plan1 controls pass,Execute governed data map or Smart Push,ApexPlan ASO totals agree with Plan1,Movement job and reconciliation,Not Run

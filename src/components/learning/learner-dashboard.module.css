@@ -37,6 +37,13 @@
 .stats strong,.stats small { display: block; }
 .stats strong { font-family: var(--font-heading); font-size: .95rem; }
 .stats small { color: var(--color-text-muted); font-size: .58rem; margin-top: 2px; }
+.programPlanCard { align-items: center; background: linear-gradient(110deg,#eef7ff,#f8fbfe); border: 1px solid #bfd9ee; border-radius: 12px; display: grid; gap: 13px; grid-template-columns: 42px 1fr auto; margin: 0 0 18px; padding: 14px 16px; }
+.programPlanCard > span { align-items: center; background: white; border-radius: 9px; color: var(--color-primary); display: flex; height: 42px; justify-content: center; width: 42px; }
+.programPlanCard small,.programPlanCard strong { display: block; }
+.programPlanCard small { color: var(--color-primary); font-size: .51rem; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
+.programPlanCard strong { color: #23384b; font-family: var(--font-heading); font-size: .74rem; margin-top: 2px; }
+.programPlanCard p { color: var(--color-text-muted); font-size: .55rem; margin: 4px 0 0; }
+.programPlanCard > svg { color: var(--color-primary); }
 .mainGrid { display: grid; gap: 18px; grid-template-columns: minmax(0,1.5fr) minmax(300px,.62fr); }
 .modulePanel,.sidePanel,.roadmap { background: white; border: 1px solid var(--color-border); border-radius: 14px; padding: 22px; }
 .panelHeading { align-items: center; display: flex; justify-content: space-between; margin-bottom: 17px; }
@@ -125,4 +132,4 @@
 @media(max-width:1100px){.welcome{grid-template-columns:1fr}.welcomeProgress{min-width:0}.mainGrid{grid-template-columns:1fr}.stageGrid{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:1000px){.phaseDirectory,.lessonDirectory{grid-template-columns:1fr}.phaseDirectory>div:last-child{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:800px){.trackChooser{align-items:stretch;flex-direction:column;gap:10px}.trackChooser>div:last-child{display:grid;grid-template-columns:1fr 1fr}}
-@media(max-width:700px){.dashboard{padding:20px 14px 60px}.welcome{padding:26px 22px}.stats{grid-template-columns:repeat(2,1fr)}.activeModule{align-items:start;grid-template-columns:42px 1fr}.activeModule>a{grid-column:1/-1;justify-content:center}.cycleList,.stageGrid,.phaseDirectory>div:last-child,.lessonDirectory>div:last-child{grid-template-columns:1fr}.trackChooser>div:last-child{grid-template-columns:1fr}}
+@media(max-width:700px){.dashboard{padding:20px 14px 60px}.welcome{padding:26px 22px}.stats{grid-template-columns:repeat(2,1fr)}.programPlanCard{grid-template-columns:42px 1fr}.programPlanCard>svg{display:none}.activeModule{align-items:start;grid-template-columns:42px 1fr}.activeModule>a{grid-column:1/-1;justify-content:center}.cycleList,.stageGrid,.phaseDirectory>div:last-child,.lessonDirectory>div:last-child{grid-template-columns:1fr}.trackChooser>div:last-child{grid-template-columns:1fr}}

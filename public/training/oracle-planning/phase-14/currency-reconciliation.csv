@@ -1,0 +1,13 @@
+statement,line,local_value,local_currency,rate_type,rate,reporting_value,reporting_currency,control
+P&L,Net revenue,559579.64,INR,Average,80,6994.7455,USD,Local value divided by INR per USD rate
+P&L,COGS,356855.544608,INR,Average,80,4460.6943076,USD,Local value divided by INR per USD rate
+P&L,Gross margin,202724.095392,INR,Average,80,2534.0511924,USD,Translated revenue minus translated COGS
+P&L,Net income,88293.071544,INR,Average,80,1103.6633943,USD,Local value divided by INR per USD rate
+Cash Flow,Operating cash flow,83448.796152,INR,Average,80,1043.1099519,USD,Local value divided by INR per USD rate
+Cash Flow,Net cash change,-116551.203848,INR,Average,80,-1456.8900481,USD,Local value divided by INR per USD rate
+Cash Flow,Closing cash,383448.796152,INR,Ending,80,4793.1099519,USD,Local value divided by INR per USD rate
+Balance Sheet,Closing net PPE,3180000,INR,Ending,80,39750,USD,Local value divided by INR per USD rate
+Balance Sheet,Closing debt,2500000,INR,Ending,80,31250,USD,Local value divided by INR per USD rate
+Balance Sheet,Total assets,3925793.071544,INR,Ending,80,49072.4133943,USD,Local value divided by INR per USD rate
+Balance Sheet,Total liabilities and equity,3925793.071544,INR,Ending,80,49072.4133943,USD,Translated balance control
+Balance Sheet,Balance control,0,INR,Ending,80,0,USD,Assets minus liabilities and equity equals zero in both currencies

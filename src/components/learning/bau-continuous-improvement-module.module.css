@@ -1,0 +1,326 @@
+.rhythmGrid,
+.healthGrid,
+.knowledgeGrid,
+.valueChain {
+  display: grid;
+  gap: 10px;
+  margin: 16px 0;
+}
+
+.rhythmGrid,
+.knowledgeGrid,
+.valueChain {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.rhythmGrid article,
+.healthGrid article,
+.knowledgeGrid article,
+.valueChain article {
+  background: linear-gradient(145deg, #f8fbfd, #edf5fa);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 13px;
+}
+
+.rhythmGrid small,
+.rhythmGrid strong,
+.knowledgeGrid strong,
+.knowledgeGrid span {
+  display: block;
+}
+
+.rhythmGrid small {
+  color: var(--color-primary);
+  font-size: 0.57rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.rhythmGrid strong,
+.knowledgeGrid strong {
+  font-size: 0.71rem;
+  margin-top: 5px;
+}
+
+.rhythmGrid p,
+.knowledgeGrid span,
+.valueChain p {
+  color: var(--color-text-muted);
+  font-size: 0.62rem;
+  line-height: 1.55;
+  margin: 6px 0 0;
+}
+
+.cycleFlow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 16px 0;
+}
+
+.cycleFlow span {
+  align-items: center;
+  background: #f4f8fb;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  display: flex;
+  font-size: 0.63rem;
+  font-weight: 750;
+  gap: 7px;
+  padding: 7px 10px;
+}
+
+.cycleFlow b {
+  align-items: center;
+  background: var(--color-primary);
+  border-radius: 50%;
+  color: white;
+  display: inline-flex;
+  font-size: 0.53rem;
+  height: 21px;
+  justify-content: center;
+  width: 21px;
+}
+
+.healthGrid {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.healthGrid article {
+  align-items: flex-start;
+  display: flex;
+  gap: 9px;
+}
+
+.healthGrid article > span,
+.valueChain article > span,
+.releaseFlow article > span {
+  align-items: center;
+  background: var(--color-primary);
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  flex: 0 0 24px;
+  font-size: 0.56rem;
+  height: 24px;
+  justify-content: center;
+}
+
+.healthGrid strong,
+.healthGrid p {
+  display: block;
+}
+
+.healthGrid strong,
+.valueChain strong {
+  font-size: 0.68rem;
+}
+
+.healthGrid p {
+  color: var(--color-text-muted);
+  font-size: 0.59rem;
+  line-height: 1.5;
+  margin: 5px 0 0;
+}
+
+.portfolioLab {
+  background: #f6f9fc;
+  border: 1px solid var(--color-border);
+  border-radius: 11px;
+  margin: 18px 0;
+  padding: 15px;
+}
+
+.portfolioLab > header {
+  align-items: center;
+  display: flex;
+  gap: 14px;
+  justify-content: space-between;
+}
+
+.portfolioLab header small,
+.portfolioLab header strong {
+  display: block;
+}
+
+.portfolioLab header small {
+  color: var(--color-primary);
+  font-size: 0.57rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.portfolioLab header strong {
+  font-size: 0.75rem;
+  margin-top: 3px;
+}
+
+.portfolioLab header > span {
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  color: var(--color-primary);
+  font-size: 0.58rem;
+  font-weight: 800;
+  padding: 6px 9px;
+  white-space: nowrap;
+}
+
+.portfolioGrid {
+  display: grid;
+  gap: 9px;
+  grid-template-columns: repeat(5, 1fr);
+  margin-top: 14px;
+}
+
+.portfolioGrid button {
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: 9px;
+  color: var(--color-text);
+  cursor: pointer;
+  min-height: 150px;
+  padding: 11px;
+  text-align: left;
+}
+
+.portfolioGrid button:hover {
+  border-color: #7fa9c7;
+}
+
+.portfolioGrid .portfolioSelected {
+  background: #edf7ff;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--color-primary) 25%, transparent);
+}
+
+.portfolioGrid button > div:first-child {
+  align-items: center;
+  color: var(--color-primary);
+  display: flex;
+  font-size: 0.57rem;
+  font-weight: 800;
+  justify-content: space-between;
+}
+
+.portfolioGrid button > strong {
+  display: block;
+  font-size: 0.65rem;
+  line-height: 1.4;
+  margin-top: 8px;
+  min-height: 38px;
+}
+
+.portfolioGrid dl {
+  display: grid;
+  gap: 4px;
+  grid-template-columns: 1fr 1fr;
+  margin: 10px 0 0;
+}
+
+.portfolioGrid dl div {
+  background: #f4f7f9;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.portfolioGrid dt,
+.portfolioGrid dd {
+  font-size: 0.53rem;
+  margin: 0;
+}
+
+.portfolioGrid dt {
+  color: var(--color-text-muted);
+}
+
+.portfolioGrid dd {
+  font-weight: 800;
+  margin-top: 2px;
+}
+
+.portfolioLab > p {
+  color: var(--color-text-muted);
+  font-size: 0.59rem;
+  line-height: 1.5;
+  margin: 11px 0 0;
+}
+
+.releaseFlow {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 16px 0;
+}
+
+.releaseFlow article {
+  align-items: center;
+  background: #f6f9fc;
+  border: 1px solid var(--color-border);
+  border-radius: 9px;
+  display: flex;
+  gap: 8px;
+  min-height: 56px;
+  padding: 9px;
+}
+
+.releaseFlow strong {
+  font-size: 0.62rem;
+  line-height: 1.35;
+}
+
+.knowledgeGrid article {
+  min-height: 95px;
+}
+
+.valueChain article {
+  display: grid;
+  gap: 6px;
+  grid-template-columns: auto 1fr;
+}
+
+.valueChain strong {
+  padding-top: 4px;
+}
+
+.valueChain p {
+  grid-column: 1 / -1;
+}
+
+.homeworkSpacer {
+  height: 13px;
+}
+
+@media (max-width: 1120px) {
+  .rhythmGrid,
+  .healthGrid,
+  .portfolioGrid,
+  .releaseFlow,
+  .knowledgeGrid,
+  .valueChain {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .rhythmGrid,
+  .healthGrid,
+  .portfolioGrid,
+  .releaseFlow,
+  .knowledgeGrid,
+  .valueChain {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolioLab > header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .portfolioGrid button > strong {
+    min-height: 0;
+  }
+}

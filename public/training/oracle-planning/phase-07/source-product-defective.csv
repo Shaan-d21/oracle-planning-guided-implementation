@@ -1,9 +1,11 @@
-Member,Parent,Alias,Description
-All_Products,,All Products,Root product hierarchy
-Appliances,All_Products,Appliances,Product family
-REF100,Refrigeration,100 L Refrigerator,Training SKU
-REF100,Refrigeration,Refrigerator 100,Conflicting duplicate
-REF300,Missing_Line,300 L Refrigerator,Unknown parent exercise
-,Refrigeration,Unnamed Refrigerator,Missing member exercise
-Cycle_SKU,Cycle_SKU,Cycle Product,Self-parent exercise
-
+Product, Parent, Alias: Default, Valid For Consolidations, Data Storage, Two Pass Calculation, Description, Formula, Formula Description, UDA, Smart List, Data Type, Hierarchy Type, Enable for Dynamic Children, Number of Possible Dynamic Children, Access Granted to Member Creator, Allow Upper Level Entity Input, Process Management Enabled, UUID, Data Id, Old Name, Old Unique Name, Plan Type (Plan1), Aggregation (Plan1), Data Storage (Plan1), Formula (Plan1), Solve Order (Plan1), Formula Description (Plan1), Plan Type (ApexPlan), Aggregation (ApexPlan), Data Storage (ApexPlan), Formula (ApexPlan), Solve Order (ApexPlan), Formula Description (ApexPlan), Operation
+All_Products,Product,All Products,FALSE,never share,FALSE,,<none>,<none>,,,unspecified,,,,,FALSE,TRUE,,,,<none>,TRUE,+,never share,<none>,0,,TRUE,+,never share,<none>,0,,
+Home_Appliances,All_Products,Home Appliances,FALSE,never share,FALSE,,<none>,<none>,,,unspecified,,,,,FALSE,TRUE,,,,<none>,TRUE,+,never share,<none>,0,,TRUE,+,never share,<none>,0,,
+AIR_FRYER,Home_Appliances,Air Fryer,FALSE,store,FALSE,Approved product,<none>,<none>,,,unspecified,,,,,FALSE,TRUE,,,,<none>,TRUE,+,store,<none>,0,,TRUE,+,store,<none>,0,,
+AIR_FRYER,Home_Appliances,Airfryer,FALSE,store,FALSE,Conflicting duplicate alias,<none>,<none>,,,unspecified,,,,,FALSE,TRUE,,,,<none>,TRUE,+,store,<none>,0,,TRUE,+,store,<none>,0,,
+TOASTER,Missing_Family,Toaster,FALSE,store,FALSE,Unknown parent exercise,<none>,<none>,,,unspecified,,,,,FALSE,TRUE,,,,<none>,TRUE,+,store,<none>,0,,TRUE,+,store,<none>,0,,
+,Home_Appliances,Unnamed Product,FALSE,store,FALSE,Missing member exercise,<none>,<none>,,,unspecified,,,,,FALSE,TRUE,,,,<none>,TRUE,+,store,<none>,0,,TRUE,+,store,<none>,0,,
+Cycle_Product,Cycle_Product,Cycle Product,FALSE,store,FALSE,Self-parent exercise,<none>,<none>,,,unspecified,,,,,FALSE,TRUE,,,,<none>,TRUE,+,store,<none>,0,,TRUE,+,store,<none>,0,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

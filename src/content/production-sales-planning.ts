@@ -4,22 +4,22 @@ export const productionSalesPlanningCourse: CourseDefinition = {
   id: "production-sales-planning",
   title: "Production & Sales Planning",
   subtitle: "A hands-on Oracle Planning implementation experience",
-  company: "NovaDrive Appliances Ltd.",
+  company: "Apex Home Appliances Pvt. Ltd.",
   durationDays: 90,
   tracks: [
-    {
-      id: "planning-cycle",
-      title: "Monthly Planning Cycle",
-      description:
-        "Learn how demand becomes an approved operational and financial plan.",
-      audience: "New planners and business users",
-    },
     {
       id: "implementation",
       title: "Implementation Journey",
       description:
         "Design, build, test, deploy, and support the Oracle Planning solution.",
       audience: "Consultants, developers, and solution architects",
+    },
+    {
+      id: "planning-cycle",
+      title: "Monthly Planning Capstone",
+      description:
+        "Operate the implemented solution through one complete, controlled monthly planning cycle.",
+      audience: "Implementation learners, planners, and business users",
     },
   ],
   phases: [

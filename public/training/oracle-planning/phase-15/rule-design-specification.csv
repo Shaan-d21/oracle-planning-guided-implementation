@@ -1,0 +1,11 @@
+Field,Expected_Value,Design_Question,Evidence
+Purpose,Recalculate one approved financial outlook slice,What business decision requires this rule?,Approved requirement and owner
+Cube,Plan1,Where are inputs stored and outputs calculated?,Application and cube reference
+Trigger,Financial control form launch,Who launches the rule and from where?,Form association and role test
+Inputs,Approved revenue COGS inventory workforce CapEx financing tax and opening balances,Which source versions and cutoffs are required?,Source handoff and control totals
+Outputs,P&L working capital cash balance sheet and controls,Which stored accounts change?,Expected-results file
+Scope,Forecast Working FY25 selected Period and Entity,Which dimensions are fixed prompted inherited or calculated?,Resolved-scope log
+Clear_Behavior,Approved target slice only after prerequisite validation,What can be safely replaced?,Before and after extract
+Failure_Behavior,Stop downstream movement and retain actionable safe message,What must not run after failure?,Negative test and job log
+Repeatability,Unchanged rerun returns identical values without duplicate movement,Is the target behavior idempotent?,Rerun comparison
+Recovery,Restart from failed bounded step after approved cleanup,How is partial execution contained?,Runbook and recovery test

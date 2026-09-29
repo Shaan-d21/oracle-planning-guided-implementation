@@ -2,10 +2,10 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { BookOpenCheck, ChevronRight, LayoutDashboard, LogOut, Route } from "lucide-react";
+import { BookOpenCheck, CalendarDays, ChevronRight, LayoutDashboard, LogOut, Route } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { getModulesForTrack } from "@/content/course-catalog";
+import { getModuleBySlug, getModulesForTrack } from "@/content/course-catalog";
 import { productionSalesPlanningCourse } from "@/content/production-sales-planning";
 import { emptyProgress, readLearningProgress, type LearningProgress } from "@/lib/learning-progress";
 import styles from "./learner-shell.module.css";
@@ -24,8 +24,11 @@ export function LearnerShell({ children }: { children: React.ReactNode }) {
     };
   }, []);
 
-  const isImplementationModule = pathname !== "/learn" && pathname.startsWith("/learn/");
-  const selectedTrack = isImplementationModule ? "implementation" : progress.selectedTrack;
+  const isProgramPlan = pathname === "/learn/program-plan";
+  const moduleSlug = pathname.startsWith("/learn/") ? pathname.slice("/learn/".length).split("/")[0] : "";
+  const currentModule = moduleSlug ? getModuleBySlug(moduleSlug) : undefined;
+  const isLearningModule = Boolean(currentModule);
+  const selectedTrack = currentModule?.trackId ?? (isProgramPlan ? "implementation" : progress.selectedTrack);
   const track = productionSalesPlanningCourse.tracks.find((item) => item.id === selectedTrack)!;
   const completedLessons = progress.tracks[selectedTrack].completedLessons;
   const modules = getModulesForTrack(selectedTrack);
@@ -50,11 +53,11 @@ export function LearnerShell({ children }: { children: React.ReactNode }) {
         </Link>
         <div className={styles.courseContext}>
           <span>Current program</span>
-          <strong>Oracle Planning Internship</strong>
+          <strong>90-Day Oracle Planning Workshop</strong>
         </div>
         <div className={styles.profile} aria-label="Learner profile">
           <span>SD</span>
-          <div><strong>Learner</strong><small>Frontend preview</small></div>
+          <div><strong>Learner</strong><small>Workshop participant</small></div>
         </div>
       </header>
 
@@ -63,16 +66,17 @@ export function LearnerShell({ children }: { children: React.ReactNode }) {
           <Link className={pathname === "/learn" ? styles.active : ""} href="/learn">
             <LayoutDashboard size={18} /> Dashboard
           </Link>
-          <Link className={pathname !== "/learn" && pathname.startsWith("/learn/") ? styles.active : ""} href={activeHref}>
+          <Link className={isLearningModule ? styles.active : ""} href={activeHref}>
             <BookOpenCheck size={18} /> {activeModule ? "Current module" : "Path overview"}
           </Link>
-          <a href={selectedTrack === "implementation" ? "/learn?track=implementation#roadmap" : "/learn?track=planning-cycle#planning-cycle"}><Route size={18} /> Program roadmap</a>
+          <Link className={isProgramPlan ? styles.active : ""} href="/learn/program-plan"><CalendarDays size={18} /> 90-day workshop plan</Link>
+          <a href={selectedTrack === "implementation" ? "/learn?track=implementation#roadmap" : "/learn?track=planning-cycle#planning-cycle"}><Route size={18} /> {selectedTrack === "implementation" ? "Phase roadmap" : "Capstone outline"}</a>
         </nav>
         <div className={styles.sidebarJourney}>
           <small>Active journey</small>
           <strong>{track.title}</strong>
           <div><span style={{ width: `${phasePercent}%` }} /></div>
-          <p>{activeModule ? `${activeCompleted} of ${activeTotal} lessons · Phase ${String(activeModule.phase).padStart(2, "0")} of 27` : `${modules.length} modules defined · interactive build planned`}</p>
+          <p>{activeModule ? `${activeCompleted} of ${activeTotal} lessons · ${selectedTrack === "implementation" ? `Phase ${String(activeModule.phase).padStart(2, "0")} of 27` : "Monthly capstone"}` : `${modules.length} module in the curriculum outline`}</p>
           <Link href={activeHref}>{activeModule ? "Continue" : "View path"} <ChevronRight size={15} /></Link>
         </div>
         <Link className={styles.exitLink} href="/"><LogOut size={17} /> Exit learning lab</Link>

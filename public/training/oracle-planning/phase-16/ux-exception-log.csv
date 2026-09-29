@@ -1,0 +1,4 @@
+Exception_ID,Artifact,Channel,Role,POV_or_Filter,Observed_Result,Expected_Result,Severity,Root_Cause,Corrective_Action,Retest,Owner,Due_Date,Status,Reviewer
+UXE-001,,,,,,,,,,,,,Open,
+UXE-002,,,,,,,,,,,,,Open,
+UXE-003,,,,,,,,,,,,,Open,

@@ -39,7 +39,8 @@
 .workshopSheet > div { align-items: center; color: var(--color-primary); display: flex; font-size: .68rem; gap: 7px; }
 .workshopSheet > p { color: var(--color-text-muted); font-size: .57rem; line-height: 1.55; margin: 9px 0 12px; }
 .workshopSheet label,.handoffForm label { color: #526274; display: grid; font-size: .57rem; font-weight: 650; gap: 5px; }
-.workshopSheet textarea,.handoffForm textarea,.tracePanel select,.interfaceCard select { background: white; border: 1px solid #cfd9e3; border-radius: 7px; color: var(--color-text); font-family: var(--font-body); font-size: .62rem; outline: none; padding: 9px; resize: vertical; }
+.workshopSheet textarea,.handoffForm textarea,.tracePanel select,.interfaceCard select { background: white; border: 1px solid #cfd9e3; border-radius: 7px; color: var(--color-text); font-family: var(--font-body); font-size: .7rem; line-height: 1.5; min-width: 0; outline: none; padding: 9px 10px; resize: vertical; }
+.tracePanel select,.interfaceCard select { min-height: 40px; width: 100%; }
 .workshopSheet textarea:focus,.handoffForm textarea:focus,.tracePanel select:focus,.interfaceCard select:focus { border-color: var(--color-primary); box-shadow: 0 0 0 3px rgba(11,99,182,.1); }
 .workshopSheet > small,.handoffForm > small { color: var(--color-text-muted); display: block; font-size: .5rem; margin-top: 5px; text-align: right; }
 .processButtons { display: grid; gap: 7px; grid-template-columns: repeat(4,1fr); margin-top: 17px; }
@@ -57,7 +58,7 @@
 .processTraceList header span { font-size: .66rem; font-weight: 750; }
 .processTraceList header small { color: var(--color-primary); font-size: .47rem; font-weight: 750; letter-spacing: .05em; text-transform: uppercase; }
 .processTraceList label { align-items: center; color: #526274; display: grid; font-size: .55rem; font-weight: 650; gap: 10px; grid-template-columns: 150px 1fr; }
-.processTraceList select { background: white; border: 1px solid #cfd9e3; border-radius: 7px; color: var(--color-text); font-family: var(--font-body); font-size: .56rem; min-width: 0; padding: 9px; }
+.processTraceList select { background: white; border: 1px solid #cfd9e3; border-radius: 7px; color: var(--color-text); font-family: var(--font-body); font-size: .75rem; min-height: 40px; min-width: 0; padding: 9px 10px; width: 100%; }
 .systemLandscape { align-items: center; background: var(--color-navy); border-radius: 11px; color: white; display: flex; gap: 10px; margin-top: 17px; overflow-x: auto; padding: 17px; }
 .systemLandscape > div { display: flex; gap: 5px; }
 .systemLandscape span { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.1); border-radius: 5px; color: #aac0d0; font-size: .5rem; padding: 7px; }
@@ -96,7 +97,9 @@
 .tableRow > span b,.tableRow > span small { display: block; }
 .tableRow > span b { font-size: .57rem; }
 .tableRow > span small { color: var(--color-text-muted); font-size: .5rem; margin-top: 2px; }
-.tableRow select { background: white; border: 1px solid #cfd9e3; border-radius: 6px; color: #495b6d; font-family: inherit; font-size: .52rem; min-width: 0; padding: 7px; }
+.tableSelect { color: #526274; display: grid; font-size: .63rem; font-weight: 700; gap: 5px; min-width: 0; }
+.tableSelect > span { display: none; }
+.tableRow select { background: white; border: 1px solid #cfd9e3; border-radius: 7px; color: #495b6d; font-family: var(--font-body); font-size: .75rem; min-height: 40px; min-width: 0; padding: 9px 10px; width: 100%; }
 .priorityRule { background: #f8fafc; border: 1px solid var(--color-border); border-radius: 8px; display: grid; font-size: .51rem; gap: 6px; grid-template-columns: auto 1fr 1fr 1fr; line-height: 1.45; margin-top: 12px; padding: 10px; }
 .priorityRule > strong { color: var(--color-primary-dark); }
 .priorityRule span { color: var(--color-text-muted); }
@@ -126,5 +129,5 @@
 .handoffPreview > div span { align-items: center; background: rgba(255,255,255,.07); border-radius: 5px; color: #9eb3c2; display: flex; font-size: .47rem; gap: 5px; padding: 5px 6px; }
 .handoffPreview svg { color: #5bacef; }
 @media(max-width:1100px){.phaseComparison{grid-template-columns:1fr}.phaseComparison>svg{display:none}.assessmentChain{grid-template-columns:repeat(3,1fr)}.principleGrid,.stakeholderList,.stakeholderCards,.evidenceGrid{grid-template-columns:repeat(2,1fr)}.processButtons,.interfacePicker{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:720px){.prerequisite{align-items:start;grid-template-columns:20px 1fr}.prerequisite a{grid-column:1/-1;justify-self:start}.assessmentChain,.principleGrid,.stakeholderList,.stakeholderCards,.processButtons,.interfacePicker,.checkGrid,.kpiGrid,.evidenceGrid{grid-template-columns:1fr 1fr}.assessmentChain svg{display:none}.tracePanel label,.interfaceCard>label,.processTraceList label{align-items:start;grid-template-columns:1fr}.priorityRule{grid-template-columns:1fr}.painTable{overflow-x:auto}.tableHead,.tableRow{min-width:760px}.systemLandscape{align-items:flex-start;flex-direction:column}.systemLandscape>svg{transform:rotate(90deg)}}
+@media(max-width:720px){.prerequisite{align-items:start;grid-template-columns:20px 1fr}.prerequisite a{grid-column:1/-1;justify-self:start}.assessmentChain,.principleGrid,.stakeholderList,.stakeholderCards,.processButtons,.interfacePicker,.checkGrid,.kpiGrid,.evidenceGrid{grid-template-columns:1fr 1fr}.assessmentChain svg{display:none}.tracePanel label,.interfaceCard>label,.processTraceList label{align-items:start;grid-template-columns:1fr}.priorityRule{grid-template-columns:1fr}.painTable{overflow:visible}.painTable .tableHead{display:none}.painTable .tableRow{align-items:stretch;grid-template-columns:1fr;min-width:0;padding:14px}.tableSelect>span{display:block}.systemLandscape{align-items:flex-start;flex-direction:column}.systemLandscape>svg{transform:rotate(90deg)}}
 @media(max-width:480px){.assessmentChain,.principleGrid,.stakeholderList,.stakeholderCards,.processButtons,.interfacePicker,.checkGrid,.kpiGrid,.evidenceGrid{grid-template-columns:1fr}}

@@ -1,0 +1,9 @@
+step,activity,owner,input,control,expected_output
+1,Freeze scope and versions,Finance Planner,Approved operational and financial assumptions,Entity period currency Scenario Version source versions and cutoff recorded,Controlled run header
+2,Validate mappings,Finance Systems Lead,Source measures accounts signs flows and grains,Duplicate mapping and aggregation tests complete,Approved mapping baseline
+3,Calculate P&L,Finance Planner,Revenue cost expense depreciation interest and tax,Subtotals and independent calculation agree,Management net income
+4,Calculate working capital,Finance Business Partner,Opening closing balances and assumptions,Movements signs sources and cash effects reconcile,Working-capital bridge
+5,Calculate cash flow,Treasury Manager,Net income noncash working capital CapEx and financing,Operating investing financing and closing cash reconcile,Indirect cash flow
+6,Calculate balance sheet,Finance Planner,Opening balances movements and closing cash,PPE debt equity cash and full-precision balance controls agree,Integrated closing position
+7,Resolve and move data,Finance Systems Lead,Exceptions and approved statements,Affected scopes rerun and data map reconciled,ApexPlan reporting result
+8,Reconcile and approve,Independent Reviewer,All statements jobs and movements,Detail aggregate repeatability security limitations and evidence agree,Approved Phase 14 baseline

@@ -1,0 +1,6 @@
+Member_ID,Dimension,Parent,Member,Alias,Purpose,Writable,Approval_Use,Security_Group,Time_Range,Currency_Treatment,Retention,Owner,Status
+SVR-01,Scenario,Scenario,Forecast,Forecast,Governed forecast dataset,Controlled,Yes,Approved planning groups,FY25-FY29,Approved Forecast rate treatment,Application life,Finance Process Owner,Draft
+SVR-02,Version,Version,Final,Approved Forecast,Protected official baseline,No,Reference and approved outcome,Reviewers and viewers read,Scenario time range,Inherited from Forecast,Permanent baseline,Finance Process Owner,Draft
+SVR-03,Version,Version,Working,Official Working Plan,Controlled write,Yes,Planners reviewers approvers,Scenario time range,Inherited from Forecast,Current cycle plus audit retention,Business Process Owner,Draft
+SVR-04,Version,Version,Upside,Upside What-If,Controlled write,No direct approval,Scenario analysts and reviewers,Scenario time range,Inherited from Forecast,Decision-cycle retention,Scenario Owner,Draft
+SVR-05,Version,Version,Downside,Downside What-If,Controlled write,No direct approval,Scenario analysts and reviewers,Scenario time range,Inherited from Forecast,Decision-cycle retention,Scenario Owner,Draft

@@ -1,0 +1,3 @@
+exception_id,scenario,entity,period,type,quantity_or_value,cause,response,owner,due_date,status,approval_reference
+DE-001,Jan Workforce,Pune,Jan-FY27,Workforce hours gap,2 hours,Three FTE supply 408 hours against 410 required,Use controlled overtime and monitor recurrence,Plant Manager,2027-01-02,Proposed,
+DE-002,Growth CapEx,Pune,Apr-FY27,Enabling dependency,1 trained operator,New asset needs certified operator before in-service,Complete training plan and retain readiness gate,Plant HR Manager,2027-03-15,Open,

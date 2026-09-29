@@ -1,0 +1,25 @@
+statement,line,value,currency,control_reference
+P&L,Net revenue,559579.64,INR,Phase 09 handoff
+P&L,COGS,356855.544608,INR,Phase 12 handoff
+P&L,Gross margin,202724.095392,INR,Revenue minus COGS
+P&L,Other operating expense,60000,INR,Approved assumption
+P&L,Depreciation,20000,INR,Phase 13 in-service scenario
+P&L,Operating profit,122724.095392,INR,Gross margin minus operating expense and depreciation
+P&L,Interest expense,5000,INR,Approved financing assumption
+P&L,Profit before tax,117724.095392,INR,Operating profit minus interest
+P&L,Tax expense,29431.023848,INR,Positive PBT times 25 percent
+P&L,Net income,88293.071544,INR,PBT minus tax
+Working Capital,Receivables increase,29789.82,INR,Closing 279789.82 minus opening 250000
+Working Capital,Inventory increase,15054.455392,INR,Closing 82554.455392 minus opening 67500
+Working Capital,Payables increase,20000,INR,Closing 120000 minus opening 100000
+Cash Flow,Operating cash flow,83448.796152,INR,Net income plus depreciation minus AR minus inventory plus AP
+Cash Flow,Investing cash flow,-1200000,INR,CapEx cash payment
+Cash Flow,Financing cash flow,1000000,INR,New debt less dividends
+Cash Flow,Net cash change,-116551.203848,INR,CFO plus CFI plus CFF
+Cash Flow,Closing cash,383448.796152,INR,Opening cash plus net movement
+Balance Sheet,Closing net PPE,3180000,INR,Opening PPE plus CapEx minus depreciation
+Balance Sheet,Closing debt,2500000,INR,Opening debt plus new debt
+Balance Sheet,Closing equity,1105793.071544,INR,Opening equity plus net income
+Balance Sheet,Total assets,3925793.071544,INR,Cash plus receivables plus inventory plus PPE
+Balance Sheet,Total liabilities and equity,3925793.071544,INR,Payables plus debt plus other liabilities plus equity
+Balance Sheet,Balance control,0,INR,Assets minus liabilities and equity

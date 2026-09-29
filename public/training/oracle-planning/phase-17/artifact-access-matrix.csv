@@ -1,0 +1,9 @@
+Artifact_ID,Artifact_Type,Artifact_or_Folder,Cube,Group,Access,Rule_Launch,Navigation_Flow,Reason,Owner,Expected_Behavior,Status
+AA-01,Form Folder,Operations Planning,Plan1,APX_OPERATIONS_PLANNERS,Read,N/A,Operations Workspace,Open assigned operational forms,Operations Process Owner,Visible,Draft
+AA-02,Form,Production Allocation,Plan1,APX_OPERATIONS_PLANNERS,Read,N/A,Operations Workspace,Enter owned production allocations,Operations Process Owner,Visible with member-controlled writable cells,Draft
+AA-03,Business Rule,Calculate Production,Plan1,APX_OPERATIONS_PLANNERS,Read,Launch,Operations Workspace,Run governed production calculation,Calculation Owner,Visible and launchable,Draft
+AA-04,Business Rule,Calculate Production,Plan1,APX_SALES_PLANNERS,None,No Launch,Sales Workspace,Prevent cross-process execution,Calculation Owner,Not launchable,Draft
+AA-05,Dashboard,Management Outlook,ApexPlan ASO,APX_EXECUTIVE_VIEWERS,Read,N/A,Executive Workspace,Review approved KPIs,CFO,Visible and read-only,Draft
+AA-06,Smart View Form,Production Allocation,Plan1,APX_OPERATIONS_PLANNERS,Read,N/A,N/A,Connected controlled input,Operations Process Owner,Same effective cell access as web,Draft
+AA-07,Task Manager Schedule,Apex Monthly Planning,N/A,APX_TASK_PROCESS_OWNERS,Manage,N/A,Tasks,Operate recurring cycle,EPM Product Owner,Manage templates and schedules,Draft
+AA-08,Approval Unit,Pune Forecast Working,Plan1,APX_FINANCE_APPROVERS,Read,N/A,Approvals,Perform final business approval,Finance Director,Approve after review,Draft

@@ -12,18 +12,18 @@
 .principleGrid strong { display: block; font-size: .68rem; margin-top: 8px; }
 .principleGrid p { color: var(--color-text-muted); font-size: .59rem; line-height: 1.5; margin: 5px 0 0; }
 .qualityList { display: grid; gap: 10px; }
-.qualityList article { background: #f8fafc; border: 1px solid var(--color-border); border-radius: 11px; display: grid; gap: 18px; grid-template-columns: minmax(210px,.7fr) minmax(320px,1.3fr); padding: 15px; }
+.qualityList article { background: #f8fafc; border: 1px solid var(--color-border); border-radius: 11px; display: grid; gap: 18px; grid-template-columns: minmax(210px,.7fr) minmax(0,1.3fr); padding: 15px; }
 .qualityList article > div > span { color: var(--color-primary); font-family: var(--font-mono); font-size: .58rem; font-weight: 750; }
 .qualityList small { color: var(--color-text-muted); display: block; font-size: .54rem; margin-top: 6px; text-transform: uppercase; }
 .qualityList p { font-size: .64rem; line-height: 1.5; margin: 4px 0 0; }
 .qualityList label,.priorityGrid label,.summaryField { color: #46586a; display: grid; font-size: .59rem; font-weight: 700; gap: 6px; }
-.qualityList select,.traceTable select,.priorityGrid select,.summaryField textarea { background: white; border: 1px solid #cbd7e3; border-radius: 7px; color: var(--color-text); font: inherit; padding: 9px; }
+.qualityList select,.traceTable select,.priorityGrid select,.summaryField textarea { background: white; border: 1px solid #cbd7e3; border-radius: 7px; color: var(--color-text); font-family: var(--font-body); font-size: .75rem; min-height: 40px; min-width: 0; padding: 9px 10px; width: 100%; }
 .classificationList { display: grid; gap: 8px; }
 .classificationList article { align-items: center; border: 1px solid var(--color-border); border-radius: 9px; display: grid; gap: 12px; grid-template-columns: 1fr minmax(210px,.45fr); padding: 11px; }
 .classificationList article > div { align-items: start; display: grid; gap: 8px; grid-template-columns: 42px 1fr; }
 .classificationList span { color: var(--color-primary); font-family: var(--font-mono); font-size: .53rem; font-weight: 750; }
 .classificationList p { color: #4e6173; font-size: .6rem; line-height: 1.45; margin: 0; }
-.classificationList select { background: white; border: 1px solid #cbd7e3; border-radius: 7px; color: var(--color-text); font: inherit; font-size: .57rem; min-width: 0; padding: 9px; }
+.classificationList select { background: white; border: 1px solid #cbd7e3; border-radius: 7px; color: var(--color-text); font-family: var(--font-body); font-size: .75rem; min-height: 40px; min-width: 0; padding: 9px 10px; width: 100%; }
 .traceTable { border: 1px solid var(--color-border); border-radius: 11px; overflow: hidden; }
 .tableHead,.tableRow { display: grid; gap: 12px; grid-template-columns: minmax(190px,.7fr) minmax(330px,1.3fr); padding: 11px 13px; }
 .tableHead { background: var(--color-navy); color: #a9c6dd; font-size: .55rem; font-weight: 750; letter-spacing: .06em; text-transform: uppercase; }

@@ -134,14 +134,14 @@ export function FutureStateModule() {
         setFeedback({ tone: "error", message: "Choose the connected planning rule and correctly assign transactional versus planning ownership for every information domain." });
         return;
       }
-      markComplete("The target flow connects demand, feasibility, financial impact, approval, and clearly separated information ownership.");
+      markComplete("The target flow connects the sales plan, operational feasibility, profitability, approval, and clearly separated information ownership.");
       return;
     }
     if (activeLesson === "future-state-grain") {
       const grainsCorrect = decisionGrainCases.every((item) => grainAnswers[item.id] === item.correct);
       const contextComplete = sharedContextOptions.every((item) => sharedContext.includes(item));
-      if (!grainsCorrect || !contextComplete || cadence !== "monthly-weekly") {
-        setFeedback({ tone: "error", message: "Map every business decision to its proper grain, include Scenario, Version, Year, and Period as shared context, and select the governed monthly cycle with weekly operational detail." });
+      if (!grainsCorrect || !contextComplete || cadence !== "monthly") {
+        setFeedback({ tone: "error", message: "Map every business decision to its proper grain, include Scenario, Version, Year, and Period as shared context, and select the governed monthly planning cycle." });
         return;
       }
       markComplete("Decision grains and the planning calendar now align commercial, operational, and financial work without prematurely designing dimensions.");
@@ -219,12 +219,12 @@ function Orientation() {
       <article><Scale size={20} /><strong>Governed</strong><p>Decision rights, workflow, auditability, reconciliation, and exception ownership are explicit.</p></article>
       <article><Layers3 size={20} /><strong>Technology-neutral first</strong><p>Agree how the business should operate before mapping the design to Oracle components.</p></article>
     </div>
-    <div className={base.infoCallout}><Info size={19} /><div><strong>No Oracle screenshot is required in Phase 3</strong><p>This phase produces a business design, not configured Oracle screens. Screenshots become useful when learners must recognize and operate actual application pages; we will review those with you before adding them.</p></div></div>
+    
   </>;
 }
 
 function OutcomeTranslation({ values, onChange, target, onTarget }: { values: Record<string, string>; onChange: (id: string, value: string) => void; target: string; onTarget: (value: string) => void }) {
-  const options = outcomeScenarios.map((scenario) => scenario.desiredOutcome);
+  const options = [...new Set(outcomeScenarios.map((scenario) => scenario.desiredOutcome))];
   return <>
     <div className={base.lessonLead}><GitBranch size={23} /><div><small>AS-IS to TO-BE bridge</small><strong>Translate validated findings into outcomes and measurable targets without inventing unsupported benefits.</strong></div></div>
     <div className={styles.outcomeList}>{outcomeScenarios.map((scenario) => <article key={scenario.id}><div><small>Confirmed finding</small><p>{scenario.finding}</p></div><ArrowRight size={18} /><label>Required outcome<select value={values[scenario.id] ?? ""} onChange={(event) => onChange(scenario.id, event.target.value)}><option value="">Select the supported outcome</option>{options.map((option) => <option key={option} value={option}>{option}</option>)}</select></label></article>)}</div>
@@ -234,11 +234,11 @@ function OutcomeTranslation({ values, onChange, target, onTarget }: { values: Re
 }
 
 function ProcessAndOwnership({ flowChoice, onFlow, ownership, onOwnership }: { flowChoice: string; onFlow: (value: string) => void; ownership: Record<string, string>; onOwnership: (id: string, value: string) => void }) {
-  const ownershipOptions = systemOwnershipCases.map((item) => item.correct);
+  const ownershipOptions = [...new Set(systemOwnershipCases.map((item) => item.correct))];
   return <>
     <div className={base.lessonLead}><Workflow size={23} /><div><small>Process and information ownership</small><strong>Create one connected planning sequence while preserving authoritative transactional sources.</strong></div></div>
     <div className={styles.flow}>{planningFlow.map((step, index) => <div key={step}><span>{String(index + 1).padStart(2, "0")}</span><strong>{step}</strong>{index < planningFlow.length - 1 && <ArrowRight size={14} />}</div>)}</div>
-    <fieldset className={styles.choiceGroup}><legend>Which design rule does this process demonstrate?</legend><label><input checked={flowChoice === "connected"} name="flow" onChange={() => onFlow("connected")} type="radio" />Demand, feasibility, operational decisions, financial impact, exceptions, reconciliation, and approval form one governed chain.</label><label><input checked={flowChoice === "parallel"} name="flow" onChange={() => onFlow("parallel")} type="radio" />Every function approves an independent plan and Finance manually reconciles differences afterward.</label></fieldset>
+    <fieldset className={styles.choiceGroup}><legend>Which design rule does this process demonstrate?</legend><label><input checked={flowChoice === "connected"} name="flow" onChange={() => onFlow("connected")} type="radio" />Sales, feasibility, plant and inventory decisions, profitability, exceptions, reconciliation, and approval form one governed chain.</label><label><input checked={flowChoice === "parallel"} name="flow" onChange={() => onFlow("parallel")} type="radio" />Every function approves an independent plan and Finance manually reconciles differences afterward.</label></fieldset>
     <h3 className={base.sectionTitle}>Assign conceptual information ownership</h3>
     <div className={styles.ownershipList}>{systemOwnershipCases.map((item) => <article key={item.id}><div><span>{item.id.toUpperCase()}</span><p>{item.information}</p></div><select aria-label={`${item.id} ownership`} onChange={(event) => onOwnership(item.id, event.target.value)} value={ownership[item.id] ?? ""}><option value="">Select ownership decision</option>{ownershipOptions.map((option) => <option key={option}>{option}</option>)}</select></article>)}</div>
     <div className={base.infoCallout}><Network size={19} /><div><strong>Phase boundary</strong><p>This is business ownership and conceptual flow. Detailed application boundaries, integration patterns, environments, and component choices belong in Solution Architecture.</p></div></div>
@@ -246,13 +246,13 @@ function ProcessAndOwnership({ flowChoice, onFlow, ownership, onOwnership }: { f
 }
 
 function GrainAndCalendar({ answers, onAnswer, context, onContext, cadence, onCadence }: { answers: Record<string, string>; onAnswer: (id: string, value: string) => void; context: string[]; onContext: (item: string) => void; cadence: string; onCadence: (value: string) => void }) {
-  const options = decisionGrainCases.map((item) => item.correct);
+  const options = [...new Set(decisionGrainCases.map((item) => item.correct))];
   return <>
     <div className={base.lessonLead}><Layers3 size={23} /><div><small>Business decision design</small><strong>Define the grain at which each role must decide—not the final Oracle dimension structure.</strong></div></div>
     <div className={styles.grainList}>{decisionGrainCases.map((item) => <article key={item.id}><div><span>{item.id.toUpperCase()}</span><p>{item.decision}</p></div><select aria-label={`${item.id} decision grain`} onChange={(event) => onAnswer(item.id, event.target.value)} value={answers[item.id] ?? ""}><option value="">Select business decision grain</option>{options.map((option) => <option key={option}>{option}</option>)}</select></article>)}</div>
     <h3 className={base.sectionTitle}>Shared planning context</h3>
     <div className={styles.checkGrid}>{sharedContextOptions.map((item) => <label className={context.includes(item) ? styles.selected : ""} key={item}><input checked={context.includes(item)} onChange={() => onContext(item)} type="checkbox" />{context.includes(item) ? <CheckCircle2 size={16} /> : <span />}{item}</label>)}</div>
-    <fieldset className={styles.choiceGroup}><legend>Decision calendar</legend><label><input checked={cadence === "monthly-weekly"} name="cadence" onChange={() => onCadence("monthly-weekly")} type="radio" />Monthly governed S&amp;OP cycle with weekly operational detail, exception review, clear cutoffs, and defined publish dates.</label><label><input checked={cadence === "annual"} name="cadence" onChange={() => onCadence("annual")} type="radio" />Annual planning only, with no operational replanning or exception cadence.</label></fieldset>
+    <fieldset className={styles.choiceGroup}><legend>Decision calendar</legend><label><input checked={cadence === "monthly"} name="cadence" onChange={() => onCadence("monthly")} type="radio" />Monthly governed S&amp;OP cycle for sales, inventory, production, capacity, cost, and profitability, with clear cutoffs and publish dates.</label><label><input checked={cadence === "annual"} name="cadence" onChange={() => onCadence("annual")} type="radio" />Annual planning only, with no monthly replanning or exception cadence.</label></fieldset>
     <div className={base.infoCallout}><Info size={19} /><div><strong>Decision grain comes before dimension design</strong><p>Here the business agrees who decides at which level and cadence. Phase 6 later evaluates hierarchies, dimensionality, sparsity, aggregation, valid intersections, and application performance.</p></div></div>
   </>;
 }
@@ -264,7 +264,7 @@ function GovernanceAndExceptions({ value, onChange, answers, onAnswer }: { value
     ["approve", "Approve integrated plan", [["", "Select owner"], ["sop", "S&OP governance forum"], ["planner", "Individual planner"]]],
     ["publish", "Reconcile and publish", [["", "Select owner"], ["fpa", "FP&A / Planning process owner"], ["developer", "Implementation developer"]]],
   ] as const;
-  const exceptionOptions = exceptionCases.map((item) => item.correct);
+  const exceptionOptions = [...new Set(exceptionCases.map((item) => item.correct))];
   return <>
     <div className={base.lessonLead}><Scale size={23} /><div><small>Decision rights and control design</small><strong>Define the normal workflow and the controlled response when tolerances, data, or feasibility fail.</strong></div></div>
     <div className={styles.governanceGrid}>{fields.map(([key, label, options], index) => <article key={key}><span>{index + 1}</span><label>{label}<select value={value[key]} onChange={(event) => onChange({ ...value, [key]: event.target.value })}>{options.map(([optionValue, optionLabel]) => <option key={optionValue} value={optionValue}>{optionLabel}</option>)}</select></label></article>)}</div>
@@ -278,10 +278,10 @@ function GovernanceAndExceptions({ value, onChange, answers, onAnswer }: { value
 function FutureStateHomework({ active, onActive, status, text, onText, sequenceAnswers, onSequenceAnswer, ownershipAnswers, onOwnershipAnswer }: { active: FutureStateHomeworkId; onActive: (id: FutureStateHomeworkId) => void; status: Record<FutureStateHomeworkId, boolean>; text: HomeworkTextValue; onText: (field: keyof HomeworkTextValue, value: string) => void; sequenceAnswers: Record<string, string>; onSequenceAnswer: (id: string, value: string) => void; ownershipAnswers: Record<string, string>; onOwnershipAnswer: (id: string, value: string) => void }) {
   const mission = futureStateHomeworkMissions.find((item) => item.id === active) ?? futureStateHomeworkMissions[0];
   const completedCount = futureStateHomeworkMissions.filter((item) => status[item.id]).length;
-  const sequenceOptions = homeworkSequenceCases.map((item) => item.correct);
-  const ownershipOptions = homeworkOwnershipCases.map((item) => item.correct);
+  const sequenceOptions = [...new Set(homeworkSequenceCases.map((item) => item.correct))];
+  const ownershipOptions = [...new Set(homeworkOwnershipCases.map((item) => item.correct))];
   return <>
-    <div className={base.lessonLead}><BookOpenCheck size={23} /><div><small>Applied homework</small><strong>Produce five connected future-state design outputs using the NovaDrive case.</strong></div></div>
+    <div className={base.lessonLead}><BookOpenCheck size={23} /><div><small>Applied homework</small><strong>Produce five connected future-state design outputs using the Apex case.</strong></div></div>
     <p className={base.bodyCopy}>These missions practise operating-model design. Configuration, cube architecture, metadata, forms, rules, and screenshots remain outside this phase.</p>
     <div className={base.homeworkMissionGrid}>{futureStateHomeworkMissions.map((item, index) => <button className={`${active === item.id ? base.homeworkMissionActive : ""} ${status[item.id] ? base.homeworkMissionDone : ""}`} key={item.id} onClick={() => onActive(item.id)} type="button"><span>{status[item.id] ? <CheckCircle2 size={17} /> : String(index + 1).padStart(2, "0")}</span><div><strong>{item.title}</strong><small>{item.output}</small></div></button>)}</div>
     <div className={base.homeworkProgress}><div><span style={{ width: `${completedCount / futureStateHomeworkMissions.length * 100}%` }} /></div><strong>{completedCount} of {futureStateHomeworkMissions.length} missions complete</strong></div>
@@ -291,8 +291,8 @@ function FutureStateHomework({ active, onActive, status, text, onText, sequenceA
       {active === "principles" && <><div className={base.homeworkPrompt}><strong>Confirmed assessment themes</strong><p>Conflicting forecasts, fixed inventory policy, late capacity checks, stale cost drivers, and manual financial reconciliation.</p></div><label className={base.summaryField}>Future-state design principles<textarea onChange={(event) => onText("principles", event.target.value)} placeholder={"Write five concise rules. For each: reference the finding, state the future-state principle, name the business outcome or control, and explain how later design decisions will be evaluated against it."} rows={11} value={text.principles} /><small>{text.principles.trim().length}/180 minimum characters</small></label></>}
       {active === "sequence" && <><div className={base.homeworkPrompt}><strong>Connected-planning checkpoints</strong><p>Place each checkpoint in the business sequence. The numbers represent dependency order, not an application workflow configuration.</p></div><div className={base.homeworkMap}>{homeworkSequenceCases.map((item) => <article key={item.id}><div><span>{item.id}</span><p>{item.checkpoint}</p></div><select aria-label={`${item.id} sequence`} onChange={(event) => onSequenceAnswer(item.id, event.target.value)} value={sequenceAnswers[item.id] ?? ""}><option value="">Select sequence position</option>{sequenceOptions.map((option) => <option key={option}>{option}</option>)}</select></article>)}</div></>}
       {active === "ownership" && <><div className={base.homeworkPrompt}><strong>Ownership decisions</strong><p>Distinguish the authoritative execution source from the governed planning workspace and its responsibilities.</p></div><div className={base.homeworkMap}>{homeworkOwnershipCases.map((item) => <article key={item.id}><div><span>{item.id}</span><p>{item.information}</p></div><select aria-label={`${item.id} ownership`} onChange={(event) => onOwnershipAnswer(item.id, event.target.value)} value={ownershipAnswers[item.id] ?? ""}><option value="">Select ownership decision</option>{ownershipOptions.map((option) => <option key={option}>{option}</option>)}</select></article>)}</div></>}
-      {active === "exception" && <><div className={base.homeworkPrompt}><strong>Scenario</strong><p>Pune Line 03 is forecast at 114% capacity after consensus demand is submitted, and the increase improves revenue but reduces margin because overtime is required.</p></div><label className={base.summaryField}>Future-state exception path<textarea onChange={(event) => onText("exception", event.target.value)} placeholder={"Define trigger and tolerance, detection point, owner, permitted responses, scenario comparison, downstream recalculation, workflow/approval, evidence, escalation, and the condition for closing and publishing."} rows={11} value={text.exception} /><small>{text.exception.trim().length}/180 minimum characters</small></label></>}
-      {active === "readout" && <><div className={base.homeworkPrompt}><strong>Validation workshop</strong><p>Sales supports the flow, Operations questions weekly capacity ownership, Finance has not accepted the cash target, and IT needs the conceptual ownership decisions before architecture begins.</p></div><label className={base.summaryField}>Design validation readout<textarea onChange={(event) => onText("readout", event.target.value)} placeholder={"Summarize outcomes, target process, decision grains, calendar, ownership, governance, exceptions, controls, KPIs, decisions accepted, unresolved items with owners/dates, risks, validation participants, and readiness recommendation."} rows={12} value={text.readout} /><small>{text.readout.trim().length}/200 minimum characters</small></label></>}
+      {active === "exception" && <><div className={base.homeworkPrompt}><strong>Scenario</strong><p>Pune Plant reaches 114% of monthly capacity after the sales forecast and plant allocation are agreed. Overtime could satisfy demand, but it would increase manufacturing cost and reduce margin.</p></div><label className={base.summaryField}>Future-state exception path<textarea onChange={(event) => onText("exception", event.target.value)} placeholder={"Define trigger and tolerance, detection point, owner, permitted responses, scenario comparison, downstream recalculation, workflow/approval, evidence, escalation, and the condition for closing and publishing."} rows={11} value={text.exception} /><small>{text.exception.trim().length}/180 minimum characters</small></label></>}
+      {active === "readout" && <><div className={base.homeworkPrompt}><strong>Validation workshop</strong><p>Sales supports the monthly flow, Operations needs plant-allocation and capacity ownership confirmed, Finance has not accepted the unit-cost handoff, and IT needs source ownership decisions before architecture begins.</p></div><label className={base.summaryField}>Design validation readout<textarea onChange={(event) => onText("readout", event.target.value)} placeholder={"Summarize outcomes, target process, decision grains, calendar, ownership, governance, exceptions, controls, KPIs, decisions accepted, unresolved items with owners/dates, risks, validation participants, and readiness recommendation."} rows={12} value={text.readout} /><small>{text.readout.trim().length}/200 minimum characters</small></label></>}
     </section>
     <div className={base.infoCallout}><Info size={19} /><div><strong>Five tasks are sufficient here</strong><p>They cover the judgement needed for Phase 3. Detailed requirement tracing, architecture, dimension design, configuration, and testing are intentionally left to their own lifecycle phases.</p></div></div>
   </>;

@@ -1,0 +1,4 @@
+Measure ID,Dimension,Service or outcome,Metric,Baseline,Target,Current result,Trend,Frequency,Source,Owner,Threshold action,Evidence period,Status
+BAU-HLT-001,Reliability,Required scheduled jobs,Successful completion rate,TRAINING SAMPLE,Approved target,,Pending,Per cycle,Job register,Operations owner,Investigate failure and verify downstream controls,YYYY-MM,Pending
+BAU-HLT-002,Business control,Plan1 to ApexPlan ASO,Full-precision reconciliation variance,TRAINING SAMPLE,Within approved tolerance,,Pending,Per publish,Reconciliation control,Functional owner,Hold reporting acceptance and investigate,YYYY-MM,Pending
+BAU-HLT-003,Experience,Planner journey,Governed journey completion without offline workaround,TRAINING SAMPLE,Approved target,,Pending,Monthly,Usage and support evidence,Product owner,Analyze task process design data and enablement,YYYY-MM,Pending

@@ -1,0 +1,11 @@
+test_id,test,expected_result,evidence
+WD-T01,Calculate Pune workforce requirement,136 productive hours per FTE; 3.014706 exact FTE; 4 roster FTE; 2-hour gap,Workforce calculation and independent check
+WD-T02,Set productive availability to zero,Rule blocks invalid productive-capacity denominator,Validation message
+WD-T03,Exceed approved overtime limit,Exception remains open and compliant alternative is required,Negative-test evidence
+WD-T04,Compare two-hour gap actions,Overtime costs 700 while one roster FTE costs 45000 monthly; timing and recurrence remain visible,Action comparison
+WD-T05,Calculate future capacity gap,Gross gap 110; mitigations 50; residual gap 60; one new asset,Capacity bridge
+WD-T06,Set asset lead time after need date,New capacity is excluded and scenario remains infeasible,Late-asset test
+WD-T07,Calculate CapEx financial impact,Investment 1200000 and monthly depreciation 20000,Financial schedule
+WD-T08,Remove enabling operator or utility dependency,CapEx scenario cannot be approved,Dependency completeness test
+WD-T09,Rerun changed production scope,Workforce asset cost and financial scopes update and reconcile,Connected rerun evidence
+WD-T10,Move approved results to ApexPlan ASO,Reporting totals agree with reconciled Plan1 detail,Aggregate reconciliation

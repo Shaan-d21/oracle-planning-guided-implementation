@@ -23,14 +23,14 @@ export const integrationReadinessControls = [
 ] as const;
 
 export const sourceContractCases = [
-  { id: "SC-01", issue: "The source file contains SALES_QTY, but the contract does not identify its target Account member.", correct: "Stop preparation and obtain an approved measure-to-Account mapping before loading", options: ["Stop preparation and obtain an approved measure-to-Account mapping before loading", "Load it to the first available account", "Create an account during the data load"] },
-  { id: "SC-02", issue: "The file has eight records and a signed source amount total of 800.", correct: "Record both controls and reconcile them through staging, validation, export, and Planning", options: ["Record both controls and reconcile them through staging, validation, export, and Planning", "Check only the final total", "Ignore record counts if the job succeeds"] },
-  { id: "SC-03", issue: "A row contains a nonnumeric Amount and another uses source Product P999 with no approved mapping.", correct: "Quarantine both defects before export and assign them to the source or mapping owner", options: ["Quarantine both defects before export and assign them to the source or mapping owner", "Convert the amount to zero and map P999 randomly", "Delete both rows without recording them"] },
+  { id: "SC-01", issue: "The source file contains an Account value, but the contract does not prove that it maps to the approved historical-demand account.", correct: "Stop preparation and obtain an approved measure-to-Account mapping before loading", options: ["Stop preparation and obtain an approved measure-to-Account mapping before loading", "Load it to the first available account", "Create an account during the data load"] },
+  { id: "SC-02", issue: "The clean FY26 file has 576 unique records and a signed source total of 66,240 units.", correct: "Record both controls and reconcile them through staging, validation, export, and Planning", options: ["Record both controls and reconcile them through staging, validation, export, and Planning", "Check only the final total", "Ignore record counts if the job succeeds"] },
+  { id: "SC-03", issue: "A row contains a nonnumeric Amount and another uses Product UNKNOWN_PRODUCT with no approved mapping.", correct: "Quarantine both defects before export and assign them to the source or mapping owner", options: ["Quarantine both defects before export and assign them to the source or mapping owner", "Convert the amount to zero and map the Product randomly", "Delete both rows without recording them"] },
   { id: "SC-04", issue: "Two rows have the same business key and amount.", correct: "Confirm whether they are legitimate transactions or a duplicate before aggregation", options: ["Confirm whether they are legitimate transactions or a duplicate before aggregation", "Assume duplicate rows are always correct", "Let Planning decide which row to keep"] },
 ] as const;
 
 export const configurationCases = [
-  { id: "CFG-01", situation: "A repeatable historical-sales file will load to the PSP_MONTHLY cube.", correct: "Create a governed file-based integration with a stable name, location, source file profile, Planning target, category, and owner", options: ["Create a governed file-based integration with a stable name, location, source file profile, Planning target, category, and owner", "Create a new anonymous integration for every run", "Load directly to whichever cube is open"] },
+  { id: "CFG-01", situation: "A repeatable monthly historical-sales file will load to the Plan1 BSO cube.", correct: "Create a governed file-based integration with a stable name, location, source file profile, Plan1 target, category, and owner", options: ["Create a governed file-based integration with a stable name, location, source file profile, Plan1 target, category, and owner", "Create a new anonymous integration for every run", "Load directly to whichever cube is open"] },
   { id: "CFG-02", situation: "The same location is proposed for unrelated source feeds with different mappings and access owners.", correct: "Use separate controlled locations when mapping ownership or access must be isolated", options: ["Use separate controlled locations when mapping ownership or access must be isolated", "Force every feed into one location", "Give every user access to all locations"] },
   { id: "CFG-03", situation: "The clean training file is comma-delimited with a header row.", correct: "Configure and preview the delimiter and header, then verify column names and representative values before saving", options: ["Configure and preview the delimiter and header, then verify column names and representative values before saving", "Skip preview because the file opens in Excel", "Guess the column positions"] },
   { id: "CFG-04", situation: "A production ERP direct connector may be required later.", correct: "Prove the file-based pattern and controls first; design the connector separately with credentials, filters, ownership, and support", options: ["Prove the file-based pattern and controls first; design the connector separately with credentials, filters, ownership, and support", "Store credentials in the training file", "Replace the source contract with connector defaults"] },
@@ -38,17 +38,17 @@ export const configurationCases = [
 
 export const dimensionMappingCases = [
   { id: "DM-01", situation: "MEASURE_CODE identifies the Planning measure.", correct: "Map MEASURE_CODE to Account and validate every distinct source code" },
-  { id: "DM-02", situation: "ENTITY_CODE, PRODUCT_CODE, CUSTOMER_CODE, and CHANNEL_CODE identify business grain.", correct: "Map each source column to its corresponding target dimension; do not collapse the approved grain" },
-  { id: "DM-03", situation: "VERSION is absent because all records are final actuals.", correct: "Use an approved constant/default target value only when the contract proves the source is single-valued" },
-  { id: "DM-04", situation: "Source period 2026-01 must load to Jan in FY26.", correct: "Include the required time fields and use an explicit period mapping when source and target labels differ" },
-  { id: "DM-05", situation: "Source scenario code ACT must load to Planning Scenario Actual.", correct: "Use a governed category mapping whose target member exists in Planning" },
+  { id: "DM-02", situation: "ENTITY_CODE, PRODUCT_CODE, MARKET_CODE, CHANNEL_CODE, and CURRENCY_CODE identify the Apex target intersection.", correct: "Map each source column to Entity, Product, Market, Channel, and Currency without collapsing the approved grain" },
+  { id: "DM-03", situation: "VERSION contains Final for every controlled Actual record.", correct: "Map the supplied Version and validate that the entire source remains single-valued as contracted" },
+  { id: "DM-04", situation: "Source Period Jan and Year FY26 must resolve to the corresponding Planning time members.", correct: "Include both time fields and use explicit period mapping when the source and target calendar labels differ" },
+  { id: "DM-05", situation: "Source Scenario Actual must load through the approved Actual integration category.", correct: "Use a governed category mapping whose target member exists in Planning" },
 ] as const;
 
 export const memberMappingCases = [
-  { id: "MM-01", situation: "Product P100 must load to REF100.", correct: "Explicit mapping" },
-  { id: "MM-02", situation: "Source entities beginning IN_WEST_ share one approved target only for this feed.", correct: "Like mapping with a reviewed pattern and processing order" },
-  { id: "MM-03", situation: "Numeric account codes 4100 through 4199 map to one governed sales group.", correct: "Between mapping only when the complete range has one approved meaning" },
-  { id: "MM-04", situation: "A controlled list of noncontiguous channel codes maps to Retail.", correct: "In mapping with the approved source list" },
+  { id: "MM-01", situation: "The controlled source Product MIXER_GRINDER must load to the identically named approved member.", correct: "Explicit mapping" },
+  { id: "MM-02", situation: "Source market codes beginning NORTH_ share one approved target North only for this feed.", correct: "Like mapping with a reviewed pattern and processing order" },
+  { id: "MM-03", situation: "Numeric sales account codes 4100 through 4199 map to one governed Sales_Revenue target.", correct: "Between mapping only when the complete range has one approved meaning" },
+  { id: "MM-04", situation: "A controlled list of source channel codes DIST and WHOLESALE maps to Distributor.", correct: "In mapping with the approved source list" },
   { id: "MM-05", situation: "Source Year and Period together determine two target time dimensions.", correct: "Use multi-dimensional mapping only when the signed design requires the combined relationship" },
   { id: "MM-06", situation: "Source and target values already match for a conformed dimension.", correct: "Use a deliberate passthrough/copy pattern and still validate source values against target metadata" },
 ] as const;
@@ -62,17 +62,17 @@ export const runDecisionCases = [
 ] as const;
 
 export const rejectCases = [
-  { id: "IR-01", symptom: "Product P999 is unmapped.", correct: "Confirm whether P999 should map to an existing approved Product or be rejected for source/master-data correction" },
+  { id: "IR-01", symptom: "Product code UNKNOWN_PRODUCT is unmapped.", correct: "Confirm whether it should map to an existing approved Apex Product or be rejected for source/master-data correction" },
   { id: "IR-02", symptom: "The source period is 2026-13.", correct: "Reject the invalid period and correct it at source; do not force it into a valid target month" },
   { id: "IR-03", symptom: "Amount contains text instead of a number.", correct: "Reject the row, correct the source data type, reload the controlled file, and preserve defect evidence" },
   { id: "IR-04", symptom: "Process Details shows rejected target cells after export.", correct: "Download the validation output, identify invalid members or protected intersections, correct the governed cause, and rerun the required stage" },
-  { id: "IR-05", symptom: "The job is successful but Planning total is 780 versus source total 800.", correct: "Do not sign off; reconcile filtered, skipped, mapped, rejected, and target records until the 20 difference is explained" },
+  { id: "IR-05", symptom: "The job is successful but Planning contains 66,220 units versus the 66,240-unit source control.", correct: "Do not sign off; reconcile filtered, skipped, mapped, rejected, and target records until the 20-unit difference is explained" },
 ] as const;
 
 export const reconciliationControls = [
   "Source file name/version, record count, amount total, and owner approval",
   "Imported, skipped, mapped, unmapped, validated, exported, and rejected record counts",
-  "Control totals by Entity, Product, Account, Period, and Scenario/category",
+  "Control totals by Entity, Product, Market, Channel, Account, Currency, Period, and Scenario/category",
   "Process ID, stage statuses, logs, validation report, and defect disposition",
   "Planning retrieval proving the expected target POV, values, and aggregation",
   "Rerun/idempotency result showing no unexplained duplication or stale records",
@@ -124,7 +124,7 @@ export const integrationScreenshots = {
   ],
   mapping: [
     { id: "DI-UI-04", title: "Map source columns to target dimensions", path: "Integration → Map Dimensions", asset: "04-map-dimensions.png", capture: "Map Dimensions page showing file columns mapped to Planning dimensions and approved expressions/constants.", action: "Map each source field to the approved target dimension; use constants only for contractually single-valued dimensions.", evidence: "Every required target dimension is sourced, defaulted, or explicitly excluded with rationale.", docUrl: "https://docs.oracle.com/en/cloud/saas/enterprise-performance-management-common/diepm/integrations_dimensions_100x92489fca.html" },
-    { id: "DI-UI-05", title: "Define period mappings", path: "Data Integration → Actions → Setup → Period Mapping", asset: "05-period-mapping.png", capture: "Period Mapping page showing source period 2026-01 aligned to the approved Planning year and month.", action: "Use default processing only when calendars and labels conform; otherwise create and review explicit mappings.", evidence: "Boundary periods and invalid periods have positive and negative tests.", docUrl: "https://docs.oracle.com/en/cloud/saas/enterprise-performance-management-common/diepm/integrations_source_mappings.html" },
+    { id: "DI-UI-05", title: "Define period mappings", path: "Data Integration → Actions → Setup → Period Mapping", asset: "05-period-mapping.png", capture: "Period Mapping page showing source Period and Year values aligned to Jan through Dec FY26 in Planning.", action: "Use default processing only when calendars and labels conform; otherwise create and review explicit mappings.", evidence: "Jan, Dec, FY26 boundaries, and invalid M13 have positive and negative tests.", docUrl: "https://docs.oracle.com/en/cloud/saas/enterprise-performance-management-common/diepm/integrations_source_mappings.html" },
     { id: "DI-UI-06", title: "Define category mapping", path: "Data Integration → Actions → Setup → Category Mapping", asset: "06-category-mapping.png", capture: "Category Mapping page showing the integration category aligned with target Scenario Actual.", action: "Confirm the target Scenario member exists and that the category is correct for this feed.", evidence: "Category, target Scenario, frequency, owner, and review result recorded.", docUrl: "https://docs.oracle.com/en/cloud/saas/enterprise-performance-management-common/diepm/integrations_category_map.html" },
   ],
   members: [

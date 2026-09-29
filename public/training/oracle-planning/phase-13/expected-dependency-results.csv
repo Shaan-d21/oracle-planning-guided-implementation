@@ -1,0 +1,16 @@
+scenario,metric,value,unit,control_reference
+Jan Workforce,Pune productive hours per FTE,136,Hours,160 paid hours × 85 percent
+Jan Workforce,Pune exact required FTE,3.014706,FTE,410 ÷ 136
+Jan Workforce,Pune roster FTE,4,People,Round exact FTE up
+Jan Workforce,Pune current productive capacity,408,Hours,3 × 136
+Jan Workforce,Pune gap,2,Hours,410 − 408
+Jan Workforce,Short-term overtime cost,700,INR,2 × 350
+Jan Workforce,Permanent monthly hire cost,45000,INR,1 roster FTE × 45000
+Growth CapEx,Gross capacity gap,110,Hours,560 − 450
+Growth CapEx,Approved mitigations,50,Hours,30 overtime + 20 productivity
+Growth CapEx,Residual capacity gap,60,Hours,110 − 50
+Growth CapEx,Required new assets,1,Asset,Round 60 ÷ 160 up
+Growth CapEx,Post-action capacity,660,Hours,450 + 50 + 160
+Growth CapEx,Post-action headroom,100,Hours,660 − 560
+Growth CapEx,Capital investment,1200000,INR,1 × 1200000
+Growth CapEx,Monthly depreciation,20000,INR,(1200000 − 0) ÷ 60

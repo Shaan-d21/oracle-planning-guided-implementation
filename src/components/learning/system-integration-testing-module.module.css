@@ -1,0 +1,418 @@
+.phaseBoundary {
+  display: grid;
+  gap: 11px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.phaseBoundary > div,
+.baselineGrid article {
+  background: linear-gradient(145deg, #f8fbfd, #eef5fa);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 14px;
+}
+
+.phaseBoundary small,
+.phaseBoundary strong,
+.phaseBoundary span,
+.baselineGrid small,
+.baselineGrid strong,
+.baselineGrid span {
+  display: block;
+}
+
+.phaseBoundary small,
+.baselineGrid small {
+  color: var(--color-primary);
+  font-size: 0.54rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.phaseBoundary strong,
+.baselineGrid strong {
+  font-size: 0.75rem;
+  margin-top: 5px;
+}
+
+.phaseBoundary span,
+.baselineGrid span {
+  color: var(--color-text-muted);
+  font-size: 0.59rem;
+  line-height: 1.48;
+  margin-top: 5px;
+}
+
+.coverageFlow,
+.recoveryFlow {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(8, 1fr);
+}
+
+.coverageFlow article,
+.recoveryFlow article {
+  align-items: center;
+  background: #f6f9fc;
+  border: 1px solid var(--color-border);
+  border-radius: 9px;
+  display: flex;
+  gap: 7px;
+  min-height: 54px;
+  padding: 9px;
+}
+
+.coverageFlow article > span,
+.recoveryFlow article > span {
+  align-items: center;
+  background: var(--color-primary);
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  flex: 0 0 22px;
+  font-size: 0.54rem;
+  height: 22px;
+  justify-content: center;
+}
+
+.coverageFlow article > strong,
+.recoveryFlow article > strong {
+  font-size: 0.56rem;
+  line-height: 1.35;
+}
+
+.baselineGrid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.referenceNote,
+.runbookNote {
+  align-items: flex-start;
+  background: #fff8ed;
+  border: 1px solid #ecd8ad;
+  border-radius: 10px;
+  color: #8a5600;
+  display: flex;
+  gap: 11px;
+  padding: 14px;
+}
+
+.referenceNote > svg,
+.runbookNote > svg {
+  flex: 0 0 auto;
+}
+
+.referenceNote strong,
+.referenceNote span {
+  display: block;
+}
+
+.referenceNote strong {
+  font-size: 0.7rem;
+}
+
+.referenceNote span,
+.runbookNote span {
+  color: var(--color-text-muted);
+  font-size: 0.62rem;
+  line-height: 1.5;
+  margin-top: 3px;
+}
+
+.defectFlow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.defectFlow span {
+  align-items: center;
+  background: #f3f7fa;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  display: flex;
+  font-size: 0.57rem;
+  font-weight: 750;
+  gap: 7px;
+  padding: 7px 9px;
+}
+
+.defectFlow svg {
+  color: #8ca2b4;
+}
+
+.sitLab {
+  border: 1px solid #b8cee0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.sitLab > header {
+  align-items: center;
+  background: linear-gradient(110deg, #0a528c, #126bae);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 16px;
+}
+
+.sitLab > header > div {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+
+.sitLab > header small,
+.sitLab > header strong {
+  display: block;
+}
+
+.sitLab > header small {
+  font-size: 0.52rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
+
+.sitLab > header strong {
+  font-size: 0.75rem;
+  margin-top: 2px;
+}
+
+.sitLab > header > span {
+  background: rgb(255 255 255 / 16%);
+  border-radius: 999px;
+  font-size: 0.59rem;
+  font-weight: 750;
+  padding: 7px 10px;
+}
+
+.stagePath {
+  display: grid;
+  gap: 7px;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 15px;
+}
+
+.stagePath article {
+  align-items: center;
+  background: #f6f8fa;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  display: flex;
+  gap: 7px;
+  opacity: 0.6;
+  padding: 9px;
+}
+
+.stagePath article > span {
+  align-items: center;
+  background: #c5d0da;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  flex: 0 0 23px;
+  font-size: 0.55rem;
+  height: 23px;
+  justify-content: center;
+}
+
+.stagePath article strong {
+  font-size: 0.55rem;
+  line-height: 1.3;
+}
+
+.stagePath .stageActive {
+  background: #eef8f4;
+  border-color: #7bbca6;
+  opacity: 1;
+}
+
+.stagePath .stageActive > span {
+  background: #168663;
+}
+
+.controlGrid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 0 15px 13px;
+}
+
+.controlGrid label,
+.evidenceNote {
+  color: var(--color-text);
+  font-size: 0.59rem;
+  font-weight: 750;
+}
+
+.controlGrid input,
+.evidenceNote textarea {
+  background: white;
+  border: 1px solid #aebfcd;
+  border-radius: 7px;
+  color: var(--color-text);
+  display: block;
+  font: inherit;
+  margin-top: 5px;
+  padding: 9px;
+  width: 100%;
+}
+
+.evidenceNote {
+  display: block;
+  padding: 0 15px 13px;
+}
+
+.evidenceNote small {
+  color: var(--color-text-muted);
+  display: block;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+.controlSummary {
+  display: grid;
+  gap: 9px;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 0 15px 15px;
+}
+
+.controlSummary article {
+  border: 1px solid var(--color-border);
+  border-radius: 9px;
+  padding: 11px;
+}
+
+.controlSummary small,
+.controlSummary strong,
+.controlSummary span {
+  display: block;
+}
+
+.controlSummary small {
+  font-size: 0.53rem;
+  font-weight: 800;
+}
+
+.controlSummary strong {
+  font-size: 0.83rem;
+  margin-top: 4px;
+}
+
+.controlSummary span {
+  align-items: center;
+  display: flex;
+  font-size: 0.53rem;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.goodMetric {
+  background: #edf9f4;
+  color: #116d52;
+}
+
+.badMetric {
+  background: #fff1ed;
+  color: #a64021;
+}
+
+.runError,
+.runSuccess {
+  align-items: center;
+  display: flex;
+  font-size: 0.62rem;
+  gap: 8px;
+  margin: 0 15px 12px;
+  padding: 10px 12px;
+}
+
+.runError {
+  background: #fff1ed;
+  border: 1px solid #efb29e;
+  color: #a64021;
+}
+
+.runSuccess {
+  background: #edf9f4;
+  border: 1px solid #86c9b2;
+  color: #116d52;
+}
+
+.sitLab > footer {
+  align-items: center;
+  background: #f5f8fb;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  gap: 14px;
+  justify-content: space-between;
+  padding: 12px 15px;
+}
+
+.sitLab > footer p {
+  color: var(--color-text-muted);
+  font-size: 0.57rem;
+  line-height: 1.45;
+  margin: 0;
+  max-width: 72%;
+}
+
+.sitLab > footer button {
+  align-items: center;
+  background: var(--color-primary);
+  border: 0;
+  border-radius: 7px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  font-size: 0.61rem;
+  font-weight: 800;
+  gap: 6px;
+  padding: 9px 13px;
+}
+
+.sitLab > footer button:disabled {
+  cursor: default;
+  opacity: 0.55;
+}
+
+@media (max-width: 1180px) {
+  .coverageFlow,
+  .recoveryFlow {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .controlGrid,
+  .controlSummary {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .stagePath {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
+  .phaseBoundary,
+  .coverageFlow,
+  .recoveryFlow,
+  .baselineGrid,
+  .stagePath,
+  .controlGrid,
+  .controlSummary {
+    grid-template-columns: 1fr;
+  }
+
+  .sitLab > header,
+  .sitLab > footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .sitLab > footer p {
+    max-width: none;
+  }
+}

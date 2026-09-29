@@ -1,0 +1,434 @@
+.layerGrid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.layerGrid article,
+.workflowContract > div {
+  background: linear-gradient(145deg, #f8fbfd, #eef5fa);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 14px;
+}
+
+.layerGrid strong,
+.layerGrid span,
+.workflowContract small,
+.workflowContract strong,
+.workflowContract span {
+  display: block;
+}
+
+.layerGrid strong {
+  color: var(--color-primary);
+  font-size: 0.68rem;
+}
+
+.layerGrid span,
+.workflowContract span {
+  color: var(--color-text-muted);
+  font-size: 0.6rem;
+  line-height: 1.5;
+  margin-top: 6px;
+}
+
+.sodStrip,
+.referenceNote {
+  align-items: flex-start;
+  background: #fff8ed;
+  border: 1px solid #ecd8ad;
+  border-radius: 10px;
+  color: #8a5600;
+  display: flex;
+  gap: 11px;
+  padding: 14px;
+}
+
+.sodStrip > svg,
+.referenceNote > svg {
+  flex: 0 0 auto;
+}
+
+.sodStrip strong,
+.sodStrip span,
+.referenceNote strong,
+.referenceNote span {
+  display: block;
+}
+
+.sodStrip strong,
+.referenceNote strong {
+  font-size: 0.7rem;
+}
+
+.sodStrip span,
+.referenceNote span {
+  color: var(--color-text-muted);
+  font-size: 0.62rem;
+  line-height: 1.5;
+  margin-top: 3px;
+}
+
+.accessMatrix,
+.taskTable {
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.accessMatrix > div {
+  display: grid;
+  grid-template-columns: 0.8fr 1fr 1fr 1.45fr;
+}
+
+.taskTable > div {
+  display: grid;
+  grid-template-columns: 0.28fr 1.5fr 1fr 1fr 0.9fr;
+}
+
+.accessMatrix > div:not(:last-child),
+.taskTable > div:not(:last-child) {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.accessMatrix span,
+.accessMatrix strong,
+.taskTable span,
+.taskTable strong {
+  font-size: 0.58rem;
+  line-height: 1.45;
+  padding: 10px 12px;
+}
+
+.accessMatrix span:not(:last-child),
+.accessMatrix strong:not(:last-child),
+.taskTable span:not(:last-child),
+.taskTable strong:not(:last-child) {
+  border-right: 1px solid var(--color-border);
+}
+
+.matrixHead,
+.taskHead {
+  background: #edf5fb;
+  color: #154c79;
+}
+
+.controlFlow {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.controlFlow article {
+  align-items: center;
+  background: #f6f9fc;
+  border: 1px solid var(--color-border);
+  border-radius: 9px;
+  display: flex;
+  gap: 7px;
+  min-height: 54px;
+  padding: 9px;
+}
+
+.controlFlow span {
+  align-items: center;
+  background: var(--color-primary);
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  flex: 0 0 22px;
+  font-size: 0.56rem;
+  height: 22px;
+  justify-content: center;
+}
+
+.controlFlow strong {
+  font-size: 0.57rem;
+  line-height: 1.35;
+}
+
+.workflowContract {
+  display: grid;
+  gap: 11px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.workflowContract small {
+  color: var(--color-primary);
+  font-size: 0.55rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.workflowContract strong {
+  font-size: 0.72rem;
+  margin-top: 5px;
+}
+
+.testLegend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.testLegend span {
+  align-items: center;
+  background: #f4f8fb;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  color: var(--color-text-muted);
+  display: flex;
+  font-size: 0.6rem;
+  gap: 6px;
+  padding: 7px 10px;
+}
+
+.workflowLab {
+  border: 1px solid #b8cee0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.workflowLab > header {
+  align-items: center;
+  background: linear-gradient(110deg, #0a528c, #126bae);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 16px;
+}
+
+.workflowLab > header > div {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+
+.workflowLab > header small,
+.workflowLab > header strong {
+  display: block;
+}
+
+.workflowLab > header small {
+  font-size: 0.52rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
+
+.workflowLab > header strong {
+  font-size: 0.75rem;
+  margin-top: 2px;
+}
+
+.workflowLab > header > span {
+  background: rgb(255 255 255 / 16%);
+  border-radius: 999px;
+  font-size: 0.59rem;
+  font-weight: 750;
+  padding: 7px 10px;
+}
+
+.stagePath {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 15px;
+}
+
+.stagePath article {
+  align-items: center;
+  background: #f6f8fa;
+  border: 1px solid var(--color-border);
+  border-radius: 9px;
+  display: flex;
+  gap: 8px;
+  opacity: 0.62;
+  padding: 10px;
+}
+
+.stagePath article > span {
+  align-items: center;
+  background: #c5d0da;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  flex: 0 0 24px;
+  font-size: 0.58rem;
+  height: 24px;
+  justify-content: center;
+}
+
+.stagePath article strong,
+.stagePath article small {
+  display: block;
+}
+
+.stagePath article strong {
+  font-size: 0.59rem;
+}
+
+.stagePath article small {
+  color: var(--color-text-muted);
+  font-size: 0.5rem;
+  margin-top: 2px;
+}
+
+.stagePath .stageActive {
+  background: #eef8f4;
+  border-color: #7bbca6;
+  opacity: 1;
+}
+
+.stagePath .stageActive > span {
+  background: #168663;
+}
+
+.workflowControls {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0 15px 12px;
+}
+
+.workflowControls label,
+.annotationField {
+  color: var(--color-text);
+  font-size: 0.6rem;
+  font-weight: 750;
+}
+
+.workflowControls input,
+.annotationField textarea {
+  background: white;
+  border: 1px solid #aebfcd;
+  border-radius: 7px;
+  color: var(--color-text);
+  display: block;
+  font: inherit;
+  margin-top: 5px;
+  padding: 9px;
+  width: 100%;
+}
+
+.annotationField {
+  display: block;
+  padding: 0 15px 12px;
+}
+
+.annotationField small {
+  color: var(--color-text-muted);
+  display: block;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+.workflowError,
+.workflowSuccess {
+  align-items: center;
+  display: flex;
+  font-size: 0.62rem;
+  gap: 8px;
+  margin: 0 15px 12px;
+  padding: 10px 12px;
+}
+
+.workflowError {
+  background: #fff1ed;
+  border: 1px solid #efb29e;
+  color: #a64021;
+}
+
+.workflowSuccess {
+  background: #edf9f4;
+  border: 1px solid #86c9b2;
+  color: #116d52;
+}
+
+.workflowLab > footer {
+  align-items: center;
+  background: #f5f8fb;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  gap: 14px;
+  justify-content: space-between;
+  padding: 12px 15px;
+}
+
+.workflowLab > footer p {
+  color: var(--color-text-muted);
+  font-size: 0.57rem;
+  line-height: 1.45;
+  margin: 0;
+  max-width: 72%;
+}
+
+.workflowLab > footer button {
+  align-items: center;
+  background: var(--color-primary);
+  border: 0;
+  border-radius: 7px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  font-size: 0.62rem;
+  font-weight: 800;
+  gap: 6px;
+  padding: 9px 13px;
+}
+
+.workflowLab > footer button:disabled {
+  cursor: default;
+  opacity: 0.58;
+}
+
+@media (max-width: 1180px) {
+  .layerGrid,
+  .workflowContract {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .controlFlow {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .stagePath {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
+  .layerGrid,
+  .workflowContract,
+  .controlFlow,
+  .stagePath,
+  .workflowControls {
+    grid-template-columns: 1fr;
+  }
+
+  .accessMatrix > div,
+  .taskTable > div {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .matrixHead,
+  .taskHead {
+    display: none !important;
+  }
+
+  .accessMatrix span,
+  .taskTable span {
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .workflowLab > header,
+  .workflowLab > footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .workflowLab > footer p {
+    max-width: none;
+  }
+}

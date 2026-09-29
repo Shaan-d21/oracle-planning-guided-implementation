@@ -97,7 +97,7 @@
 .tableRow > div { display: grid; gap: 3px; grid-template-columns: 40px 1fr; }
 .tableRow strong { color: var(--color-primary); font-family: var(--font-mono); font-size: .5rem; }
 .tableRow small { color: #586a7c; font-size: .57rem; line-height: 1.45; }
-.tableRow select,.designMap select { background: white; border: 1px solid #cbd7e2; border-radius: 7px; color: var(--color-text); font-family: inherit; font-size: .56rem; min-width: 0; outline: none; padding: 8px; width: 100%; }
+.tableRow select,.designMap select { background: white; border: 1px solid #cbd7e2; border-radius: 7px; color: var(--color-text); font-family: inherit; font-size: .75rem; min-height: 40px; min-width: 0; outline: none; padding: 8px 10px; width: 100%; }
 .tableRow select:focus,.designMap select:focus { border-color: var(--color-primary); box-shadow: 0 0 0 3px rgba(11,99,182,.1); }
 .evidenceRequestGrid,.artifactGrid { display: grid; gap: 8px; grid-template-columns: repeat(2,1fr); }
 .hypothesisCallout { align-items: start; background: #eef6fd; border: 1px solid #c9def0; border-radius: 9px; color: var(--color-primary); display: flex; gap: 9px; margin-top: 16px; padding: 12px; }
@@ -111,7 +111,7 @@
 .designMap article p { color: #556779; font-size: .57rem; line-height: 1.45; margin: 0; }
 .designMap article > svg { color: #9baab7; }
 .summaryField { color: #526274; display: grid; font-size: .58rem; font-weight: 650; gap: 5px; margin-top: 16px; }
-.summaryField textarea { background: white; border: 1px solid #cfd9e3; border-radius: 7px; color: var(--color-text); font-family: var(--font-body); font-size: .64rem; outline: none; padding: 10px; resize: vertical; }
+.summaryField textarea { background: white; border: 1px solid #cfd9e3; border-radius: 7px; color: var(--color-text); font-family: var(--font-body); font-size: .75rem; line-height: 1.55; outline: none; padding: 10px; resize: vertical; }
 .summaryField textarea:focus { border-color: var(--color-primary); box-shadow: 0 0 0 3px rgba(11,99,182,.1); }
 .discoveryPreview { background: var(--color-navy); border-radius: 11px; color: white; margin-top: 17px; padding: 16px; }
 .discoveryPreview > small { color: #7eb6e8; font-size: .51rem; font-weight: 750; letter-spacing: .07em; text-transform: uppercase; }
@@ -145,7 +145,7 @@
 .homeworkMap article > div { display: grid; gap: 7px; grid-template-columns: 43px 1fr; }
 .homeworkMap article > div span { color: var(--color-primary); font-family: var(--font-mono); font-size: .49rem; }
 .homeworkMap article p { color: #566879; font-size: .56rem; line-height: 1.45; margin: 0; }
-.homeworkMap select { background: white; border: 1px solid #cbd7e2; border-radius: 7px; color: var(--color-text); font-family: inherit; font-size: .55rem; min-width: 0; outline: none; padding: 8px; width: 100%; }
+.homeworkMap select { background: white; border: 1px solid #cbd7e2; border-radius: 7px; color: var(--color-text); font-family: inherit; font-size: .75rem; min-height: 40px; min-width: 0; outline: none; padding: 8px 10px; width: 100%; }
 .homeworkMap select:focus { border-color: var(--color-primary); box-shadow: 0 0 0 3px rgba(11,99,182,.1); }
 .processFlow { align-items: stretch; display: grid; gap: 7px; grid-template-columns: repeat(5,1fr); margin: 18px 0; }
 .processFlow > div { align-items: center; background: #f7f9fb; border: 1px solid var(--color-border); border-radius: 8px; display: grid; gap: 5px; grid-template-columns: 22px 1fr auto; min-height: 60px; padding: 9px; position: relative; }
@@ -183,7 +183,8 @@
 .interviewPanel > div { align-items: center; color: var(--color-primary); display: flex; font-size: .68rem; gap: 7px; margin-bottom: 2px; }
 .interviewPanel > label:not(.noteField) { align-items: center; background: white; border: 1px solid #e1e7ed; border-radius: 7px; display: flex; font-size: .6rem; gap: 8px; padding: 9px; }
 .noteField { color: #526274; display: grid; font-size: .58rem; font-weight: 650; gap: 5px; margin-top: 5px; }
-.noteField textarea,.requirementForm input,.requirementForm textarea,.painList select { background: white; border: 1px solid #cfd9e3; border-radius: 7px; color: var(--color-text); font-family: var(--font-body); font-size: .64rem; outline: none; padding: 9px; resize: vertical; }
+.noteField textarea,.requirementForm input,.requirementForm textarea,.painList select { background: white; border: 1px solid #cfd9e3; border-radius: 7px; color: var(--color-text); font-family: var(--font-body); font-size: .75rem; line-height: 1.5; outline: none; padding: 9px 10px; resize: vertical; }
+.requirementForm input,.painList select { min-height: 40px; }
 .noteField textarea:focus,.requirementForm input:focus,.requirementForm textarea:focus,.painList select:focus { border-color: var(--color-primary); box-shadow: 0 0 0 3px rgba(11,99,182,.1); }
 .interviewPanel > small { color: var(--color-text-muted); font-size: .5rem; justify-self: end; }
 .currentFlow { align-items: center; display: flex; flex-wrap: wrap; gap: 5px; margin: 17px 0; }

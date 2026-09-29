@@ -1,0 +1,2 @@
+Incident ID,Detected At,Detected By,Release,User / Role,POV / Process,Business Impact,Data / Control Impact,Severity,Related Condition,Cumulative Trend,Containment,Rollback Threshold,Decision Authority,Owner,SLA,Status,Root Cause,Fix / Workaround,Change Reference,Retest / Regression,Reconciliation,Communication,Closed At,Closure Authority,Evidence Link,Comments
+INC-001,YYYY-MM-DD HH:MM,,ApexPlan-RC1,,,,,Unclassified,,,"Stop affected processing and protect evidence",,"Named production decision authority",,,Open,,,,,,,,,,,

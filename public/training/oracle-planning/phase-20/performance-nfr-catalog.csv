@@ -1,0 +1,6 @@
+NFR_ID,Business_Journey,Operation,Artifact,Role,POV,Data_Volume,Workload,Statistic,Target,Error_Tolerance,Measurement_Window,Owner,Status
+NFR-01,Enter sales plan,Open form,Sales Input,Sales Planner,Forecast|Working|FY25|North,Representative product-market-month,P50 and P95,P95,3 seconds,1 percent,Peak planning window,Business Process Owner,Draft
+NFR-02,Enter sales plan,Save form and attached rules,Sales Input,Sales Planner,Forecast|Working|FY25|North,20 changed cells|representative grid,50 concurrent users|6-second arrival lag,P95,5 seconds,1 percent,Peak planning window,Business Process Owner,Draft
+NFR-03,Calculate plan,Run ruleset,Apex End-to-End Plan,Power Planner,Forecast|Working|FY25|Company,Representative full-cycle data,Controlled batch,P95,30 seconds for scoped rule,0 percent,Batch window,Planning Product Owner,Draft
+NFR-04,Publish reporting,Run plan type map or data map,Plan1 to ApexPlan ASO,Administrator,Forecast|Working|FY25|Company,Approved measures and exceptions,Controlled batch,Maximum,45 seconds,0 percent,Post-calculation window,Technical Owner,Draft
+NFR-05,Review management plan,Open dashboard,Executive Plan Review,Approver,Forecast|Working|FY25|Company,Representative KPI queries,25 concurrent viewers,P95,4 seconds,1 percent,Review meeting window,Finance Owner,Draft

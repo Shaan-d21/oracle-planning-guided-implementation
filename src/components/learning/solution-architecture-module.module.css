@@ -17,7 +17,7 @@
 .mappingList strong { font-size: .64rem; }
 .mappingList article > div small { color: var(--color-text-muted); font-size: .53rem; grid-column: 2; line-height: 1.45; }
 .mappingList label,.summaryField { color: #46586a; display: grid; font-size: .58rem; font-weight: 700; gap: 6px; }
-.mappingList select,.integrationTable select,.summaryField textarea { background: white; border: 1px solid #cbd7e3; border-radius: 7px; color: var(--color-text); font: inherit; padding: 9px; }
+.mappingList select,.integrationTable select,.summaryField textarea { background: white; border: 1px solid #cbd7e3; border-radius: 7px; color: var(--color-text); font-family: var(--font-body); font-size: .75rem; min-height: 40px; min-width: 0; padding: 9px 10px; width: 100%; }
 .choiceGroup { border: 1px solid var(--color-border); border-radius: 10px; display: grid; gap: 9px; margin: 17px 0; padding: 15px; }
 .choiceGroup legend { color: var(--color-primary-dark); font-size: .66rem; font-weight: 750; padding: 0 6px; }
 .choiceGroup label { align-items: flex-start; color: #48596a; display: flex; font-size: .63rem; gap: 8px; line-height: 1.5; }
@@ -51,7 +51,7 @@
 .caseList strong { color: var(--color-primary-dark); display: block; font-size: .63rem; }
 .caseList p { color: #596b7c; font-size: .57rem; line-height: 1.5; margin: 0; }
 .caseList strong + p { margin-top: 4px; }
-.caseList select { background: white; border: 1px solid #cbd7e3; border-radius: 7px; color: var(--color-text); font-family: inherit; font-size: .56rem; min-width: 0; outline: none; padding: 9px; width: 100%; }
+.caseList select { background: white; border: 1px solid #cbd7e3; border-radius: 7px; color: var(--color-text); font-family: var(--font-body); font-size: .75rem; min-height: 40px; min-width: 0; outline: none; padding: 9px 10px; width: 100%; }
 .caseList select:focus,.mappingList select:focus,.summaryField textarea:focus { border-color: var(--color-primary); box-shadow: 0 0 0 3px rgba(11,99,182,.1); }
 .environmentFlow { display: grid; gap: 9px; grid-template-columns: 1fr 1fr; margin-top: 17px; }
 .environmentFlow button { align-items: center; background: white; border: 1px solid var(--color-border); border-radius: 10px; color: #536577; cursor: pointer; display: flex; flex-wrap: wrap; gap: 7px; padding: 14px; text-align: left; }

@@ -1,0 +1,7 @@
+CONTROL_ID,CONTROL_DESCRIPTION,EXPECTED_VALUE,ACTUAL_VALUE,DIFFERENCE,STATUS,OWNER,EVIDENCE_REFERENCE
+REC-01,Phase 09 Mixer Grinder demand equals Phase 10 demand handoff,1301.348,,,,,
+REC-02,Beginning FG plus expected good output minus demand equals projected ending FG,301.052,,,,,
+REC-03,Pune plus Noida starts equal planned starts,1380,,,,,
+REC-04,Total demonstrated capacity equals plant capacity sum,1600,,,,,
+REC-05,Overall utilization equals planned starts divided by total capacity percent,86.25,,,,,
+REC-06,Unchanged rerun produces identical results,0 difference,,,,,

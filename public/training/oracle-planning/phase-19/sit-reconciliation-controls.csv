@@ -1,0 +1,11 @@
+Control_ID,Source,Target,Measure_or_Bridge,Grain,Expected_Difference,Tolerance,Execution_ID,Source_Value,Target_Value,Difference,Owner,Reviewer,Status,Evidence
+REC-001,Source fixture,Data Integration staging,Rows units and amounts,File and controlled dimensions,0,0,,,,,Data Integration Owner,SIT Reviewer,Pending,
+REC-002,Staging,Plan1 Actual,Mapped target values,Account Product Entity Market Channel Period Scenario,0,0,,,,,Data Integration Owner,Finance Reviewer,Pending,
+REC-003,Consensus Demand,Inventory and Production,Demand inventory requirement and starts,Product Entity Month Scenario Version,0,0,,,,,Sales and Operations Owners,SIT Reviewer,Pending,
+REC-004,Production,Capacity Workforce and CapEx,Starts hours utilization staffing and asset need,Product Entity Month Scenario Version,0,0.01,,,,,Operations and Dependency Owners,SIT Reviewer,Pending,
+REC-005,Production and Cost,COGS and Margin,Material labor overhead inventory COGS and margin,Product Entity Month Scenario Version Currency,0,0.01,,,,,Costing Owner,Finance Reviewer,Pending,
+REC-006,Modules,Integrated Statements,Revenue costs working capital CapEx debt tax equity and cash,Account Entity Month Scenario Version Currency,0,0.01,,,,,Finance Owner,Finance Approver,Pending,
+REC-007,Balance Sheet,Balance Control,Assets less liabilities and equity,Entity Month Scenario Version Currency,0,0,,,,,Finance Owner,Finance Approver,Pending,
+REC-008,Plan1,ApexPlan ASO,Units revenue COGS margin income cash and exceptions,Common reporting POV,0,0.01,,,,,EPM Product Owner,SIT Reviewer,Pending,
+REC-009,Web,Smart View and Dashboards,Authorized values cell behavior and validations,Representative user and common POV,0,0.01,,,,,UX Owner,Security Reviewer,Pending,
+REC-010,Planning Approvals,Task Manager,Owner state reason timestamp and completion,Scenario Version Entity and schedule task,Aligned,N/A,,,,,Process Owner,SIT Reviewer,Pending,

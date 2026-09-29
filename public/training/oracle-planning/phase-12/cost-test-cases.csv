@@ -1,0 +1,11 @@
+test_id,test,expected_result,evidence
+CO-T01,Calculate Mixer Grinder unit cost,Material 210 labor 30 variable OH 15 fixed OH 20 total 275,Cost rollup and independent calculation
+CO-T02,Set absorption units to zero,Rule blocks invalid denominator,Validation message
+CO-T03,Remove a required component,Approval is blocked or controlled temporary assumption is visible,Missing-driver test
+CO-T04,Value production and inventory,1602.4 available units valued at 439410 and weighted average 274.219920,Valuation bridge
+CO-T05,Calculate COGS and ending inventory,COGS 356855.544608 ending value 82554.455392 and value control zero,COGS reconciliation
+CO-T06,Calculate net revenue and margin,Revenue 559579.64 margin 202724.095392 and margin 36.227926 percent,Margin bridge
+CO-T07,Protect source and calculated cells,Unauthorized edits are rejected,Access test
+CO-T08,Rerun after changed production quantity,Affected cost valuation COGS margin and reporting are recalculated,Connected rerun evidence
+CO-T09,Rerun unchanged Mixer Grinder scope,Results repeat with no duplicate data movement,Repeatability evidence
+CO-T10,Move Plan1 result to ApexPlan ASO,Reporting totals agree with reconciled detailed cube,Aggregate reconciliation

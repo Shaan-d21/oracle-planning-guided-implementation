@@ -16,6 +16,7 @@ export type MetadataBuildLessonId = (typeof metadataBuildLessons)[number]["id"];
 
 export const readinessControls = [
   "Approved Phase 06 hierarchy and member-property baseline",
+  "Approved Entity-currency assignment and Account behavior policy",
   "Authorized training environment and named builder / reviewer",
   "Pre-build dimension export and member control totals",
   "Load sequence, rollback approach, and change-window approval",
@@ -24,14 +25,14 @@ export const readinessControls = [
 
 export const fileQualityCases = [
   { id: "FQ-01", issue: "A Product row points to parent Missing_Line, which is absent from the baseline and file.", correct: "Reject from the load set; confirm the approved parent or correct the source mapping before import", options: ["Reject from the load set; confirm the approved parent or correct the source mapping before import", "Create Missing_Line automatically without approval", "Load the child at the root and fix it after go-live"] },
-  { id: "FQ-02", issue: "REF100 appears twice with different aliases.", correct: "Quarantine the duplicate and resolve the authoritative member record with the data owner", options: ["Quarantine the duplicate and resolve the authoritative member record with the data owner", "Keep both rows because aliases differ", "Rename one technical member during import"] },
+  { id: "FQ-02", issue: "AIR_FRYER appears twice with different aliases.", correct: "Quarantine the duplicate and resolve the authoritative member record with the data owner", options: ["Quarantine the duplicate and resolve the authoritative member record with the data owner", "Keep both rows because aliases differ", "Rename one technical member during import"] },
   { id: "FQ-03", issue: "A source extract is UTF-8 and comma-delimited, but its columns do not match the tenant export.", correct: "Map it into a copy of the tenant-exported template and validate headers before import", options: ["Map it into a copy of the tenant-exported template and validate headers before import", "Import it directly because all Oracle tenants use identical columns", "Delete unfamiliar tenant columns"] },
   { id: "FQ-04", issue: "A child row is listed before its approved parent in the prepared file.", correct: "Sequence parent records before children and retain a repeatable sort rule", options: ["Sequence parent records before children and retain a repeatable sort rule", "Change every child into a root", "Ignore hierarchy order and rely on manual repair"] },
 ] as const;
 
 export const manualBuildCases = [
-  { id: "MB-01", label: "Member identity", correct: "Use the approved stable technical name REF100 and business alias 100 L Refrigerator", options: ["Use the approved stable technical name REF100 and business alias 100 L Refrigerator", "Use the changing description as the technical key", "Create a second member whenever the alias changes"] },
-  { id: "MB-02", label: "Hierarchy placement", correct: "Place REF100 below Refrigeration exactly as approved", options: ["Place REF100 below Refrigeration exactly as approved", "Place it at the root for convenience", "Choose any parent with a similar label"] },
+  { id: "MB-01", label: "Member identity", correct: "Use the approved stable technical name AIR_FRYER and business alias Air Fryer", options: ["Use the approved stable technical name AIR_FRYER and business alias Air Fryer", "Use the changing description as the technical key", "Create a second member whenever the alias changes"] },
+  { id: "MB-02", label: "Hierarchy placement", correct: "Place AIR_FRYER below Home_Appliances exactly as approved", options: ["Place AIR_FRYER below Home_Appliances exactly as approved", "Place it at the root for convenience", "Choose any parent with a similar label"] },
   { id: "MB-03", label: "Properties", correct: "Apply only approved storage, aggregation, cube-validity, and description values", options: ["Apply only approved storage, aggregation, cube-validity, and description values", "Accept every default without review", "Enable the member in every cube"] },
   { id: "MB-04", label: "Evidence", correct: "Record before/after values, builder, reviewer, timestamp, and design reference", options: ["Record before/after values, builder, reviewer, timestamp, and design reference", "Use only a screenshot with no context", "Rely on the builder's memory"] },
 ] as const;
@@ -61,6 +62,7 @@ export const reconciliationControls = [
   "Root, parent, leaf, and total member counts by dimension",
   "Parent-child paths and orphan / duplicate checks",
   "Aliases, descriptions, storage, aggregation, data type, and cube validity",
+  "Pune and Noida local-input currency, company reporting currency, and monetary versus nonmonetary Account behavior",
   "Representative form visibility, writable intersections, and aggregation behavior",
   "Successful import and refresh jobs with logs or error-file disposition",
   "Post-build export compared with the approved baseline and archived with version details",
@@ -92,6 +94,7 @@ export const metadataArtifacts = [
   "Corrective-action and controlled-rerun evidence",
   "Refresh job result and post-refresh smoke-test evidence",
   "Post-build exports, property samples, and control totals",
+  "Entity-currency assignment and Account behavior validation signed by Finance",
   "Build summary, open items, owners, reviewer, and sign-off",
 ] as const;
 
@@ -106,7 +109,7 @@ export const metadataKnowledgeQuestions = [
 export const metadataScreenshots = {
   manual: [
     { id: "MB-UI-01", title: "Open the target dimension", path: "Home → Application → Overview → Dimensions → Product", asset: "01-dimensions-overview.png", capture: "Dimensions inventory and Product dimension selected in the training tenant.", action: "Confirm the target dimension and cube context against the approved build scope.", evidence: "Dimension, cube, builder, date, and design reference recorded.", docUrl: "https://docs.oracle.com/en/cloud/saas/planning-budgeting-cloud/pfusa/managing_dimensions.html" },
-    { id: "MB-UI-02", title: "Add and review a member", path: "Dimensions → Product → Edit Member Properties → Add Child", asset: "02-dimension-editor-add-member.png", capture: "New member row showing parent, name, alias, description, and relevant properties.", action: "Create only the approved REF100 training member and review its high-impact properties before Save.", evidence: "Maker-checker comparison agrees with the Phase 06 specification." },
+    { id: "MB-UI-02", title: "Add and review a member", path: "Dimensions → Product → Edit Member Properties → Add Child", asset: "02-dimension-editor-add-member.png", capture: "New AIR_FRYER member row showing parent Home_Appliances, alias Air Fryer, description, Plan1/ApexPlan validity, storage, and aggregation.", action: "Create only the approved AIR_FRYER training member and review its high-impact properties before Save.", evidence: "Maker-checker comparison agrees with the Phase 06 ApexPlan specification." },
   ],
   import: [
     { id: "IM-UI-01", title: "Export the tenant template", path: "Application → Overview → Dimensions → Export → Create", asset: "03-export-metadata.png", capture: "Export setup showing selected dimension, location, and delimiter.", action: "Export the target dimension and use it as the tenant-specific header/property reference.", evidence: "Pre-build export is versioned and its member counts recorded.", docUrl: "https://docs.oracle.com/en/cloud/saas/planning-budgeting-cloud/pfusa/exporting_metadata.html" },

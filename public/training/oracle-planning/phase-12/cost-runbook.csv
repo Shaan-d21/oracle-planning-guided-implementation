@@ -1,0 +1,9 @@
+step,activity,owner,input,control,expected_output
+1,Freeze scope and versions,Cost Planner,Approved production inventory demand and revenue,Product Entity period Scenario Version cost version currency and cutoff recorded,Controlled run header
+2,Validate material standard,Sourcing and Cost Accounting,BOM quantities rates units and loss convention,Effective dates conversions and duplicate-loss check complete,Approved direct material cost
+3,Validate conversion drivers,Manufacturing Controller,Labor machine and overhead baselines,Driver rates and absorption basis approved,Approved conversion cost
+4,Calculate unit cost,Cost Planner,Approved cost drivers,Scoped prompts and independent component rollup,Manufacturing unit cost
+5,Value production and inventory,Cost Planner,Beginning stock and expected good output,Quantity and layer-value bridge agrees,Goods available and weighted average
+6,Calculate COGS and margin,Cost Planner,Demand ending inventory and net revenue,Quantity value and reporting-grain controls agree,COGS ending value and gross margin
+7,Resolve and rerun,Cost Accounting Manager,Exceptions and changed operating plan,Affected scope rerun and data movement reconciled,Updated approved cost results
+8,Reconcile and approve,Independent Reviewer,All calculations jobs and movements,Detail aggregate repeatability security and evidence agree,Approved Phase 12 baseline

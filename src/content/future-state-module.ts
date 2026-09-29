@@ -13,38 +13,38 @@ export const futureStateLessons = [
 export type FutureStateLessonId = (typeof futureStateLessons)[number]["id"];
 
 export const outcomeScenarios = [
-  { id: "forecast", finding: "Regional forecast files conflict and approvals occur by email.", desiredOutcome: "One governed consensus forecast with owned overrides, workflow, comments, and audit history" },
+  { id: "forecast", finding: "Market and channel forecast files conflict and approvals occur by email.", desiredOutcome: "One governed monthly forecast with owned overrides, workflow, comments, and audit history" },
   { id: "inventory", finding: "A fixed safety-stock rule creates both excess inventory and shortages.", desiredOutcome: "Inventory policy responds to demand variability, lead time, service targets, and approved exceptions" },
-  { id: "capacity", finding: "Production feasibility is checked after the sales plan is agreed.", desiredOutcome: "Capacity, material, and supply constraints are evaluated before commitments are approved" },
+  { id: "capacity", finding: "Production feasibility is checked after the sales plan is agreed.", desiredOutcome: "Demand is allocated to Pune and Noida and plant capacity is evaluated before the plan is approved" },
   { id: "cost", finding: "Stale prices and disconnected operational assumptions distort margin.", desiredOutcome: "Approved operational drivers consistently calculate manufacturing cost, COGS, and margin" },
-  { id: "finance", finding: "Operational plans are manually reconciled to financial statements.", desiredOutcome: "Plan changes produce integrated, controlled, and reconcilable P&L, balance-sheet, and cash impacts" },
+  { id: "finance", finding: "Sales, production, and cost workbooks are manually reconciled for management review.", desiredOutcome: "Plan changes produce integrated, controlled, and reconcilable revenue, COGS, gross profit, and gross-margin results" },
 ] as const;
 
 export const planningFlow = [
   "Load and reconcile actuals, master data, and approved assumptions",
-  "Create baseline demand and commercial scenarios",
-  "Review sales overrides and agree consensus demand",
-  "Calculate inventory, production, and material requirements",
-  "Validate plant, material, procurement, and workforce feasibility",
-  "Resolve exceptions and compare approved scenarios",
-  "Calculate revenue, manufacturing cost, margin, and financial impact",
-  "Reconcile the integrated plan and review management outcomes",
+  "Plan monthly sales units and average selling price by Product × Market × Channel",
+  "Review sales overrides and calculate revenue",
+  "Set target inventory and allocate product demand to Pune and Noida",
+  "Calculate required production and validate monthly plant capacity",
+  "Calculate unit manufacturing cost, COGS, gross profit, and gross margin",
+  "Resolve exceptions and compare Actual, Budget, and Forecast",
+  "Reconcile the integrated plan and review management outcomes in the governed reporting layer",
   "Approve, lock, publish, and communicate the plan",
 ] as const;
 
 export const systemOwnershipCases = [
-  { id: "erp", information: "Posted sales, purchase, cost, and general-ledger actuals", correct: "ERP remains the system of record; Planning receives controlled and reconciled actuals" },
-  { id: "crm", information: "Opportunity pipeline, customer forecast signals, and commercial activity", correct: "CRM owns operational pipeline data; Planning owns the governed planning interpretation" },
-  { id: "wms", information: "On-hand, receipts, issues, transfers, and inventory adjustments", correct: "WMS owns inventory execution; Planning owns inventory policy and projected positions" },
-  { id: "mes", information: "Production output, downtime, line rates, yield, and operational capacity", correct: "MES owns execution facts; Planning owns forward-looking production and capacity scenarios" },
+  { id: "erp", information: "Posted sales, inventory, production, and manufacturing-cost actuals", correct: "ERP remains the system of record; Planning receives controlled and reconciled actuals" },
+  { id: "sales", information: "Monthly sales units, ASP assumptions, and manager overrides", correct: "Sales owns commercial assumptions; Planning owns the governed Working and Final plan versions" },
+  { id: "inventory", information: "On-hand inventory and inventory adjustments", correct: "ERP inventory records remain authoritative; Planning owns target and projected inventory" },
+  { id: "plant", information: "Actual output, available hours, and plant operating constraints", correct: "Plant operations own execution facts; Planning owns forward-looking production and capacity plans" },
   { id: "planning", information: "Forecasts, assumptions, scenarios, approvals, and integrated plan outputs", correct: "Oracle Planning is the governed planning workspace, not the source of transactional actuals" },
 ] as const;
 
 export const decisionGrainCases = [
-  { id: "demand", decision: "Review demand, promotions, and sales overrides", correct: "Product × Customer × Channel × Month, with Scenario and Version" },
-  { id: "inventory", decision: "Set inventory targets and evaluate projected shortage or excess", correct: "Product × Plant × Week/Month, with Scenario and Version" },
-  { id: "production", decision: "Plan feasible output and evaluate capacity", correct: "Product × Plant × Line/Resource × Week, with Scenario and Version" },
-  { id: "finance", decision: "Review revenue, cost, margin, balance sheet, and cash", correct: "Account × Entity × Product/Business Unit × Month, with Scenario, Version, and Currency" },
+  { id: "demand", decision: "Review sales units, ASP, and approved overrides", correct: "Product × Market × Channel × Month, with Scenario and Version" },
+  { id: "inventory", decision: "Set inventory targets and evaluate projected shortage or excess", correct: "Product × Plant × Month, with Scenario and Version; Market and Channel use their No members" },
+  { id: "production", decision: "Allocate demand, plan output, and evaluate capacity", correct: "Product × Plant × Month, with Scenario and Version; Market and Channel use their No members" },
+  { id: "finance", decision: "Review revenue, manufacturing cost, COGS, gross profit, and margin", correct: "Account × Entity × Product × Market × Channel × Month, with Scenario and Version" },
 ] as const;
 
 export const exceptionCases = [
@@ -66,7 +66,7 @@ export const designArtifacts = [
 
 export const futureStateHomeworkMissions = [
   { id: "principles", title: "Write evidence-led design principles", output: "Five target-design rules linked to confirmed findings and measurable outcomes", purpose: "Keeps the design focused on validated business needs rather than a list of preferred product features." },
-  { id: "sequence", title: "Sequence the connected plan", output: "Ordered demand-to-financial planning checkpoints", purpose: "Reinforces which downstream decisions depend on an agreed demand, feasible supply, and reconciled financial impact." },
+  { id: "sequence", title: "Sequence the connected plan", output: "Ordered sales-to-profitability planning checkpoints", purpose: "Reinforces which downstream decisions depend on an agreed sales forecast, feasible plant plan, and reconciled profitability result." },
   { id: "ownership", title: "Assign information ownership", output: "System-of-record and planning ownership decisions", purpose: "Prevents the target design from duplicating transactional ownership inside Oracle Planning." },
   { id: "exception", title: "Design an exception path", output: "Trigger, tolerance, action, owner, workflow, recalculation, evidence, and closure rule", purpose: "Teaches that a future-state process must define what happens when the normal path fails." },
   { id: "readout", title: "Prepare the design validation readout", output: "Target operating model, decisions, unresolved items, validation plan, and recommendation", purpose: "Practises obtaining cross-functional agreement before requirements and architecture are baselined." },
@@ -76,16 +76,16 @@ export type FutureStateHomeworkId = (typeof futureStateHomeworkMissions)[number]
 
 export const homeworkSequenceCases = [
   { id: "S-01", checkpoint: "Reconciled actuals and approved assumptions are available", correct: "1 · Establish the trusted starting point" },
-  { id: "S-02", checkpoint: "Sales overrides are reviewed and consensus demand is agreed", correct: "2 · Agree the demand signal" },
-  { id: "S-03", checkpoint: "Inventory, production, materials, and capacity are tested", correct: "3 · Establish operational feasibility" },
-  { id: "S-04", checkpoint: "Revenue, cost, margin, statements, and cash are recalculated", correct: "4 · Evaluate integrated financial impact" },
+  { id: "S-02", checkpoint: "Sales overrides are reviewed and the monthly sales forecast is agreed", correct: "2 · Agree the sales plan" },
+  { id: "S-03", checkpoint: "Inventory, plant allocation, production, and capacity are tested", correct: "3 · Establish operational feasibility" },
+  { id: "S-04", checkpoint: "Revenue, unit cost, COGS, gross profit, and gross margin are recalculated", correct: "4 · Evaluate integrated profitability" },
   { id: "S-05", checkpoint: "Exceptions are resolved and the plan is approved, locked, and published", correct: "5 · Govern and release one plan" },
 ] as const;
 
 export const homeworkOwnershipCases = [
-  { id: "O-01", information: "Approved currency rates and posted financial actuals", correct: "Financial source system owns the facts; Planning consumes controlled values and reconciles the load" },
-  { id: "O-02", information: "Working, submitted, approved, and published forecast versions", correct: "Oracle Planning owns plan versions, workflow status, commentary, and planning audit evidence" },
-  { id: "O-03", information: "Actual production output, downtime, and yield", correct: "MES owns execution actuals; Planning consumes them for variance analysis and future scenarios" },
+  { id: "O-01", information: "Posted sales, inventory, production, and manufacturing-cost actuals", correct: "ERP owns the facts; Planning consumes controlled values and reconciles the load" },
+  { id: "O-02", information: "Working and Final Budget or Forecast versions", correct: "Oracle Planning owns plan versions, workflow status, commentary, and planning audit evidence" },
+  { id: "O-03", information: "Actual plant output and available capacity hours", correct: "Plant operations own execution actuals; Planning consumes them for variance analysis and future plans" },
 ] as const;
 
 export const futureStateKnowledgeQuestions = [

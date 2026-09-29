@@ -1,0 +1,23 @@
+.plantGrid,.actionCost,.financialGrid { display: grid; gap: 10px; margin: 16px 0; }
+.plantGrid { grid-template-columns: repeat(3,1fr); }
+.actionCost { grid-template-columns: repeat(2,1fr); padding: 0 15px 15px; }
+.financialGrid { grid-template-columns: repeat(4,1fr); padding: 0 15px 15px; }
+.plantGrid article,.actionCost article,.financialGrid article { background: linear-gradient(145deg,#f8fbfd,#f1f7fb); border: 1px solid var(--color-border); border-radius: 11px; padding: 14px; }
+.plantGrid small,.plantGrid strong,.plantGrid span,.actionCost small,.actionCost strong,.actionCost span,.financialGrid small,.financialGrid strong,.financialGrid span { display: block; }
+.plantGrid small,.actionCost small,.financialGrid small { color: var(--color-primary); font-family: var(--font-mono); font-size: .58rem; font-weight: 800; }
+.plantGrid strong,.actionCost strong,.financialGrid strong { font-size: .82rem; margin-top: 6px; }
+.plantGrid span,.actionCost span,.financialGrid span { color: var(--color-text-muted); font-size: .58rem; line-height: 1.45; margin-top: 4px; }
+.optionGrid { display: grid; gap: 10px; grid-template-columns: repeat(4,1fr); margin: 16px 0; }
+.optionGrid article { background: white; border: 1px solid var(--color-border); border-radius: 11px; padding: 14px; }
+.optionGrid span,.optionGrid strong,.optionGrid b,.optionGrid small { display: block; }
+.optionGrid span { color: var(--color-primary); font-family: var(--font-mono); font-size: .58rem; font-weight: 800; text-transform: uppercase; }
+.optionGrid strong { font-size: .68rem; margin-top: 7px; }
+.optionGrid b { color: #17634c; font-size: .78rem; margin-top: 5px; }
+.optionGrid small { color: var(--color-text-muted); font-size: .57rem; line-height: 1.45; margin-top: 4px; }
+.exceptionSummary { align-items: flex-start; background: #fff7ed; border: 1px solid #f2c894; border-radius: 11px; color: #8a4d0f; display: flex; gap: 11px; margin: 15px 0; padding: 14px; }
+.exceptionSummary small,.exceptionSummary strong,.exceptionSummary span { display: block; }
+.exceptionSummary small { font-size: .58rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+.exceptionSummary strong { font-size: .72rem; margin-top: 4px; }
+.exceptionSummary span { color: #7a654b; font-size: .62rem; line-height: 1.55; margin-top: 5px; }
+@media(max-width:1050px){.optionGrid,.financialGrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:720px){.plantGrid,.optionGrid,.actionCost,.financialGrid{grid-template-columns:1fr}}

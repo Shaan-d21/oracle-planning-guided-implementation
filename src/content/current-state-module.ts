@@ -13,22 +13,21 @@ export const currentStateLessons = [
 export type CurrentStateLessonId = (typeof currentStateLessons)[number]["id"];
 
 export const currentStateStakeholders = [
-  { id: "sales", role: "Sales", focus: "Regional forecast files, overrides, approvals, and version conflicts", evidence: "Forecast files, approval trail, forecast calendar" },
-  { id: "demand", role: "Demand Planning", focus: "History, baseline forecast, consensus process, and accuracy", evidence: "Forecast history, accuracy report, exception log" },
+  { id: "sales", role: "Sales", focus: "Market/channel forecast files, units, ASP, approvals, and version conflicts", evidence: "Sales forecast files, price assumptions, approval trail, planning calendar" },
+  { id: "demand", role: "Demand Planning", focus: "Sales history, monthly forecast, overrides, and accuracy", evidence: "Forecast history, accuracy report, override and exception log" },
   { id: "inventory", role: "Inventory", focus: "On-hand, safety stock policy, transfers, shortages, and excess", evidence: "Inventory report, policy, shortage and excess history" },
-  { id: "production", role: "Production / Plant", focus: "Schedule, yield, batch, capacity, downtime, and feasibility", evidence: "Production schedule, capacity sheet, downtime log" },
-  { id: "procurement", role: "Procurement", focus: "BOM demand, open orders, lead time, MOQ, and supplier constraints", evidence: "BOM extract, open PO report, supplier lead-time data" },
-  { id: "cost", role: "Cost Accounting", focus: "Material, labor, overhead, inventory valuation, COGS, and margin", evidence: "Cost standards, variance report, allocation workbook" },
-  { id: "fpa", role: "FP&A / Controllership", focus: "Planning calendar, consolidation, statements, controls, and reconciliation", evidence: "Calendar, reconciliation workbook, management pack" },
+  { id: "production", role: "Production / Plant", focus: "Monthly plant allocation, required production, planned production, capacity, and feasibility", evidence: "Production plan, allocation workbook, capacity sheet, exception log" },
+  { id: "cost", role: "Cost Accounting", focus: "Material, labor, variable overhead, fixed overhead, unit cost, COGS, and margin", evidence: "Cost-driver workbook, cost standards, variance report" },
+  { id: "fpa", role: "FP&A / Controllership", focus: "Planning calendar, revenue, COGS, gross profit, margin, controls, and reconciliation", evidence: "Calendar, reconciliation workbook, profitability pack" },
   { id: "technology", role: "IT / Integration", focus: "System ownership, extracts, mappings, failures, recovery, and support", evidence: "Interface inventory, run logs, mappings, incident history" },
   { id: "sop", role: "Management / S&OP", focus: "Decision cadence, exceptions, trade-offs, approvals, and published plan", evidence: "S&OP pack, minutes, decision and action log" },
 ] as const;
 
 export const processTraces = [
-  { id: "sales", name: "Sales forecast", trace: ["ERP sales history", "Excel extract", "Regional files", "Manager overrides", "Email", "FP&A"], controlGap: "No governed forecast version, approval, or audit trail" },
-  { id: "inventory", name: "Inventory planning", trace: ["WMS on-hand", "Excel safety stock", "Planner judgment", "Inventory plan"], controlGap: "Inventory policy is inconsistent and disconnected from demand variability" },
+  { id: "sales", name: "Sales forecast", trace: ["ERP sales history", "Excel extract", "Market/channel files", "Manager overrides", "Email", "FP&A"], controlGap: "No governed forecast version, approval, or audit trail" },
+  { id: "inventory", name: "Inventory planning", trace: ["ERP inventory extract", "Excel target inventory", "Planner judgment", "Inventory plan"], controlGap: "Inventory policy is inconsistent and disconnected from monthly demand" },
   { id: "production", name: "Production planning", trace: ["Sales forecast", "Manual schedule", "Capacity spreadsheet", "Plant manager"], controlGap: "Production feasibility is checked late and outside the planning process" },
-  { id: "financial", name: "Financial reconciliation", trace: ["Sales", "Production", "Inventory", "Cost workbooks", "Manual consolidation", "P&L / BS / CF"], controlGap: "Operational assumptions lack automated financial integration and reconciliation" },
+  { id: "financial", name: "Profitability reconciliation", trace: ["Sales", "Production", "Inventory", "Cost workbooks", "Manual consolidation", "Revenue / COGS / Margin pack"], controlGap: "Operational assumptions lack automated profitability integration and reconciliation" },
 ] as const;
 
 export const interfaceAssessmentDimensions = [
@@ -44,18 +43,18 @@ export const interfaceAssessmentDimensions = [
 
 export const interfaceCases = [
   { id: "erp", name: "ERP actuals → planning files", cadence: "Daily and month-end", concern: "Manual extracts arrive after the planning cutoff and require finance reconciliation." },
-  { id: "crm", name: "CRM pipeline → sales forecast", cadence: "Weekly", concern: "Customer and product mappings differ across regional forecast files." },
-  { id: "wms", name: "WMS inventory → inventory plan", cadence: "Daily", concern: "Rejected rows and inventory adjustments are not visibly reconciled." },
-  { id: "mes", name: "MES capacity → production plan", cadence: "Weekly", concern: "The capacity workbook becomes stale before the approved demand plan reaches the plant." },
+  { id: "sales", name: "Sales workbooks → consolidated forecast", cadence: "Monthly", concern: "Product, Market, Channel, Scenario, and Version selections differ across submitted files." },
+  { id: "inventory", name: "ERP inventory extract → inventory plan", cadence: "Month-end", concern: "Adjustments and rejected products are not visibly reconciled before target inventory is calculated." },
+  { id: "capacity", name: "Plant capacity workbook → production plan", cadence: "Monthly", concern: "Available hours become stale before demand is allocated to Pune and Noida." },
 ] as const;
 
 export const currentStatePainPoints = [
   { id: "AS01", process: "Sales", problem: "Multiple forecast versions", impact: "Delayed consensus", frequency: "Monthly", rootCause: "No governed version and workflow", priority: "High" },
   { id: "AS02", process: "Inventory", problem: "Fixed 30-day safety stock", impact: "Excess or short inventory", frequency: "Continuous", rootCause: "Policy ignores variability, lead time, and service", priority: "Critical" },
-  { id: "AS03", process: "Production", problem: "Capacity maintained offline", impact: "Unfeasible production plans", frequency: "Weekly", rootCause: "Demand and capacity are disconnected", priority: "Critical" },
-  { id: "AS04", process: "MRP", problem: "Manual BOM netting", impact: "Material shortages", frequency: "Weekly", rootCause: "Spreadsheet dependency and stale BOM", priority: "Critical" },
+  { id: "AS03", process: "Production", problem: "Capacity maintained offline", impact: "Unfeasible production plans", frequency: "Monthly", rootCause: "Demand and capacity are disconnected", priority: "Critical" },
+  { id: "AS04", process: "Plant allocation", problem: "Demand is split between plants manually", impact: "Unclear production ownership and rework", frequency: "Monthly", rootCause: "No governed plant-allocation driver", priority: "High" },
   { id: "AS05", process: "Cost", problem: "Stale material prices", impact: "Gross-margin distortion", frequency: "Monthly", rootCause: "Cost drivers are not synchronized", priority: "High" },
-  { id: "AS06", process: "Finance", problem: "Manual reconciliation", impact: "Close and forecast delay", frequency: "Monthly", rootCause: "Operational plans are not integrated to financial statements", priority: "High" },
+  { id: "AS06", process: "Finance", problem: "Manual reconciliation", impact: "Forecast and management-reporting delay", frequency: "Monthly", rootCause: "Operational plans are not integrated with profitability reporting", priority: "High" },
 ] as const;
 
 export const baselineKpis = [
@@ -74,8 +73,8 @@ export const currentStateHomeworkMissions = [
 export type CurrentStateHomeworkId = (typeof currentStateHomeworkMissions)[number]["id"];
 
 export const homeworkHandoffCases = [
-  { id: "H-01", observation: "Seventeen regional forecast files are emailed to FP&A and repeatedly renamed during consolidation.", correct: "Duplicate versions and an uncontrolled manual handoff" },
-  { id: "H-02", observation: "The weekly material plan uses a BOM extract refreshed only once each month.", correct: "Stale master data used in a time-sensitive decision" },
+  { id: "H-01", observation: "Market and channel forecast files are emailed to FP&A and repeatedly renamed during consolidation.", correct: "Duplicate versions and an uncontrolled manual handoff" },
+  { id: "H-02", observation: "Plant allocation is calculated using a capacity workbook that was not refreshed for the current monthly cycle.", correct: "Stale operational data used in a time-sensitive decision" },
   { id: "H-03", observation: "A planner can overwrite a capacity formula and no reviewer or exception report detects the change.", correct: "Missing preventive and detective controls" },
 ] as const;
 

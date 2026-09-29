@@ -14,8 +14,8 @@ export type DiscoveryLessonId = (typeof discoveryLessons)[number]["id"];
 
 export const scopeItems = [
   "Sales and demand planning",
-  "Inventory and production planning",
-  "Manufacturing cost, margin, and financial impact",
+  "Inventory, plant allocation, production, and capacity planning",
+  "Manufacturing cost, COGS, gross profit, and gross margin",
   "Planning data, integrations, workflow, and reporting",
 ] as const;
 
@@ -37,23 +37,23 @@ export const stakeholders = [
   {
     id: "sales",
     role: "Sales & Demand Planning",
-    focus: "Forecast grain, price, promotions, overrides, and consensus demand",
-    question: "At what grain do planners adjust demand, and who approves an override?",
-    output: "Demand, sales, pricing, and forecast workflow requirements",
+    focus: "Monthly units, average selling price, markets, channels, overrides, and forecast approval",
+    question: "At which Product × Market × Channel grain are monthly sales units and ASP planned, and who approves changes?",
+    output: "Sales units, pricing, revenue, and forecast-workflow requirements",
   },
   {
     id: "operations",
     role: "Supply Chain & Plant Operations",
-    focus: "Inventory policy, production, capacity, materials, and constraints",
-    question: "Which constraints make a demand plan infeasible, and when are they detected?",
-    output: "Inventory, production, capacity, and material-planning requirements",
+    focus: "Inventory targets, plant allocation, production requirements, capacity, and feasibility",
+    question: "How is monthly demand allocated to Pune and Noida, and when is insufficient capacity detected?",
+    output: "Inventory, plant-allocation, production, and capacity requirements",
   },
   {
     id: "finance",
     role: "Finance & Cost Accounting",
-    focus: "Manufacturing cost, COGS, margin, statements, and reconciliation",
-    question: "How should operational changes affect cost, profit, balance sheet, and cash?",
-    output: "Cost, profitability, financial integration, and control requirements",
+    focus: "Material, labor, overhead, unit manufacturing cost, COGS, gross profit, and margin",
+    question: "How should production and cost-driver changes affect unit cost, COGS, gross profit, and gross margin?",
+    output: "Manufacturing-cost, profitability, reconciliation, and control requirements",
   },
   {
     id: "technology",
@@ -66,8 +66,8 @@ export const stakeholders = [
 
 export const discoveryQuestionCases = [
   { id: "Q-01", question: "Which decisions should improve, and how will the business measure success?", correct: "Objectives and success measures" },
-  { id: "Q-02", question: "Who plans what, at which product, customer, plant, and time level?", correct: "Planning grain and ownership" },
-  { id: "Q-03", question: "Where do actuals, forecasts, inventory, capacity, and cost data originate?", correct: "Data sources and integrations" },
+  { id: "Q-02", question: "Who plans what, at which product, market, channel, plant, and month?", correct: "Planning grain and ownership" },
+  { id: "Q-03", question: "Where do sales, inventory, production, capacity, and manufacturing-cost actuals originate?", correct: "Data sources and integrations" },
   { id: "Q-04", question: "Which calculations, assumptions, allocations, and exceptions are used today?", correct: "Business rules and assumptions" },
   { id: "Q-05", question: "Who prepares, reviews, rejects, approves, and publishes the plan?", correct: "Workflow, roles, and controls" },
   { id: "Q-06", question: "Which forms, reports, dashboards, and Excel analyses are needed by each role?", correct: "User experience and reporting" },
@@ -83,11 +83,11 @@ export const discoveryEvidence = [
 ] as const;
 
 export const designInfluenceCases = [
-  { id: "D-01", requirement: "Sales forecasts are entered by Product × Customer × Channel × Month.", correct: "Dimensions, hierarchies, and planning grain" },
-  { id: "D-02", requirement: "Approved ERP actuals and WMS inventory load automatically with reconciliation.", correct: "Data integration, mappings, schedules, and controls" },
-  { id: "D-03", requirement: "Production equals demand plus target inventory less beginning inventory, subject to capacity.", correct: "Accounts, assumptions, business rules, and validations" },
-  { id: "D-04", requirement: "Regional planners submit forecasts and managers approve or reject with comments.", correct: "Security, workflow, versions, and auditability" },
-  { id: "D-05", requirement: "Executives compare volume, revenue, margin, capacity, and cash scenarios.", correct: "Forms, dashboards, Smart View, and reporting" },
+  { id: "D-01", requirement: "Sales forecasts are entered by Product × Market × Channel × Month.", correct: "Dimensions, hierarchies, and planning grain" },
+  { id: "D-02", requirement: "Approved ERP sales, inventory, production, and cost actuals load with reconciliation.", correct: "Data integration, mappings, schedules, and controls" },
+  { id: "D-03", requirement: "Required production equals allocated demand plus target ending inventory less beginning inventory, subject to capacity.", correct: "Accounts, assumptions, business rules, and validations" },
+  { id: "D-04", requirement: "Sales planners submit Working forecasts and managers approve or reject with comments before Final publication.", correct: "Security, workflow, versions, and auditability" },
+  { id: "D-05", requirement: "Management compares units, revenue, production, capacity, COGS, gross profit, and margin.", correct: "Forms, dashboards, Smart View, and reporting" },
 ] as const;
 
 export const discoveryArtifacts = [

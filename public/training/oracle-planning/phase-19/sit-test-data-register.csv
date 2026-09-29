@@ -1,0 +1,5 @@
+Data_ID,Fixture,Version,File_or_Source,Scenario,Version_Member,Year_Period,Entity,Rows,Controlled_Units,Expected_Rejects,Checksum_or_Identifier,Authorized_Data,Reset_Procedure,Owner,Reviewer,Status
+DATA-001,SIT-CYCLE-01 Clean,1.0,SIT-CYCLE-01-clean.csv,Forecast,Working,FY25,Company detail,240,1380,0,Record approved identifier,Synthetic,Clear controlled Forecast Working scope then load approved opening baseline,SIT Data Owner,SIT Lead,Approved
+DATA-002,SIT-CYCLE-01 Invalid Product,1.0,SIT-CYCLE-01-invalid-product.csv,Forecast,Working,FY25,Company detail,240,1380,1,Record approved identifier,Synthetic,Reset staging and prove no accepted partial export,SIT Data Owner,SIT Lead,Approved
+DATA-003,SIT-CYCLE-01 Duplicate,1.0,SIT-CYCLE-01-duplicate.csv,Forecast,Working,FY25,Company detail,241,1380,1,Record approved identifier,Synthetic,Reset target then execute idempotency and duplicate control,SIT Data Owner,SIT Lead,Approved
+DATA-004,SIT-CYCLE-01 Baseline,1.0,Approved opening-state export,Forecast,Working,FY25,Company detail,N/A,1380,0,Export job and timestamp,Synthetic,Restore approved baseline and verify opening controls,Environment Owner,SIT Lead,Approved

@@ -7,6 +7,7 @@ import {
   Boxes,
   Check,
   ChevronRight,
+  CircleDollarSign,
   ClipboardCheck,
   Compass,
   Factory,
@@ -29,17 +30,17 @@ const stageLabels = {
 } as const;
 
 const journeySteps = [
-  { label: "Demand", icon: BarChart3 },
   { label: "Sales", icon: ClipboardCheck },
-  { label: "Inventory", icon: Boxes },
   { label: "Production", icon: Factory },
+  { label: "Inventory", icon: Boxes },
+  { label: "Finance", icon: CircleDollarSign },
 ];
 
 const lessonSteps = [
   "Understand the business scenario",
   "Follow the guided Oracle steps",
   "Practice with realistic data",
-  "Submit evidence and validate",
+  "Record evidence and validate",
 ];
 
 export default function Home() {
@@ -71,7 +72,7 @@ export default function Home() {
 
         <div className={styles.headerStatus}>
           <span aria-hidden="true" />
-          Frontend foundation
+          90-day guided program
         </div>
       </header>
 
@@ -91,9 +92,9 @@ export default function Home() {
             <span>confident execution.</span>
           </h1>
           <p className={styles.heroDescription}>
-            Learn the complete production and sales planning cycle through a
-            realistic business case, guided application steps, practice tasks,
-            and implementation evidence.
+            Deliver an Oracle Planning implementation through a realistic
+            production and sales planning case, guided application steps,
+            practice tasks, implementation evidence, and a connected monthly-cycle capstone.
           </p>
           <div className={styles.heroActions}>
             <Link className={styles.primaryAction} href="/learn?track=implementation">
@@ -107,7 +108,7 @@ export default function Home() {
           </div>
           <div className={styles.heroProof}>
             <span><Check size={14} /> Guided workflows</span>
-            <span><Check size={14} /> Oracle screen walkthroughs</span>
+            <span><Check size={14} /> Guided Oracle task walkthroughs</span>
             <span><Check size={14} /> Practice and assessment</span>
           </div>
         </div>
@@ -124,8 +125,8 @@ export default function Home() {
           <div className={styles.journeyHeading}>
             <Route size={22} aria-hidden="true" />
             <div>
-              <small>Integrated planning cycle</small>
-              <strong>Build one connected S&amp;OP plan</strong>
+              <small>Connected planning solution</small>
+              <strong>Build one operational and financial plan</strong>
             </div>
           </div>
 
@@ -155,55 +156,56 @@ export default function Home() {
       </section>
 
       <section className={styles.metrics} aria-label="Course summary">
-        <article><strong>{course.durationDays}</strong><span>Internship days</span></article>
-        <article><strong>{course.phases.length}</strong><span>Lifecycle phases</span></article>
-        <article><strong>2</strong><span>Role-based learning paths</span></article>
+        <article><strong>{course.durationDays}</strong><span>Workshop days</span></article>
+        <article><strong>{course.phases.length}</strong><span>Interactive phases</span></article>
+        <article><strong>1</strong><span>Operational capstone</span></article>
         <article><strong>1</strong><span>Connected business case</span></article>
       </section>
 
       <section className={styles.sectionShell} id="learning-tracks">
         <div className={styles.sectionHeading}>
           <div>
-            <p className={styles.sectionEyebrow}>Start with the right journey</p>
-            <h2>Two paths. One complete planning experience.</h2>
+            <p className={styles.sectionEyebrow}>One connected learning journey</p>
+            <h2>Implement first. Then operate what you built.</h2>
           </div>
           <p>
-            New learners first understand how the monthly planning process works.
-            Technical learners can then move into solution design, build, testing,
-            deployment, and support.
+            The 90-day workshop has one core implementation journey. Learners build
+            the solution through 27 phases, practise monthly-cycle activities at the
+            relevant points, and finish with one end-to-end operational capstone.
           </p>
         </div>
 
         <div className={styles.trackGrid}>
-          {course.tracks.map((track, index) => {
-            const Icon = index === 0 ? Compass : Workflow;
+          {course.tracks.map((track) => {
+            const isImplementation = track.id === "implementation";
+            const Icon = isImplementation ? Workflow : Compass;
             return (
-              <article className={styles.trackCard} key={track.id}>
+              <article className={styles.trackCard} data-status={isImplementation ? "available" : "included"} key={track.id}>
                 <div className={styles.trackTopline}>
                   <span className={styles.trackIcon}><Icon size={23} /></span>
-                  <span>Path 0{index + 1}</span>
+                  <span>{isImplementation ? "Core journey" : "Final capstone"} · {isImplementation ? "27 phases" : "7 lessons"}</span>
                 </div>
                 <p>{track.audience}</p>
                 <h3>{track.title}</h3>
                 <span className={styles.trackDescription}>{track.description}</span>
                 <ul>
-                  {index === 0 ? (
+                  {isImplementation ? (
                     <>
-                      <li><Check size={15} /> End-to-end monthly cycle</li>
-                      <li><Check size={15} /> Guided forms and approvals</li>
-                      <li><Check size={15} /> Scenario-based decisions</li>
+                      <li><Check size={15} /> Discovery through BAU support</li>
+                      <li><Check size={15} /> Guided configuration and hands-on practice</li>
+                      <li><Check size={15} /> Deliverables, evidence, and exit gates</li>
                     </>
                   ) : (
                     <>
-                      <li><Check size={15} /> Design through deployment</li>
-                      <li><Check size={15} /> Integration and calculations</li>
-                      <li><Check size={15} /> Testing and support evidence</li>
+                      <li><Check size={15} /> Actuals through approved plan</li>
+                      <li><Check size={15} /> Demand, supply, finance, and workflow</li>
+                      <li><Check size={15} /> Publish, reconcile, and close</li>
                     </>
                   )}
                 </ul>
-                <a href={index === 0 ? "/learn?track=planning-cycle" : "/learn?track=implementation"}>
-                  {index === 0 ? "View path outline" : "Start implementation journey"} <ArrowRight size={17} aria-hidden="true" />
-                </a>
+                <Link href={isImplementation ? "/learn?track=implementation" : "/learn/monthly-planning-capstone"}>
+                  {isImplementation ? "Start implementation journey" : "Open monthly capstone"} <ArrowRight size={17} aria-hidden="true" />
+                </Link>
               </article>
             );
           })}
@@ -260,7 +262,7 @@ export default function Home() {
                 <div>
                   <small>Next action</small>
                   <strong>Open the Working Forecast form</strong>
-                  <p>Choose FY27, Working, and your assigned product group.</p>
+                  <p>Choose Forecast, Working, FY27, and your assigned planning scope.</p>
                 </div>
               </div>
               <div className={styles.oracleMock}>
@@ -269,12 +271,12 @@ export default function Home() {
                   <span>Save&nbsp;&nbsp; | &nbsp;&nbsp;Refresh</span>
                 </div>
                 <div className={styles.mockFilters}>
-                  {["FY27", "Working", "North America"].map((item) => <span key={item}>{item}⌄</span>)}
+                  {["FY27", "Forecast", "Working"].map((item) => <span key={item}>{item}⌄</span>)}
                 </div>
                 <div className={styles.mockGrid}>
                   <strong>Product</strong><strong>Jan</strong><strong>Feb</strong><strong>Mar</strong>
-                  <span>Air Purifier</span><span>1,240</span><span className={styles.mockFocus}>1,310<i>2</i></span><span>1,380</span>
-                  <span>Smart Fan</span><span>980</span><span>1,025</span><span>1,110</span>
+                  <span>Mixer Grinder</span><span>1,240</span><span className={styles.mockFocus}>1,310<i>2</i></span><span>1,380</span>
+                  <span>Electric Kettle</span><span>980</span><span>1,025</span><span>1,110</span>
                 </div>
               </div>
               <div className={styles.previewFooter}>
@@ -290,12 +292,11 @@ export default function Home() {
         <div className={styles.sectionHeading}>
           <div>
             <p className={styles.sectionEyebrow}>Implementation roadmap</p>
-            <h2>The full 27-phase lifecycle is preserved.</h2>
+            <h2>The complete 27-phase implementation lifecycle is available.</h2>
           </div>
           <p>
-            The supplied concept is retained as the content source, while each
-            phase will be converted into concise lessons, guided tasks,
-            deliverables, and checks.
+            Each phase combines concise lessons, guided tasks, practical
+            deliverables, evidence, and an exit check before the next stage.
           </p>
         </div>
 
@@ -325,7 +326,7 @@ export default function Home() {
 
       <footer className={styles.siteFooter}>
         <span>BISP Learning Lab · {course.company} simulated case</span>
-        <span>Oracle Planning training experience · Frontend first</span>
+        <span>Oracle Planning training experience · 90-day guided workshop</span>
       </footer>
     </main>
   );

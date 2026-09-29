@@ -1,0 +1,5 @@
+Exception_ID,Detected_Date,User_or_Group,Layer,Affected_Scope,Expected_Behavior,Actual_Behavior,Risk,Immediate_Control,Root_Cause,Owner,Target_Date,Approval,Expiry,Retest_Evidence,Status
+EX-001,,APX_OPERATIONS_PLANNERS,Member access,Pune Forecast Working,Write only to owned inputs,,High,,,Security Administrator,,,,,Open
+EX-002,,APX_SALES_PLANNERS,Rule launch,Calculate Production,No Launch,,High,,,Calculation Owner,,,,,Open
+EX-003,,APX_EXECUTIVE_VIEWERS,Smart View,Forecast Working,Deny submission,,High,,,Security Administrator,,,,,Open
+EX-004,,Pune approval unit,Workflow,Forecast Working,Configured ownership and validation path,,High,,,Business Process Owner,,,,,Open

@@ -1,0 +1,11 @@
+Step,Activity,Required_Control,Evidence,Owner,Status
+1,Freeze reviewed rule source and catalogue version,Source matches approved specification,Export or migration artifact,EPM Developer,Pending
+2,Validate with representative runtime prompts,No unresolved syntax member function variable or generated-script errors,Validation result,EPM Developer,Pending
+3,Peer review scope guards logging and failure behavior,Reviewer is independent of author,Review checklist,EPM Technical Lead,Pending
+4,Deploy approved rule or ruleset,Deployment references reviewed version,Deployment status,Service Administrator,Pending
+5,Grant minimum launch access,Only intended roles can launch,Access assignment and role test,Security Administrator,Pending
+6,Associate rule with intended form or menu,Launch context and prompts match contract,Form configuration,Planning Administrator,Pending
+7,Run smoke functional negative and security tests,No writes outside approved scope,Test evidence,Test Lead,Pending
+8,Run unchanged rerun and reporting reconciliation,Zero duplicate and reporting variance,Rerun and reconciliation,Finance Reviewer,Pending
+9,Confirm rollback and restart instructions,Recovery artifact is available and tested,Runbook and recovery test,Operations Owner,Pending
+10,Approve Phase 16 handoff,Form dashboard and Smart View designers receive stable rule contract,Approval record,Product Owner,Pending

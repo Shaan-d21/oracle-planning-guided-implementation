@@ -6,12 +6,6 @@ export const metadata: Metadata = {
   description: "Continue the guided Production and Sales Planning learning journey.",
 };
 
-export default async function LearnDashboardPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ track?: string | string[] }>;
-}) {
-  const trackParam = (await searchParams).track;
-  const initialTrack = trackParam === "planning-cycle" || trackParam === "implementation" ? trackParam : undefined;
-  return <LearnerDashboard initialTrack={initialTrack} />;
+export default function LearnDashboardPage() {
+  return <LearnerDashboard />;
 }

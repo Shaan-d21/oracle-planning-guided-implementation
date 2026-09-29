@@ -1,0 +1,5 @@
+Exception_ID,Detected_Date,Version,Entity,Period,Driver_or_Control,Expected,Actual,Variance,Risk,Immediate_Action,Root_Cause,Owner,Target_Date,Decision_Impact,Approval,Retest_Evidence,Status
+EX-001,,Upside,India Operations,FY25,Capacity Utilization,Less than or equal to 95 percent,,,High,,,Operations Owner,,Hold recommendation,,,Open
+EX-002,,Upside,Apex Home Appliances,FY25,Plan1 to ApexPlan ASO,Zero difference,,,High,,,EPM Product Owner,,Hold dashboard decision,,,Open
+EX-003,,Downside,India Operations,FY25,Closing Cash,Greater than or equal to 300000 INR,,,Medium,,,Treasury Owner,,Review contingency,,,Open
+EX-004,,Selected Case,India Operations,FY25,Promotion Evidence,Complete and approved,,,High,,,Business Process Owner,,Do not publish,,,Open

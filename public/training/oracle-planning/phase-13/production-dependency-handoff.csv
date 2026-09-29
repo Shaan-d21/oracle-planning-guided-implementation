@@ -1,0 +1,4 @@
+product,entity,period,planned_starts,production_rate_starts_per_hour,required_hours,available_line_hours,utilization_pct,source_phase,source_version,status
+Mixer Grinder,Pune,Jan-FY27,820,2,410,450,91.111111,Phase 10,Production Baseline v1,Approved
+Mixer Grinder,Noida,Jan-FY27,560,2,280,350,80.000000,Phase 10,Production Baseline v1,Approved
+Mixer Grinder,India Operations,Jan-FY27,1380,2,690,800,86.250000,Phase 10,Production Baseline v1,Approved

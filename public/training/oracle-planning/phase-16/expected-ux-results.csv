@@ -1,0 +1,14 @@
+Control_ID,Description,Expected_Value,Tolerance,Source_or_Formula,Pass_Criteria
+UXR-01,Pune planned starts,820,0,Approved production allocation,Exact
+UXR-02,Noida planned starts,560,0,Approved production allocation,Exact
+UXR-03,Company planned starts,1380,0,Pune plus Noida,Exact
+UXR-04,Pune required hours,410,0.01,820 divided by 2,Within tolerance
+UXR-05,Noida required hours,280,0.01,560 divided by 2,Within tolerance
+UXR-06,Company required hours,690,0.01,410 plus 280,Within tolerance
+UXR-07,Net revenue,559579.64,0.01,Approved Phase 14 result,Within tolerance
+UXR-08,COGS,356855.544608,0.01,Approved Phase 14 result,Within tolerance
+UXR-09,Net income,88293.071544,0.01,Approved Phase 14 result,Within tolerance
+UXR-10,Closing cash,383448.796152,0.01,Approved Phase 14 result,Within tolerance
+UXR-11,Balance control,0,0.01,Assets minus liabilities and equity,Within tolerance
+UXR-12,Web versus Smart View variance,0,0.01,Refreshed Smart View minus web form,Within tolerance
+UXR-13,Plan1 versus ApexPlan dashboard variance,0,0.01,Dashboard total minus approved Plan1 result,Within tolerance

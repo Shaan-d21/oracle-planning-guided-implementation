@@ -1,0 +1,76 @@
+.shell {
+  position: relative;
+}
+
+.fallback {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.figure {
+  margin: 0;
+  width: 100%;
+}
+
+.probe {
+  height: 1px;
+  left: 0;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 1px;
+}
+
+.visible {
+  display: block;
+}
+
+.loaded {
+  align-items: stretch !important;
+  background: #f1f5f8 !important;
+  border: 1px solid #c6d5e1 !important;
+  display: block !important;
+  min-height: 0 !important;
+  overflow: hidden;
+  padding: 0 !important;
+  text-align: left !important;
+}
+
+.media {
+  align-items: center;
+  background: white;
+  display: flex;
+  justify-content: center;
+  max-height: min(72vh, 720px);
+  min-height: 96px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.media img {
+  object-fit: contain;
+}
+
+.figure figcaption {
+  align-items: center;
+  background: #f6f9fb;
+  border-top: 1px solid #d8e2e9;
+  color: #607589;
+  display: flex;
+  font-size: .72rem;
+  justify-content: center;
+  line-height: 1.5;
+  min-height: 38px;
+  padding: 8px 12px;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .media { min-height: 72px; }
+}

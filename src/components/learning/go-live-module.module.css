@@ -1,0 +1,168 @@
+.waveGrid,
+.handoffModel {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 16px 0;
+}
+
+.handoffModel {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.waveGrid article,
+.handoffModel article {
+  background: linear-gradient(145deg, #f8fbfd, #eef5fa);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 13px;
+}
+
+.waveGrid small,
+.waveGrid strong,
+.waveGrid span,
+.handoffModel strong,
+.handoffModel span {
+  display: block;
+}
+
+.waveGrid small {
+  color: var(--color-primary);
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.waveGrid strong,
+.handoffModel strong {
+  font-size: 0.72rem;
+  margin-top: 5px;
+}
+
+.waveGrid span,
+.handoffModel span {
+  color: var(--color-text-muted);
+  font-size: 0.65rem;
+  line-height: 1.5;
+  margin-top: 5px;
+}
+
+.activationFlow {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 16px 0;
+}
+
+.activationFlow article {
+  align-items: center;
+  background: #f6f9fc;
+  border: 1px solid var(--color-border);
+  border-radius: 9px;
+  display: flex;
+  gap: 7px;
+  min-height: 56px;
+  padding: 9px;
+}
+
+.activationFlow article > span,
+.incidentFlow article > span {
+  align-items: center;
+  background: var(--color-primary);
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  flex: 0 0 23px;
+  font-size: 0.55rem;
+  height: 23px;
+  justify-content: center;
+}
+
+.activationFlow article strong {
+  font-size: 0.62rem;
+  line-height: 1.35;
+}
+
+.cycleStrip,
+.reconciliationChain,
+.authorizationFlow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 16px 0;
+}
+
+.cycleStrip span,
+.reconciliationChain span,
+.authorizationFlow span {
+  align-items: center;
+  background: #f3f7fa;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  display: flex;
+  font-size: 0.63rem;
+  font-weight: 750;
+  gap: 7px;
+  padding: 8px 10px;
+}
+
+.cycleStrip svg,
+.reconciliationChain svg,
+.authorizationFlow svg {
+  color: #8ca2b4;
+}
+
+.incidentFlow {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(7, 1fr);
+  margin: 16px 0;
+}
+
+.incidentFlow article {
+  align-items: flex-start;
+  background: #f6f9fc;
+  border: 1px solid var(--color-border);
+  border-radius: 9px;
+  display: flex;
+  gap: 7px;
+  min-height: 70px;
+  padding: 9px;
+}
+
+.incidentFlow strong,
+.incidentFlow small {
+  display: block;
+}
+
+.incidentFlow strong {
+  font-size: 0.62rem;
+}
+
+.incidentFlow small {
+  color: var(--color-text-muted);
+  font-size: 0.55rem;
+  line-height: 1.4;
+  margin-top: 3px;
+}
+
+.homeworkSpacer {
+  height: 13px;
+}
+
+@media (max-width: 1120px) {
+  .handoffModel,
+  .incidentFlow {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .waveGrid,
+  .handoffModel,
+  .activationFlow,
+  .incidentFlow {
+    grid-template-columns: 1fr;
+  }
+}

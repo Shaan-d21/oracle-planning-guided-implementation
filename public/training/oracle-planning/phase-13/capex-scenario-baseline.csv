@@ -1,0 +1,2 @@
+scenario,entity,need_period,required_machine_hours,existing_capacity_hours,approved_overtime_hours,productivity_recovery_hours,new_asset_capacity_hours,asset_cost,useful_life_months,residual_value,monetary_currency,lead_time_months,capacity_needed_in_months,owner,status
+Growth Case,Pune,Apr-FY27,560,450,30,20,160,1200000,60,0,INR,2,3,Plant Director,Proposed

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, Beaker, CheckCircle2, Clock3, Construction, FileCheck2 } from "lucide-react";
+import { ArrowLeft, ArrowRight, BookOpenCheck, CheckCircle2, Clock3, Construction, FileCheck2 } from "lucide-react";
 import type { CourseModuleDefinition } from "@/types/course";
 import styles from "./planned-phase-preview.module.css";
 
@@ -19,14 +19,14 @@ export function PlannedPhasePreview({ module, previous, next }: PlannedPhasePrev
       <section className={styles.hero}>
         <div className={styles.phase}>{phaseLabel}</div>
         <div><p>{module.stage}</p><h1>{module.title}</h1><span>{module.description}</span></div>
-        <div className={styles.previewBadge}><Beaker size={16} /> Testing preview</div>
+        <div className={styles.previewBadge}><BookOpenCheck size={16} /> Curriculum outline</div>
       </section>
 
-      <div className={styles.notice}><Construction size={22} /><div><strong>This phase is unlocked for navigation testing only.</strong><p>Its interactive lessons, Oracle walkthroughs, validation activities, and evidence package have not been implemented. Phases 01–09 are the completed learning modules.</p></div></div>
+      <div className={styles.notice}><Construction size={22} /><div><strong>This page provides the agreed learning scope for the phase.</strong><p>Use the deliverable and exit gate below to understand what the phase must produce before the implementation can progress.</p></div></div>
 
       <section className={styles.contentGrid}>
         <article className={styles.definition}>
-          <small>Planned phase definition</small>
+          <small>Phase definition</small>
           <h2>{module.title}</h2>
           <div><span><Clock3 size={16} /> Duration</span><strong>{module.duration}</strong></div>
           <div><span><FileCheck2 size={16} /> Deliverable</span><strong>{module.deliverable}</strong></div>
@@ -34,18 +34,18 @@ export function PlannedPhasePreview({ module, previous, next }: PlannedPhasePrev
         </article>
 
         <article className={styles.testingScope}>
-          <small>What can be tested now</small>
-          <h2>Navigation and lifecycle position</h2>
+          <small>Learning purpose</small>
+          <h2>How this phase supports the lifecycle</h2>
           <ul>
-            <li>The phase opens from the complete phase directory.</li>
-            <li>Previous and next phase navigation resolves correctly.</li>
-            <li>The page clearly distinguishes preview content from completed training.</li>
-            <li>No progress or exit-gate completion is recorded from this placeholder.</li>
+            <li>Understand the business and implementation purpose of the phase.</li>
+            <li>Identify the decisions and evidence inherited from earlier phases.</li>
+            <li>Prepare the stated deliverable for an accountable review.</li>
+            <li>Use the exit gate to decide whether the next phase can begin.</li>
           </ul>
         </article>
       </section>
 
-      <nav className={styles.phaseNavigation} aria-label="Phase preview navigation">
+      <nav className={styles.phaseNavigation} aria-label="Phase navigation">
         {previous ? <Link href={`/learn/${previous.slug}`}><ArrowLeft size={16} /> Phase {String(previous.phase).padStart(2, "0")} · {previous.title}</Link> : <span />}
         {next ? <Link href={`/learn/${next.slug}`}>Phase {String(next.phase).padStart(2, "0")} · {next.title}<ArrowRight size={16} /></Link> : <Link href="/learn?track=implementation">Return to dashboard<ArrowRight size={16} /></Link>}
       </nav>

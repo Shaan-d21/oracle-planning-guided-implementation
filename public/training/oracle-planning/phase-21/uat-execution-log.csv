@@ -1,0 +1,2 @@
+Execution_ID,Script_ID,Journey_ID,Release,Environment,Data_Version,Tester,Role,Start_Timestamp_Timezone,End_Timestamp_Timezone,Planned_Steps,Passed_Steps,Failed_Steps,Blocked_Steps,Evidence_Items,Issue_IDs,Reconciliation_Status,Tester_Decision,Business_Owner_Review,Comments
+UAT-EXEC-001,UAT-SCRIPT-01,UAT-JOURNEY-01,Release Candidate 1,UAT,UAT-DATA-01,Named Tester,Sales Planner,YYYY-MM-DD HH:MM IST,,8,0,0,0,0,,Pending,Pending,Pending,

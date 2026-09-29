@@ -1,0 +1,7 @@
+source_phase,source_measure,source_grain,period,value,target_purpose,source_version,status
+Phase 09,Net revenue,Product Market Channel Month,Practice run-rate,559579.64,Management P&L,Sales Baseline v1,Approved
+Phase 12,COGS,Product Entity Month,Practice run-rate,356855.544608,Management P&L and inventory bridge,Cost Baseline v1,Approved
+Phase 12,Ending inventory value,Product Entity Month,Practice run-rate,82554.455392,Balance sheet,Cost Baseline v1,Approved
+Phase 13,Capital investment,Entity Project-summary Month,Practice run-rate,1200000,Investing cash flow and PPE,Dependency Growth Case v1,Approved scenario
+Phase 13,Monthly depreciation,Entity Month,Practice run-rate,20000,Management P&L cash add-back and PPE,Dependency Growth Case v1,Approved scenario
+Phase 13,New debt financing,Entity Month,Practice run-rate,1000000,Financing cash flow and debt,Financing Assumption v1,Approved assumption

@@ -1,0 +1,9 @@
+control_id,control,source_value,planning_value,variance,status,reviewer,evidence_reference
+FR-01,Revenue COGS depreciation workforce interest tax and P&L subtotals agree with approved sources,,,,Open,,
+FR-02,Opening plus movements equals closing for working capital PPE debt equity and cash,,,,Open,,
+FR-03,Net income plus noncash and working-capital adjustments equals operating cash flow,,,,Open,,
+FR-04,Opening cash plus net cash movement equals closing cash on cash flow and balance sheet,,,,Open,,
+FR-05,Total assets minus total liabilities and equity equals zero at full precision,,,,Open,,
+FR-06,COGS plus ending inventory value equals goods available value,,,,Open,,
+FR-07,Plan1 statements agree with ApexPlan reporting aggregate,,,,Open,,
+FR-08,Unchanged rerun produces the same result without duplicate movement,,,,Open,,

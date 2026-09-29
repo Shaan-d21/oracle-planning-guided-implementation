@@ -1,9 +1,31 @@
 ControlLevel,ControlMember,ExpectedRecords,ExpectedAmount
-File,Historical Sales Clean,8,800
-Entity,IN_WEST,4,400
-Entity,IN_NORTH,4,400
-Product,P100,4,455
-Product,P200,4,345
-Period,2026-01,8,800
-Scenario,ACT,8,800
-
+File,Historical Sales Clean,576,66240
+Account,Historical_Sales_Units,576,66240
+Entity,India_Operations,576,66240
+Product,MIXER_GRINDER,144,21600
+Product,ELECTRIC_KETTLE,144,17280
+Product,AIR_FRYER,144,14400
+Product,INDUCTION_COOKTOP,144,12960
+Market,NORTH,144,17640
+Market,CENTRAL,144,16200
+Market,WEST,144,16920
+Market,SOUTH,144,15480
+Channel,DISTRIBUTOR,192,24000
+Channel,RETAIL,192,22080
+Channel,ONLINE,192,20160
+Period,Jan,48,4920
+Period,Feb,48,5160
+Period,Mar,48,5400
+Period,Apr,48,5640
+Period,May,48,5880
+Period,Jun,48,5640
+Period,Jul,48,5400
+Period,Aug,48,5160
+Period,Sep,48,4920
+Period,Oct,48,5640
+Period,Nov,48,6120
+Period,Dec,48,6360
+Year,FY26,576,66240
+Scenario,Actual,576,66240
+Version,Final,576,66240
+Currency,No Currency,576,66240

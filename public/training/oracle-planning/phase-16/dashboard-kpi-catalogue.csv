@@ -1,0 +1,8 @@
+KPI_ID,KPI_Name,Cube,Definition,Comparison,Filter_Context,Threshold_or_Exception,Drill_Destination,Owner,Refresh_Behavior
+KPI-01,Production Starts,ApexPlan,Approved company and plant production starts,Demand requirement,"Scenario;Version;Year;Period;Entity;Product",Mismatch or capacity overload,Production allocation form,Operations Planning Lead,After reconciled data movement
+KPI-02,Net Revenue,ApexPlan,Approved net revenue from sales planning,Prior or target,"Scenario;Version;Year;Period;Entity;Product;Market;Channel",Material revenue variance,Sales review form,Sales Planning Lead,After reconciled data movement
+KPI-03,Gross Margin,ApexPlan,Net revenue minus governed COGS,Prior target and percent,"Scenario;Version;Year;Period;Entity;Product",Margin below threshold,Cost and margin review,Finance Planning Lead,After financial calculation and movement
+KPI-04,Ending Inventory,ApexPlan,Reconciled ending inventory value and quantity,Policy range,"Scenario;Version;Year;Period;Entity;Product",Below safety or excess,Inventory control form,Inventory Lead,After inventory calculation and movement
+KPI-05,Net Income,ApexPlan,Approved management-planning net income,Prior and target,"Scenario;Version;Year;Period;Entity",Below approved scenario,Financial review form,Finance Planning Lead,After statement reconciliation
+KPI-06,Closing Cash,ApexPlan,Opening cash plus reconciled net cash movement,Minimum liquidity,"Scenario;Version;Year;Period;Entity",Below liquidity threshold,Cash-flow control form,Finance Planning Lead,After statement reconciliation
+KPI-07,Balance Control,ApexPlan,Assets minus liabilities and equity,Zero,"Scenario;Version;Year;Period;Entity",Absolute variance above tolerance,Financial control form,EPM Technical Lead,After statement reconciliation

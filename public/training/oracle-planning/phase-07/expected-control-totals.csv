@@ -1,6 +1,6 @@
 Dimension,ExpectedTotal,ExpectedRoots,ExpectedParents,ExpectedLeaves,ControlNote
-Product,7,1,3,3,Clean source only
-Plant,5,1,3,2,Clean source only
-Customer,5,1,3,2,Clean source only
-Account,6,1,3,3,Clean source only
-
+Product,6,1,1,4,Clean source only
+Entity,5,1,2,2,Clean source only
+Market,5,1,0,4,Clean source only
+Channel,4,1,0,3,Clean source only
+Account,161,1,11,149,Clean source only

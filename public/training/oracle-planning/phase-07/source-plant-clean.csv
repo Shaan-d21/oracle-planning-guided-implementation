@@ -1,7 +1,0 @@
-Member,Parent,Alias,Description
-All_Plants,,All Plants,Root plant hierarchy
-India,All_Plants,India,Country rollup
-PUNE,India,Pune Plant,Training plant
-LINE_01,PUNE,Line 01,Training production line
-LINE_02,PUNE,Line 02,Training production line
-

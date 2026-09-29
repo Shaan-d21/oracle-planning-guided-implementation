@@ -14,6 +14,8 @@ export type ModuleFeedback = {
 
 type LearningModuleFrameProps = {
   phase: number;
+  unitLabel?: string;
+  dashboardHref?: string;
   stage: string;
   title: string;
   description: string;
@@ -32,6 +34,8 @@ type LearningModuleFrameProps = {
 
 export function LearningModuleFrame({
   phase,
+  unitLabel = "Phase",
+  dashboardHref = "/learn?track=implementation",
   stage,
   title,
   description,
@@ -61,7 +65,7 @@ export function LearningModuleFrame({
   return (
     <main className={styles.modulePage}>
       <div className={styles.breadcrumb}>
-        <Link href="/learn?track=implementation">Dashboard</Link><span>/</span>Phase {phaseLabel}<span>/</span>{active.title}
+        <Link href={dashboardHref}>Dashboard</Link><span>/</span>{unitLabel} {phaseLabel}<span>/</span>{active.title}
       </div>
 
       <section className={styles.moduleHeader}>
@@ -77,7 +81,7 @@ export function LearningModuleFrame({
       {prerequisite && !prerequisite.complete && TESTING_UNLOCK_ALL_PHASES && (
         <div className={`${styles.prerequisiteNotice} ${styles.testingNotice}`}>
           <Info size={18} />
-          <div><strong>Testing mode · prerequisite bypassed</strong><span>{prerequisite.message} Normal sequencing can be restored from the learning-mode switch.</span></div>
+          <div><strong>Earlier phase recommended</strong><span>{prerequisite.message} You may review this phase now, but complete the earlier work before submitting this phase&apos;s exit gate.</span></div>
           <Link href={prerequisite.href}>{prerequisite.linkLabel}</Link>
         </div>
       )}

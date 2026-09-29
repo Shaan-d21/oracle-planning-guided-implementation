@@ -1,0 +1,7 @@
+product,component,quantity_per_good_unit,uom,conversion_factor,effective_rate,extended_cost,currency_context,effective_from,owner,status
+Mixer Grinder,Motor assembly,1,Each,1,105,105,INR,2027-01-01,Sourcing Manager,Approved
+Mixer Grinder,Jar set,1,Set,1,45,45,INR,2027-01-01,Sourcing Manager,Approved
+Mixer Grinder,Housing and electrical parts,1,Kit,1,40,40,INR,2027-01-01,Sourcing Manager,Approved
+Mixer Grinder,Packaging,1,Pack,1,10,10,INR,2027-01-01,Sourcing Manager,Approved
+Mixer Grinder,Normal material loss allowance,1,Allowance,1,10,10,INR,2027-01-01,Cost Accounting Manager,Approved
+Mixer Grinder,Direct material total,1,Good unit,1,210,210,INR,2027-01-01,Cost Accounting Manager,Approved

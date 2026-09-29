@@ -1,0 +1,9 @@
+product,entity,period,book_fg,quality_hold,obsolete_blocked,available_fg,snapshot_date,owner,status
+Mixer Grinder,Pune,Jan-FY27,160,5,5,150,2026-12-31,Inventory Controller,Approved
+Mixer Grinder,Noida,Jan-FY27,110,5,5,100,2026-12-31,Inventory Controller,Approved
+Electric Kettle,Pune,Jan-FY27,120,5,5,110,2026-12-31,Inventory Controller,Approved
+Electric Kettle,Noida,Jan-FY27,80,5,5,70,2026-12-31,Inventory Controller,Approved
+Air Fryer,Pune,Jan-FY27,80,5,5,70,2026-12-31,Inventory Controller,Approved
+Air Fryer,Noida,Jan-FY27,60,5,5,50,2026-12-31,Inventory Controller,Approved
+Induction Cooktop,Pune,Jan-FY27,65,5,5,55,2026-12-31,Inventory Controller,Approved
+Induction Cooktop,Noida,Jan-FY27,55,5,5,45,2026-12-31,Inventory Controller,Approved

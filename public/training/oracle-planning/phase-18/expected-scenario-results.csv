@@ -1,0 +1,19 @@
+Result_ID,Version,Measure,Expected_Value,Tolerance,Threshold,Expected_Status,Source_or_Formula,Owner,Review_Status
+ER-01,Final,Production Starts,1380,0,Baseline,Protected,Approved Forecast Final,Operations Owner,Pending
+ER-02,Final,Capacity Utilization,86.25,0.01,Less than or equal to 95,Feasible,690 divided by 800,Operations Owner,Pending
+ER-03,Final,Net Revenue,559579.64,0.01,Baseline,Protected,Approved Forecast Final,Sales Owner,Pending
+ER-04,Final,Gross Margin,202724.10,0.01,Positive,Protected,Approved Forecast Final,Finance Owner,Pending
+ER-05,Final,Net Income,88293.07,0.01,Baseline,Protected,Approved Forecast Final,Finance Owner,Pending
+ER-06,Final,Closing Cash,383448.80,0.01,Greater than or equal to 300000,Protected,Approved Forecast Final,Treasury Owner,Pending
+ER-07,Upside,Production Starts,1490.40,0.01,Calculated,Review,1380 multiplied by 1.08,Operations Owner,Pending
+ER-08,Upside,Capacity Utilization,93.15,0.01,Less than or equal to 95,Feasible,745.2 divided by 800,Operations Owner,Pending
+ER-09,Upside,Net Revenue,616432.93,0.01,Calculated,Review,559579.64 multiplied by 1.08 and 1.02,Sales Owner,Pending
+ER-10,Upside,Gross Margin,219466.83,0.01,Positive,Review,Revenue minus COGS,Finance Owner,Pending
+ER-11,Upside,Net Income,99175.84,0.02,Calculated,Review,Base plus 65 percent of margin change,Finance Owner,Pending
+ER-12,Upside,Closing Cash,392675.57,0.02,Greater than or equal to 300000,Feasible,Base cash plus NI change less incremental inventory,Treasury Owner,Pending
+ER-13,Downside,Production Starts,1214.40,0.01,Calculated,Review,1380 multiplied by 0.88,Operations Owner,Pending
+ER-14,Downside,Capacity Utilization,75.90,0.01,Less than or equal to 95,Feasible,607.2 divided by 800,Operations Owner,Pending
+ER-15,Downside,Net Revenue,487505.78,0.02,Calculated,Review,559579.64 multiplied by 0.88 and 0.99,Sales Owner,Pending
+ER-16,Downside,Gross Margin,151490.61,0.02,Positive,Review,Revenue minus COGS,Finance Owner,Pending
+ER-17,Downside,Net Income,54991.30,0.02,Calculated,Review,Base plus 65 percent of margin change,Finance Owner,Pending
+ER-18,Downside,Closing Cash,350147.03,0.02,Greater than or equal to 300000,Feasible,Base cash plus NI change,Treasury Owner,Pending

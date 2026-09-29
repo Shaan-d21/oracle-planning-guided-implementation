@@ -1,0 +1,2 @@
+EXCEPTION_ID,PRODUCT,ENTITY_PLANT,PERIOD,EXCEPTION_TYPE,QUANTITY,ROOT_DRIVER,PROPOSED_ACTION,OWNER,DUE_DATE,STATUS,APPROVAL_REFERENCE
+PP-EX-001,MIXER_GRINDER,All Plants,Jan FY27,CAPACITY_SHORTFALL,300,Planned starts 1900 exceed demonstrated capacity 1600,Evaluate approved overtime alternate capability subcontract or demand timing,Production Planning Lead,,OPEN,

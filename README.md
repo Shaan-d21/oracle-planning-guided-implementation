@@ -5,21 +5,20 @@ and operational planning training.
 
 ## Current scope
 
-- Two explicitly separated paths: Implementation Journey and Monthly Planning Cycle.
+- One 90-day workshop connecting the 27-phase Implementation Journey with ten
+  monthly-cycle activities and a final operational capstone.
 - Track-specific local progress with migration from the original MVP storage format.
 - A reusable module frame for lessons, prerequisites, validation, and exit gates.
-- Complete interactive modules for Discovery, Current-State Assessment,
-  Future-State Design, Requirement Traceability, Solution Architecture, and
-  Application & Dimension Design.
+- Interactive lesson modules across all 27 implementation phases.
 - A corrected 27-phase implementation catalog and a defined 10-module monthly cycle.
+- A basic Next.js backend foundation with versioned health and catalog endpoints,
+  validation contracts, storage ports, and future chatbot knowledge retrieval.
 
 ## Temporary testing mode
 
-All 27 implementation phases are currently open for navigation testing. Phases
-01–06 contain interactive learning content; Phases 07–27 display clearly marked
-preview pages and do not record completion. Set `TESTING_UNLOCK_ALL_PHASES` to
-`false` in `src/config/learning-mode.ts` to restore prerequisite notices and hide
-planned-phase preview access.
+All 27 implementation phases are currently open for navigation and content review.
+Set `TESTING_UNLOCK_ALL_PHASES` to `false` in `src/config/learning-mode.ts` before
+production launch to restore prerequisite sequencing.
 
 ## Technology
 
@@ -29,9 +28,9 @@ planned-phase preview access.
 - Modern CSS
 - Typed, data-driven course content
 
-The project intentionally starts without a database, authentication service, or
-separate backend. FastAPI and PostgreSQL will be introduced when shared learner
-progress, evidence submission, and instructor workflows are required.
+The project currently has no database or authentication service. Next.js Route
+Handlers are the default backend boundary; a separate FastAPI service is not planned
+unless a future Python-specific requirement justifies it.
 
 ## Development
 
@@ -53,6 +52,7 @@ This runs linting, TypeScript validation, and a production build.
 ## Project documentation
 
 - `docs/architecture.md`
+- `docs/backend-foundation.md`
 - `docs/content-model.md`
 
 The original HTML concept file is treated as a requirements reference and remains

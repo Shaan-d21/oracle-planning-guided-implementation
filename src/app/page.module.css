@@ -94,9 +94,12 @@
 .sectionHeading > p, .experienceIntro > p { color: var(--color-text-muted); line-height: 1.75; margin: 0; }
 .trackGrid { display: grid; gap: 18px; grid-template-columns: repeat(2, 1fr); }
 .trackCard { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); padding: 28px; transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease; }
+.trackCard[data-status="included"] { background: #fbfcfd; }
 .trackCard:hover { border-color: #9dc4e8; box-shadow: var(--shadow-md); transform: translateY(-3px); }
 .trackTopline { align-items: center; display: flex; justify-content: space-between; }
-.trackTopline > span:last-child { color: #93a3b4; font-family: var(--font-mono); font-size: 0.66rem; }
+.trackTopline > span:last-child { color: #718296; font-family: var(--font-mono); font-size: 0.66rem; font-weight: 700; }
+.trackCard[data-status="available"] .trackTopline > span:last-child { color: #147454; }
+.trackCard[data-status="included"] .trackTopline > span:last-child { color: #7455c3; }
 .trackIcon { align-items: center; background: var(--color-primary-light); border-radius: 10px; color: var(--color-primary); display: flex; height: 44px; justify-content: center; width: 44px; }
 .trackCard > p { color: var(--color-accent); font-size: 0.65rem; font-weight: 800; letter-spacing: 0.1em; margin: 28px 0 9px; text-transform: uppercase; }
 .trackCard h3 { font-family: var(--font-heading); font-size: 1.65rem; letter-spacing: -0.035em; margin: 0 0 8px; }

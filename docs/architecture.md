@@ -1,4 +1,4 @@
-# Initial architecture
+# Application architecture
 
 This project starts as a frontend-first Next.js application. Next.js is intentionally
 used as a single application boundary so server APIs can be added later without
@@ -10,21 +10,25 @@ introducing a separate backend prematurely.
 - TypeScript domain definitions
 - Course content stored as typed source data
 - Ordinary image files for future screenshots and diagrams
-- No authentication, database, external API, or AI dependency
+- Next.js Route Handler backend foundation with versioned API conventions
+- Storage-independent contracts for identity, progress, submissions, and chat
+- Deterministic workshop knowledge retrieval for a future chatbot
+- No authentication, database connection, external API, or live AI dependency
 
 ## Planned growth
 
 When multi-user requirements are approved, introduce capabilities in this order:
 
-1. FastAPI as the application API boundary.
-2. PostgreSQL for users, track progress, attempts, and evidence metadata.
-3. Authentication through the organization's OIDC provider or another approved identity service.
-4. Object storage for Oracle screenshots and learner evidence files.
-5. Background jobs only if reporting, exports, or media processing require them.
+1. Confirm a Node-capable deployment target and the available relational database.
+2. Integrate WordPress or another approved provider as the identity authority.
+3. Add a database adapter for learner records, progress, attempts, and evidence metadata.
+4. Add object storage only when learner evidence uploads are approved.
+5. Expose the AI chatbot only after authentication, rate limiting, and content review.
+6. Add background jobs only if reporting, exports, or media processing require them.
 
-Next.js route handlers remain appropriate for lightweight frontend-facing concerns
-such as health checks. Business persistence and instructor workflows will move to
-FastAPI when a shared backend is actually required.
+Next.js Route Handlers are the default API boundary for this application. FastAPI
+should be introduced only if substantial Python-specific processing or a separately
+owned shared service creates a concrete need for it.
 
 ## Product boundaries
 

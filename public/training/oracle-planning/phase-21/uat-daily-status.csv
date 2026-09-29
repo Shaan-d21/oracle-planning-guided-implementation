@@ -1,0 +1,2 @@
+Status_Date,Release,Scope_Journeys,Assigned_Roles,Participating_Roles,Planned_Scripts,Executed_Scripts,Passed,Failed,Blocked,Not_Run,Critical_Open,High_Open,Medium_Open,Low_Open,Retests_Passed,Regression_Passed,Reconciliations_Passed,Training_Gaps,Support_Gaps,Cutover_Conditions,Top_Risks,Decision,Owner
+YYYY-MM-DD,Release Candidate 1,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Continue|Pause|Exit Review,UAT Lead

@@ -1,8 +1,8 @@
 Stage,Control,ExpectedEvidence,Owner,Status
 Readiness,Approved contract and target POV,Contract and change record,Integration lead,Not started
-Profile,Record count and amount total,8 records and total 800,Source owner,Not started
+Profile,Record count and amount total,576 records and total 66240,Source owner,Not started
 Configure,Integration and location definition,General and file-preview evidence,Builder,Not started
-Map,Dimensions time category constants and members,Reviewed mapping baseline,Builder,Not started
+Map,Dimensions time category and members,Reviewed mapping baseline,Builder,Not started
 Stage,Import Source with No Export,Process ID and staged controls,Builder,Not started
 Validate,All records mapped and valid,Workbench or validation evidence,Reviewer,Not started
 Export,Approved target mode and POV,Process Details and logs,Builder,Not started

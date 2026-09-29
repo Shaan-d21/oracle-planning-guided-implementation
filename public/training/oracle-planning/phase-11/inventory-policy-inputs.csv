@@ -1,0 +1,5 @@
+product,period,future_demand,demand_horizon_days,target_days_cover,daily_demand_stddev,replenishment_lead_days,service_factor,pack_multiple,effective_from,policy_owner,status
+Mixer Grinder,Jan-FY27,1301.348,30,6.5,20,4,1.65,20,2027-01-01,Supply Chain Director,Approved
+Electric Kettle,Jan-FY27,900,30,7,15,3,1.65,25,2027-01-01,Supply Chain Director,Approved
+Air Fryer,Jan-FY27,650,30,8,12,5,1.65,10,2027-01-01,Supply Chain Director,Approved
+Induction Cooktop,Jan-FY27,500,30,8,10,4,1.65,10,2027-01-01,Supply Chain Director,Approved

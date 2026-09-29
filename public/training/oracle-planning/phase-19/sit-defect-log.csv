@@ -1,0 +1,5 @@
+Defect_ID,Detected_Date,Test_Case,Requirement_or_Interface,Summary,Preconditions,Steps,Expected_Result,Actual_Result,Evidence,Severity,Priority,Business_Impact,Control_Impact,Root_Cause,Owner,Fix_Build,Fix_Date,Retest_Result,Regression_Scope,Regression_Result,Workaround,Residual_Risk,Approver,Disposition,Status
+DEF-001,,SIT-002,INT-02,Invalid Product is not rejected,,,,,,Critical,High,,,,,,,,,,,,,,Open
+DEF-002,,SIT-051,INT-06,Plan1 and ApexPlan ASO totals differ,,,,,,High,High,,,,,,,,,,,,,,Open
+DEF-003,,SIT-061,REQ-SEC-001,Viewer can submit through Smart View,,,,,,Critical,High,,,,,,,,,,,,,,Open
+DEF-004,,SIT-071,REQ-WF-001,Task and approval-unit states do not agree,,,,,,High,High,,,,,,,,,,,,,,Open

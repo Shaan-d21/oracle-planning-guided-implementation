@@ -1,0 +1,13 @@
+STEP,ACTIVITY,CONTROL,EVIDENCE
+1,Confirm environment application cube role and change reference,Use authorized ApexPlan training tenant and Plan1 only,Environment role and approval reference
+2,Freeze Phase 09 demand handoff,Record source version cutoff grain and reconciliation total,Demand contract and source total
+3,Validate controlled assumptions,Confirm beginning inventory provisional target yield lot size hours rates and ownership,Approved assumption baseline
+4,Validate Product-to-plant capability,Test Pune and Noida valid and invalid intersections,Capability matrix and negative test
+5,Run production requirement calculation,Prompt only approved Product month Forecast and Working,Rule version prompts and job ID
+6,Reconcile requirement bridge,Prove inventory equation yield adjustment lot rounding and projected ending inventory,Independent calculation and differences
+7,Allocate plant production,Use valid lots and require plant total to equal planned starts,Allocation form and balance
+8,Calculate capacity and utilization,Use approved productive hours and Product-by-plant rates,Hours rate capacity and utilization evidence
+9,Resolve exceptions,Do not overwrite calculated requirements or capacity,Exception owner action due date impacts and approval
+10,Rerun and reconcile,Repeat unchanged scope and compare all detailed and aggregate totals,Two runs and reconciliation workbook
+11,Approve baseline,Retain forms jobs tests defects open items and reviewer decision,Evidence index and sign-off
+12,Issue Phase 11 trigger,Identify provisional target inventory assumptions requiring policy refinement,Rerun trigger owner and due date

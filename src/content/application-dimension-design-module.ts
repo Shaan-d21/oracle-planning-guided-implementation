@@ -16,76 +16,82 @@ export const applicationDecisions = [
   {
     id: "application-type",
     label: "Application pattern",
-    correct: "Custom Planning application for the integrated production and sales use case",
-    options: ["Custom Planning application for the integrated production and sales use case", "FreeForm application with no standard Planning dimensions", "Separate unrelated applications for every department"],
+    correct: "Create one Custom Planning application for the approved Apex design",
+    options: ["Create one Custom Planning application for the approved Apex design", "Use Planning Modules even though the approved design is Custom", "Create a separate application for every planning department"],
   },
   {
     id: "calendar",
     label: "Calendar design",
-    correct: "Monthly corporate calendar with weekly production detail handled through an approved connected design",
-    options: ["Monthly corporate calendar with weekly production detail handled through an approved connected design", "One undefined time member for every planning process", "Planner-created spreadsheet dates with no shared calendar"],
+    correct: "Use monthly periods from 2023 through 2029 with January as the fiscal-year start",
+    options: ["Use monthly periods from 2023 through 2029 with January as the fiscal-year start", "Add weekly production periods that are outside the approved design", "Let each planner maintain independent spreadsheet dates"],
   },
   {
     id: "currency",
     label: "Currency design",
-    correct: "Local entity input with an approved main reporting currency, rate ownership, and multicurrency requirement",
-    options: ["Local entity input with an approved main reporting currency, rate ownership, and multicurrency requirement", "Store converted values only and discard local currency", "Let each planner enter an ungoverned currency code"],
+    correct: "Use INR for Pune and Noida local inputs, USD as the main reporting currency, and No Currency for nonmonetary measures; govern average and ending rates",
+    options: ["Use INR for Pune and Noida local inputs, USD as the main reporting currency, and No Currency for nonmonetary measures; govern average and ending rates", "Treat the checked multicurrency option as irrelevant", "Let each planner enter an ungoverned currency code"],
   },
   {
     id: "task-flow",
     label: "Planning process control",
-    correct: "Select the approved task-flow approach during creation and document ownership because it affects the operating process",
-    options: ["Select the approved task-flow approach during creation and document ownership because it affects the operating process", "Ignore task flow until after go-live", "Use email as the only planning process control"],
+    correct: "Use EPM Task Manager and define task ownership, due dates, dependencies, and evidence",
+    options: ["Use EPM Task Manager and define task ownership, due dates, dependencies, and evidence", "Ignore task flow until after go-live", "Use email as the only planning process control"],
   },
   {
     id: "naming",
     label: "Cube and naming decisions",
-    correct: "Approve stable technical names, business aliases, cube purpose, owners, and naming conventions before creation",
-    options: ["Approve stable technical names, business aliases, cube purpose, owners, and naming conventions before creation", "Use descriptions as keys and rename cubes whenever terminology changes", "Allow every workstream to create members without conventions"],
+    correct: "Use ApexPlan for the application and ASO reporting cube, and Plan1 for the BSO input and calculation cube",
+    options: ["Use ApexPlan for the application and ASO reporting cube, and Plan1 for the BSO input and calculation cube", "Let users enter data independently in both cubes", "Create additional cubes for each department without a design decision"],
   },
 ] as const;
 
 export const screenshotWalkthroughs = {
   application: [
-    { id: "APP-01", title: "Open the Planning creation flow", path: "EPM landing page → Planning → Select → Create a new application → Start", asset: "01-planning-start.png", capture: "Planning landing page showing the Create a new application card and Start action.", action: "Confirm that the exercise uses a disposable training business process. Do not remove or replace an existing application.", evidence: "Tenant and exercise owner confirmed before entering the wizard.", docUrl: "https://docs.oracle.com/en/cloud/saas/planning-budgeting-cloud/planning-tutorial-creating-the-planning-business-process/index.html" },
-    { id: "APP-02", title: "Set general properties", path: "Application Wizard → General Properties", asset: "02-general-properties.png", capture: "Name, description, and Application Type set to Custom.", action: "Enter the approved technical name and description; choose Custom only because the signed architecture requires a highly tailored connected-planning design.", evidence: "Values match the application setup decision sheet." },
-    { id: "APP-03", title: "Review application details", path: "Application Wizard → Details", asset: "03-application-details.png", capture: "Period frequency, fiscal calendar, years, rolling forecast, task-flow type, currency, cube names, sandboxes, and Strategic Modeling options.", action: "Compare every setting to the approved decision sheet. Treat cube names, calendar, and currency choices as high-impact configuration, not defaults to accept blindly.", evidence: "Peer review records the selected value and rationale for every field." },
-    { id: "APP-04", title: "Define initial dimensions", path: "Application Wizard → Metadata and Custom Dimensions", asset: "04-metadata-dimensions.png", capture: "Required Planning dimensions, initial members/import choices, and custom-dimension rows.", action: "Add only approved custom dimensions and initial metadata. Do not invent dimensions merely because rows are available.", evidence: "Custom dimensions reconcile to the approved inventory and cube participation matrix." },
-    { id: "APP-05", title: "Review before creation", path: "Application Wizard → Review", asset: "05-review-create.png", capture: "Review page showing the complete application configuration before Create.", action: "Perform a maker-checker review. In a real tenant, only the authorized service administrator selects Create after approval.", evidence: "Reviewer, decision log reference, and approval status recorded." },
+    { id: "APP-01", title: "Select the Planning business process", path: "Cloud EPM business-process selection → Planning → Select", asset: "01-select-planning.png", imageSrc: "/training/oracle-planning/phase-06/01-select-planning.png", imageWidth: 1894, imageHeight: 691, capture: "Cloud EPM page with Planning selected from the available business processes.", action: "Choose Planning because the solution requires budgets, forecasts, driver-based plans, workflow, and multidimensional analysis. The other cards represent different EPM business processes and are not substitutes for Planning.", evidence: "Planning is visibly selected, the authorized training tenant is confirmed, and no existing business process will be replaced.", docUrl: "https://docs.oracle.com/en/cloud/saas/planning-budgeting-cloud/planning-tutorial-creating-the-planning-business-process/index.html" },
+    { id: "APP-02", title: "Choose how the application will be created", path: "Planning → Create a new application → Start", asset: "02-create-new-application.png", imageSrc: "/training/oracle-planning/phase-06/02-create-new-application.png", imageWidth: 1722, imageHeight: 495, capture: "Planning start page showing Create a new application and Migrate.", action: "Select Create a new application because this is an empty authorized training business process. Use Migrate only when restoring an approved snapshot.", evidence: "The creation method, application owner, and training-environment approval are recorded before Start is selected." },
+    { id: "APP-03", title: "Enter the application identity", path: "Create Application → General", asset: "03-general-properties.png", imageSrc: "/training/oracle-planning/phase-06/03-general-properties.png", imageWidth: 1872, imageHeight: 690, capture: "General page showing Name ApexPlan, Description Production and Sales Planning, and Application Type Custom.", action: "Verify the stable application name and business description, and confirm that Custom is the approved application type. The disabled Dimensions Mapping step is not required for this new Custom application path.", evidence: "ApexPlan, its description, and Custom application type match the approved setup decision sheet." },
+    { id: "APP-04", title: "Configure the application details", path: "Create Application → Details", asset: "04-application-details.png", imageSrc: "/training/oracle-planning/phase-06/04-application-details.png", imageWidth: 1877, imageHeight: 880, capture: "Details page showing Monthly periods, years 2023–2029, January fiscal start, rolling forecast disabled, EPM Task Manager, USD as the main currency, Simplified Multicurrency, Plan1 input cube, ApexPlan reporting cube, Sandboxes disabled, and Strategic Modeling disabled.", action: "Compare every selected value with the approved configuration sheet. Confirm USD as the application main/reporting currency and Simplified Multicurrency as the mechanism that will support INR local input at Pune and Noida. Confirm that Plan1 is the writable BSO input/calculation cube and ApexPlan is the read-oriented ASO reporting cube. Do not select Next while any value differs from the approved design.", evidence: "The reviewer signs off calendar, workflow, USD/INR/No Currency treatment, cube names and purposes, optional features, and the reason for enabling Simplified Multicurrency." },
+    { id: "APP-05", title: "Add the approved custom dimensions", path: "Create Application → Customize", asset: "0_dimensions.png", imageSrc: "/training/oracle-planning/phase-06/0_dimensions.png", imageWidth: 1887, imageHeight: 878, capture: "Customize page showing the standard Period, Account, Years, Scenario, Version, and Entity dimensions plus custom Product, Market, and Channel dimensions.", action: "Keep the standard dimensions and add only Product, Market, and Channel. Plant responsibility is modeled through Entity members for Pune and Noida; do not add Customer, Plant, Production Line, or Cost Element dimensions to this release.", evidence: "The dimension inventory matches the approved grain and contains exactly the required custom dimensions before Next is selected." },
+    { id: "APP-06", title: "Perform the final configuration review", path: "Create Application → Review", asset: "05-review-create.png", imageSrc: "/training/oracle-planning/phase-06/05-review-create.png", imageWidth: 1887, imageHeight: 772, capture: "Review page confirming ApexPlan Standard, Monthly frequency, 2023–2029, January fiscal start, EPM Task Manager, USD main currency with Simplified Multicurrency, Sandboxes disabled, and the Plan1/ApexPlan cube split.", action: "Compare the full review—not only the visible upper section—with the signed decision sheet. Confirm the accompanying design record assigns INR local input to Pune and Noida, USD reporting to the company rollup, and No Currency to nonmonetary measures. Go Back to correct any mismatch. Select Create only after maker-checker approval because several choices are high-impact or difficult to reverse.", evidence: "The reviewer, approval reference, configuration summary, Entity-currency assignment, cube split, and Create authorization are retained with the build record." },
+    { id: "APP-07", title: "Monitor application creation", path: "Create → Application Creation Status", asset: "06-application-creation-status.png", imageSrc: "/training/oracle-planning/phase-06/06-application-creation-status.png", imageWidth: 537, imageHeight: 106, capture: "Application Creation Status showing that creation has been initiated.", action: "Wait for completion; initiation is not proof of success. Do not submit Create again. Capture any warning or error and follow the approved recovery route.", evidence: "Final status, start/end time, operator, and any warning or error are recorded." },
+    { id: "APP-08", title: "Verify the created application", path: "Application Creation Status → ApexPlan Home", asset: "0_final_application.png", imageSrc: "/training/oracle-planning/phase-06/0_final_application.png", imageWidth: 1917, imageHeight: 923, capture: "ApexPlan home page with Tasks, Dashboards, Infolets, Data, Reports, Rules, Approvals, Application, Tools, IPM, and Academy cards.", action: "Confirm the application name in the header, open Application to verify cubes and dimensions, and perform a smoke check of navigation. A home page alone proves access—not that metadata, security, forms, rules, or integrations are complete.", evidence: "The home page, application name, expected cards, successful access, and follow-up cube/dimension smoke checks are captured. Sanitize the displayed user identity before publishing the screenshot externally." },
   ],
   hierarchy: [
-    { id: "DIM-UI-01", title: "Open the dimension inventory", path: "Home → Application → Overview → Dimensions", asset: "06-dimensions-overview.png", capture: "Dimensions page with cube filter, dimension order, evaluation order, Create, Import, and Export actions.", action: "Filter by cube and reconcile dimension participation, order, and evaluation order to the design workbook.", evidence: "Dimension counts and cube assignments agree with the approved inventory.", docUrl: "https://docs.oracle.com/en/cloud/saas/planning-budgeting-cloud/pfusa/managing_dimensions.html" },
-    { id: "DIM-UI-02", title: "Inspect member properties", path: "Dimensions → select a dimension → Edit Member Properties", asset: "07-member-properties.png", capture: "Simplified Dimension Editor showing hierarchy rows and relevant member-property columns.", action: "Inspect parent, alias, data storage, aggregation, data type, account behavior, plan-type validity, security, and formula columns relevant to the selected dimension.", evidence: "A property validation sample covers representative parents, leaves, calculated members, and balance accounts." },
+    { id: "DIM-UI-01", title: "Open the dimension inventory", path: "Home → Application → Overview → Dimensions", asset: "07-dimensions-overview.png", capture: "Dimensions page with cube filter, dimension order, evaluation order, Create, Import, and Export actions.", action: "Filter by cube and reconcile dimension participation, order, and evaluation order to the design workbook.", evidence: "Dimension counts and cube assignments agree with the approved inventory.", docUrl: "https://docs.oracle.com/en/cloud/saas/planning-budgeting-cloud/pfusa/managing_dimensions.html" },
+    { id: "DIM-UI-02", title: "Inspect member properties", path: "Dimensions → select a dimension → Edit Member Properties", asset: "08-member-properties.png", capture: "Simplified Dimension Editor showing hierarchy rows and relevant member-property columns.", action: "Inspect parent, alias, data storage, aggregation, data type, account behavior, plan-type validity, security, and formula columns relevant to the selected dimension.", evidence: "A property validation sample covers representative parents, leaves, calculated members, and balance accounts." },
+    { id: "CUR-UI-01", title: "Verify the Simplified Multicurrency structure", path: "Home → Application → Overview → Dimensions → Currency", asset: "11-currency-configuration.png", capture: "Currency dimension or exchange-rate configuration showing USD, INR, and the supported currency-neutral treatment required by the approved ApexPlan design.", action: "Confirm USD as the main/reporting currency, INR as the local input currency for Pune and Noida, and No Currency for units, hours, headcount, percentages, and days. Record Finance ownership of monthly average and ending rates. Do not load rates until the currency list, Entity assignments, account behavior, and ownership are approved.", evidence: "USD, INR, No Currency treatment, Entity assignment, rate type, period coverage, owner, and local-to-reporting reconciliation control are documented.", docUrl: "https://docs.oracle.com/en/cloud/saas/planning-budgeting-cloud/pfusa/about_simplified_multicurrency_100xf978173a.html" },
   ],
   intersections: [
-    { id: "CUBE-UI-01", title: "Review cubes", path: "Home → Application → Overview → Cubes", asset: "08-cubes-overview.png", capture: "Cubes page showing input and reporting cubes plus the Create action.", action: "Confirm each cube has a distinct business purpose, approved grain, participating dimensions, and controlled data movement. Do not create a cube only to separate teams.", evidence: "Cube inventory reconciles to architecture and the dimension participation matrix.", docUrl: "https://docs.oracle.com/en/cloud/saas/planning-budgeting-cloud/pfusa/viewing_plan_types.html" },
-    { id: "IX-UI-01", title: "Create a valid-intersection group", path: "Home → Application → Valid Intersections → Setup → Create", asset: "09-valid-intersections.png", capture: "Valid Intersections Setup showing group name, definition type, anchor dimension, nonanchor dimensions, and rules.", action: "Choose an anchor deliberately, define required nonanchor dimensions, select approved members, and verify how unselected anchor members are treated.", evidence: "Positive and negative test cases prove valid combinations are editable and invalid combinations are read-only.", docUrl: "https://docs.oracle.com/en/cloud/saas/planning-budgeting-cloud/pfusa/creating_valid_intersections.html" },
+    { id: "CUBE-UI-01", title: "Review cubes", path: "Home → Application → Overview → Cubes", asset: "09-cubes-overview.png", capture: "Cubes page showing input and reporting cubes plus the Create action.", action: "Confirm each cube has a distinct business purpose, approved grain, participating dimensions, and controlled data movement. Do not create a cube only to separate teams.", evidence: "Cube inventory reconciles to architecture and the dimension participation matrix.", docUrl: "https://docs.oracle.com/en/cloud/saas/planning-budgeting-cloud/pfusa/viewing_plan_types.html" },
+    { id: "IX-UI-01", title: "Create a valid-intersection group", path: "Home → Application → Valid Intersections → Setup → Create", asset: "10-valid-intersections.png", capture: "Valid Intersections Setup showing group name, definition type, anchor dimension, nonanchor dimensions, and rules.", action: "Choose an anchor deliberately, define required nonanchor dimensions, select approved members, and verify how unselected anchor members are treated.", evidence: "Positive and negative test cases prove valid combinations are editable and invalid combinations are read-only.", docUrl: "https://docs.oracle.com/en/cloud/saas/planning-budgeting-cloud/pfusa/creating_valid_intersections.html" },
   ],
 } as const;
 
 export const dimensionRoleCases = [
   { id: "DIM-01", need: "Financial measures, drivers, KPIs, and statement rollups", correct: "Account" },
-  { id: "DIM-02", need: "Legal entities, responsibility centres, and organizational rollups", correct: "Entity" },
-  { id: "DIM-03", need: "SKU, product family, brand, and product category analysis", correct: "Product" },
-  { id: "DIM-04", need: "Demand and revenue by sold-to customer", correct: "Customer" },
-  { id: "DIM-05", need: "Manufacturing site and operating plant responsibility", correct: "Plant" },
-  { id: "DIM-06", need: "Actual, Budget, Forecast, Target, and What-If datasets", correct: "Scenario" },
-  { id: "DIM-07", need: "Working, Submitted, Approved, and alternative iterations", correct: "Version" },
+  { id: "DIM-02", need: "Apex company, India Operations, and Pune/Noida plant responsibility", correct: "Entity" },
+  { id: "DIM-03", need: "Mixer Grinder, Electric Kettle, Air Fryer, and Induction Cooktop analysis", correct: "Product" },
+  { id: "DIM-04", need: "North, Central, West, and South commercial planning", correct: "Market" },
+  { id: "DIM-05", need: "Distributor, Retail, and Online sales routes", correct: "Channel" },
+  { id: "DIM-06", need: "Actual, Budget, and Forecast datasets", correct: "Scenario" },
+  { id: "DIM-07", need: "Working, Final, Upside, and Downside planning iterations", correct: "Version" },
+  { id: "DIM-08", need: "INR local input, USD reporting, and currency-neutral measures created or supported by Simplified Multicurrency", correct: "Currency" },
 ] as const;
 
-export const requiredDimensions = ["Account", "Entity", "Scenario", "Version", "Year", "Period", "Currency", "Product", "Customer", "Channel", "Plant", "Production Line", "Cost Element"] as const;
+export const requiredDimensions = ["Account", "Entity", "Scenario", "Version", "Year", "Period", "Currency", "Product", "Market", "Channel"] as const;
 
 export const grainCases = [
-  { id: "GR-01", measure: "Sales Units", correct: "Product × Customer × Channel × Entity × Month × Scenario × Version" },
-  { id: "GR-02", measure: "Planned Production", correct: "Product × Plant × Production Line × Week × Scenario × Version" },
-  { id: "GR-03", measure: "Ending Finished Goods Inventory", correct: "Product × Plant × Month × Scenario × Version" },
-  { id: "GR-04", measure: "Standard Unit Cost", correct: "Product × Plant × Cost Element × Month × Scenario × Version" },
+  { id: "GR-01", measure: "Sales Units", correct: "Product × Market × Channel × Month × Scenario × Version" },
+  { id: "GR-02", measure: "Planned Production", correct: "Product × Entity (Plant) × Month × Scenario × Version" },
+  { id: "GR-03", measure: "Ending Finished Goods Inventory", correct: "Product × Entity (Plant) × Month × Scenario × Version" },
+  { id: "GR-04", measure: "Revenue, COGS, and Margin", correct: "Account × Product × Market × Channel × Entity × Month × Scenario × Version × Currency" },
 ] as const;
 
 export const hierarchyCases = [
-  { id: "H-01", label: "Product hierarchy", correct: "All Products → Product Family → Product Line → SKU" },
-  { id: "H-02", label: "Entity hierarchy", correct: "Global Company → Region → Legal Entity → Responsibility Centre" },
-  { id: "H-03", label: "Plant hierarchy", correct: "All Plants → Country / Region → Plant → Production Line" },
+  { id: "H-01", label: "Product hierarchy", correct: "All Products → Home Appliances → Mixer Grinder / Electric Kettle / Air Fryer / Induction Cooktop" },
+  { id: "H-02", label: "Entity hierarchy", correct: "Apex Home Appliances → India Operations → Manufacturing Plants → Pune / Noida" },
+  { id: "H-03", label: "Market hierarchy", correct: "All Markets → North / Central / West / South" },
+  { id: "H-04", label: "Channel hierarchy", correct: "All Channels → Distributor / Retail / Online" },
 ] as const;
 
 export const propertyCases = [
@@ -97,16 +103,15 @@ export const propertyCases = [
 ] as const;
 
 export const planTypeCases = [
-  { id: "PT-01", process: "Sales, demand, inventory, cost, and financial planning by month", correct: "PSP_MONTHLY · block-storage calculation cube" },
-  { id: "PT-02", process: "Production, capacity, and material requirements by plant and week", correct: "PSP_WEEKLY · block-storage operational calculation cube" },
-  { id: "PT-03", process: "Cross-process management analysis with approved aggregated results", correct: "PSP_RPT · aggregate-storage reporting cube fed by controlled data maps" },
+  { id: "PT-01", process: "Monthly sales, inventory, plant allocation, production, capacity, cost, COGS, and margin input/calculation", correct: "Plan1 · block-storage input and calculation cube" },
+  { id: "PT-02", process: "Fast read-only management aggregation, variance analysis, and reporting", correct: "ApexPlan · aggregate-storage reporting cube fed from Plan1" },
 ] as const;
 
 export const intersectionCases = [
-  { id: "IX-01", rule: "Customer input is relevant to sales but not plant-line production.", correct: "Allow approved Customer combinations in PSP_MONTHLY and prevent meaningless Customer entry in PSP_WEEKLY" },
-  { id: "IX-02", rule: "Only specific production lines can manufacture each product family.", correct: "Use a Product-family anchor with required Plant / Production Line rules and test both valid and invalid combinations" },
-  { id: "IX-03", rule: "Actual operating expense does not use Customer or Channel.", correct: "Keep Opex Actual at Account × Entity × Month × Actual × Final with irrelevant custom dimensions excluded or fixed appropriately" },
-  { id: "IX-04", rule: "Approved operational results feed management reporting.", correct: "Map only governed, aggregated results to PSP_RPT and reconcile source and target control totals" },
+  { id: "IX-01", rule: "Sales input is planned by Product, Market, and Channel.", correct: "Allow approved Product × Market × Channel combinations for sales accounts in Plan1" },
+  { id: "IX-02", rule: "Production and capacity are planned by Product and plant Entity, not by Market or Channel.", correct: "Use approved No Market and No Channel members at operational intersections and restrict invalid Product × Plant combinations" },
+  { id: "IX-03", rule: "Currency conversion applies to monetary accounts, not unit quantities.", correct: "Use the Simplified Multicurrency design for monetary accounts and keep unit measures currency-neutral as supported by the approved model" },
+  { id: "IX-04", rule: "Only governed results feed management reporting.", correct: "Map approved aggregated results from Plan1 to ApexPlan and reconcile source and target control totals" },
 ] as const;
 
 export const dimensionHomeworkMissions = [
@@ -118,9 +123,9 @@ export const dimensionHomeworkMissions = [
 ] as const;
 
 export const homeworkGrainCases = [
-  { id: "HW-GR-01", scenario: "Regional sales managers adjust unit demand by customer and channel each month.", correct: "Product × Customer × Channel × Entity × Month × Scenario × Version", options: ["Product × Customer × Channel × Entity × Month × Scenario × Version", "Product × Plant × Production Line × Week", "Account × Entity × Year only"] },
-  { id: "HW-GR-02", scenario: "Plant schedulers compare weekly line capacity with required production.", correct: "Product × Plant × Production Line × Week × Scenario × Version", options: ["Product × Plant × Production Line × Week × Scenario × Version", "Product × Customer × Channel × Month", "Entity × Account × Quarter only"] },
-  { id: "HW-GR-03", scenario: "Finance reconciles standard cost by product, plant, and cost element.", correct: "Product × Plant × Cost Element × Month × Scenario × Version", options: ["Product × Plant × Cost Element × Month × Scenario × Version", "Customer × Channel × Week", "Product Category attribute only"] },
+  { id: "HW-GR-01", scenario: "Market managers adjust monthly unit forecasts by product and channel.", correct: "Product × Market × Channel × Month × Scenario × Version", options: ["Product × Market × Channel × Month × Scenario × Version", "Product × Entity × Week", "Account × Entity × Year only"] },
+  { id: "HW-GR-02", scenario: "Plant planners compare monthly required production with Pune and Noida capacity.", correct: "Product × Entity (Plant) × Month × Scenario × Version", options: ["Product × Entity (Plant) × Month × Scenario × Version", "Product × Market × Channel × Week", "Entity × Account × Quarter only"] },
+  { id: "HW-GR-03", scenario: "Finance reviews revenue, COGS, and margin in reporting currency.", correct: "Account × Product × Market × Channel × Entity × Month × Scenario × Version × Currency", options: ["Account × Product × Market × Channel × Entity × Month × Scenario × Version × Currency", "Product × Production Line × Week", "Product category only"] },
 ] as const;
 
 export const homeworkPropertyCases = [
@@ -130,8 +135,8 @@ export const homeworkPropertyCases = [
 ] as const;
 
 export const homeworkIntersectionCases = [
-  { id: "HW-IX-01", scenario: "Only selected product families are produced on Line 03.", correct: "Define and test Product-family × Plant × Production Line valid-intersection rules", options: ["Define and test Product-family × Plant × Production Line valid-intersection rules", "Grant administrator access to everyone", "Allow every combination and clean errors later"] },
-  { id: "HW-IX-02", scenario: "Customer is not relevant to the weekly production cube.", correct: "Exclude Customer from that cube or fix it to an approved neutral member where the design requires", options: ["Exclude Customer from that cube or fix it to an approved neutral member where the design requires", "Enable every dimension in every cube", "Use customer security to change production grain"] },
+  { id: "HW-IX-01", scenario: "Only approved products may be produced at each Apex plant.", correct: "Define and test Product × Entity valid-intersection rules for Pune and Noida", options: ["Define and test Product × Entity valid-intersection rules for Pune and Noida", "Grant administrator access to everyone", "Allow every combination and clean errors later"] },
+  { id: "HW-IX-02", scenario: "Market and Channel do not describe plant-level production values.", correct: "Use approved No Market and No Channel members for production accounts and test the resulting form behavior", options: ["Use approved No Market and No Channel members for production accounts and test the resulting form behavior", "Enable every combination for data entry", "Use security to change the meaning of production data"] },
   { id: "HW-IX-03", scenario: "The reporting cube needs approved monthly summaries, not writable operational detail.", correct: "Use a controlled data map with aggregation, reconciliation, and read-oriented reporting design", options: ["Use a controlled data map with aggregation, reconciliation, and read-oriented reporting design", "Let users enter reporting totals independently", "Copy arbitrary cells with no control totals"] },
 ] as const;
 

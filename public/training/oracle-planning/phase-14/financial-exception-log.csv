@@ -1,0 +1,3 @@
+exception_id,statement,account,period,type,variance,cause,response,owner,due_date,status,approval_reference
+FE-001,Cash Flow,Operating Cash Flow,Practice run-rate,Sign error,59579.64,Receivables increase was added instead of subtracted,Correct flow sign and rerun cash and balance sheet,Finance Systems Lead,2027-04-03,Open,
+FE-002,Balance Sheet,Cash,Practice run-rate,Reporting variance,0,Template row reserved for ASO comparison,Run data map and retain source-to-target reconciliation,Finance Systems Lead,2027-04-03,Open,
