@@ -1,0 +1,11 @@
+Control ID,Release-readiness condition,Expected,Actual,Evidence,Owner,Status,Approver,Decision Date
+DR-01,Open Severity 1 defects,0,,,,,,
+DR-02,Release-blocking Severity 2 defects,0,,,,,,
+DR-03,Overdue release actions,0,,,,,,
+DR-04,Pending release-required retests,0,,,,,,
+DR-05,Failed impacted regression tests,0,,,,,,
+DR-06,Unreconciled Plan1 to ApexPlan ASO results,0,,,,,,
+DR-07,Unapproved deferred defects,0,,,,,,
+DR-08,Open defects without owner and target,0,,,,,,
+DR-09,Reopened defects in final observation window,0,,,,,,
+DR-10,Residual risks without cutover condition and authority,0,,,,,,

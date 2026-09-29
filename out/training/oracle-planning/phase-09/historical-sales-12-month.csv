@@ -1,0 +1,13 @@
+Entity,Product,Market,Channel,Currency,Period,Scenario,Version,Historical_Sales_Units,Normalization_Adjustment,Normalized_Demand
+India_Operations,MIXER_GRINDER,NORTH,RETAIL,No Currency,Jan,Actual,Final,900,0,900
+India_Operations,MIXER_GRINDER,NORTH,RETAIL,No Currency,Feb,Actual,Final,920,0,920
+India_Operations,MIXER_GRINDER,NORTH,RETAIL,No Currency,Mar,Actual,Final,940,0,940
+India_Operations,MIXER_GRINDER,NORTH,RETAIL,No Currency,Apr,Actual,Final,960,0,960
+India_Operations,MIXER_GRINDER,NORTH,RETAIL,No Currency,May,Actual,Final,980,0,980
+India_Operations,MIXER_GRINDER,NORTH,RETAIL,No Currency,Jun,Actual,Final,1000,0,1000
+India_Operations,MIXER_GRINDER,NORTH,RETAIL,No Currency,Jul,Actual,Final,1020,0,1020
+India_Operations,MIXER_GRINDER,NORTH,RETAIL,No Currency,Aug,Actual,Final,1040,0,1040
+India_Operations,MIXER_GRINDER,NORTH,RETAIL,No Currency,Sep,Actual,Final,1060,0,1060
+India_Operations,MIXER_GRINDER,NORTH,RETAIL,No Currency,Oct,Actual,Final,1080,0,1080
+India_Operations,MIXER_GRINDER,NORTH,RETAIL,No Currency,Nov,Actual,Final,1100,0,1100
+India_Operations,MIXER_GRINDER,NORTH,RETAIL,No Currency,Dec,Actual,Final,1120,0,1120

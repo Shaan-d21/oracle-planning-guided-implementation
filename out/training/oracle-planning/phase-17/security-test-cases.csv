@@ -1,0 +1,9 @@
+Test_ID,Persona,Channel,Precondition,Action,Expected_Result,Evidence,Actual_Result,Tester,Reviewer,Status
+SEC-01,Operations Planner,Web,Pune Forecast Working access assigned,Edit Pune production input,Allowed and saved,Identity; POV; before and after; timestamp,,,,Not Run
+SEC-02,Operations Planner,Web,Actual loaded and read access assigned,Attempt to edit Actual,Deny and retain value,Identity; protected cell; attempted action,,,,Not Run
+SEC-03,Operations Planner,Web,Noida read access assigned,Attempt to edit Noida,Deny and retain value,Identity; Entity POV; protected result,,,,Not Run
+SEC-04,Sales Planner,Web,Sales artifacts assigned,Attempt to launch Calculate Production,Deny or hide launch action,Identity; form; action menu; result,,,,Not Run
+SEC-05,Executive Viewer,Smart View,Viewer and reporting access assigned,Attempt Forecast Working submit,Deny submission,Identity; connection; POV; error or protection,,,,Not Run
+SEC-06,Executive Viewer,Dashboard,Approved reporting access assigned,Open Management Outlook,Allow read and drill only within scope,Identity; filters; KPI values; drill result,,,,Not Run
+SEC-07,Finance Reviewer,Approvals,Pune unit submitted,Review and reject with reason,Ownership returns and annotation persists,Before and after owner; state; annotation,,,,Not Run
+SEC-08,Service Administrator,Process,Routine business approval proposed,Assess segregation,Reject design and assign business approver,Approved SoD decision and owner,,,,Not Run

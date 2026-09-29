@@ -1,0 +1,5 @@
+Workload_ID,Journey,Operation,Artifact,Role,Normal_Users,Peak_Users,Arrival_Lag_Seconds,Iterations,Data_Profile,POV,Target_ID,Reset_Needed,Evidence
+WL-01,Sales planning,Open Form,Sales Input,Sales Planner,20,50,6,5,Representative product-market-month,Forecast|Working|FY25|assigned market,NFR-01,No,Simulation report|Activity Report
+WL-02,Sales planning,Save Form,Sales Input,Sales Planner,20,50,6,5,20 controlled changed cells,Forecast|Working|FY25|assigned market,NFR-02,Yes,Simulation report|Jobs|reconciliation
+WL-03,Integrated calculation,Run Business Ruleset,Apex End-to-End Plan,Power Planner,1,3,10,5,Representative full-cycle data,Forecast|Working|FY25|Company,NFR-03,Yes,Jobs|rule logs|Activity Report
+WL-04,Management review,Execute Report,Executive Plan Review,Approver,10,25,6,5,Representative reporting slice,Forecast|Working|FY25|Company,NFR-05,No,Simulation report|Activity Report

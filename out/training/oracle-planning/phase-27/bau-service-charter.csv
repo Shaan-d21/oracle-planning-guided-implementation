@@ -1,0 +1,3 @@
+Charter ID,Service or decision scope,Accountable owner,Responsible operator,Backup owner,Decision authority,Service level or checkpoint,Operating frequency,Dependency,Escalation route,Runbook or evidence,Status
+BAU-CH-001,Monthly planning-cycle opening,Business service owner,Functional support,Backup functional owner,Planning process owner,Reconciled opening state before user access,Monthly,Actuals integration and control totals,Service owner,Training reference,Draft
+BAU-CH-002,Production release authorization,Product owner,Release manager,Backup release manager,Change authority,All release gates accepted,Per release,Packages regression rollback and communication,Change authority,Training reference,Draft

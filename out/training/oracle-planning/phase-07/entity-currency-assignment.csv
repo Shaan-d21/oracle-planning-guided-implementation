@@ -1,0 +1,5 @@
+Entity,Local_Input_Currency,Reporting_Currency,Translation_Rate_Type,Purpose,Owner,Status
+Apex_Home_Appliances,USD,USD,None,Company reporting and consolidation root,Group Finance,Approved
+India_Operations,INR,USD,Average and Ending by account behavior,India operating rollup,India Finance Director,Approved
+PUNE,INR,USD,Average and Ending by account behavior,Pune plant local planning and USD reporting,Plant Controller,Approved
+NOIDA,INR,USD,Average and Ending by account behavior,Noida plant local planning and USD reporting,Plant Controller,Approved

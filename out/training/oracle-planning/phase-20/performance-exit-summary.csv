@@ -1,0 +1,6 @@
+Area,Planned,Executed,Passed,Failed,Not_Executed,Conclusion,Open_Defects,Limitation_or_Risk,Owner,Monitoring_or_Mitigation,Waiver,Decision_Authority,Decision_Date
+Single-user critical operations,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Owner,Pending,Pending,Approver,YYYY-MM-DD
+Peak concurrent workload,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Owner,Pending,Pending,Approver,YYYY-MM-DD
+Stress and recovery,Pending,Pending,Pending,Pending,Pending,Execute only if approved in strategy,Pending,Pending,Owner,Pending,Pending,Approver,YYYY-MM-DD
+Endurance and stability,Pending,Pending,Pending,Pending,Pending,Execute only if approved in strategy,Pending,Pending,Owner,Pending,Pending,Approver,YYYY-MM-DD
+Functional reconciliation,Pending,Pending,Pending,Pending,Pending,Must pass after every accepted optimization,Pending,Pending,Owner,Pending,Pending,Approver,YYYY-MM-DD

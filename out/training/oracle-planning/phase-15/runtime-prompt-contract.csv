@@ -1,0 +1,7 @@
+Prompt_Name,Type,Required,Default_or_Source,Allowed_Scope,Rejected_Examples,Precedence,Validation_Evidence
+rtpScenario,Member,Yes,Forecast,Forecast only,"Actual;blank",Explicit prompt then approved form context,Negative launch blocked
+rtpVersion,Member,Yes,Working,Working only,"Final;blank",Explicit prompt then approved form context,Read-only version blocked
+rtpYear,Member,Yes,FY25,Configured planning years,"invalid year;blank",Explicit prompt,Member validation passed
+rtpPeriod,Member,Yes,Form POV,Jan to Dec within selected year,"No Period;blank",Form context unless approved override,Resolved period logged
+rtpEntity,Member,Yes,Form POV,"Pune;Noida or approved parent where aggregation is intended","unauthorized entity;blank",Form context unless approved override,Launch-user access tested
+rtpProduct,Member,No,Edited grid members,Approved sellable products,"retired product;unvalidated text",Edited-cell context then approved override,Allow-list and metadata validation passed

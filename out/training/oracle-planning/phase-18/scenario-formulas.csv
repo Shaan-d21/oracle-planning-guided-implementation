@@ -1,0 +1,10 @@
+Formula_ID,Sequence,Output,Formula_or_Rule,Inputs,Scope,Control,Owner,Expected_Evidence
+FRM-01,1,Production Starts,1380 multiplied by volume factor,Demand Volume,Forecast selected Version FY25,Nonnegative and within approved driver range,Sales and Operations Owner,Driver input and calculated units
+FRM-02,2,Required Hours,Production Starts divided by 2,Production Starts,Forecast selected Version FY25,Reconcile to production plan,Operations Owner,Calculated hours
+FRM-03,3,Capacity Utilization,Required Hours divided by Available Capacity,Required Hours and Available Capacity,Entity Month,Flag above 95 percent,Operations Owner,Utilization and exception
+FRM-04,4,Net Revenue,559579.64 multiplied by volume factor and price factor,Demand Volume and Net Price,Product Market Channel Entity Month,Reconcile quantity and price bridge,Sales and Finance Owner,Revenue bridge
+FRM-05,5,COGS,356855.54 multiplied by volume factor and material-cost factor,Demand Volume and Material Cost,Product Entity Month,Reconcile unit cost and volume,Costing Owner,COGS bridge
+FRM-06,6,Gross Margin,Net Revenue minus COGS,Net Revenue and COGS,Forecast selected Version,Full-precision control,Finance Owner,Margin calculation
+FRM-07,7,Net Income,88293.07 plus 65 percent of gross-margin change,Gross Margin,Forecast selected Version,Training simplification documented,Finance Owner,Net-income bridge
+FRM-08,8,Closing Cash,383448.80 plus net-income change less 15 per incremental unit above baseline,Net Income and Production Starts,Forecast selected Version,Minimum 300000 training threshold,Treasury Owner,Cash bridge
+FRM-09,9,Reporting Results,Governed data map or Smart Push from Plan1,Approved calculated outputs,Exact source and target POV,Zero Plan1-to-ASO variance,EPM Product Owner,Job and reconciliation

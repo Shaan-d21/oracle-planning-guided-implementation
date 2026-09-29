@@ -1,0 +1,4 @@
+product,entity,beginning_fg,expected_good_output,demand,target_ending,pre_transfer_ending,target_variance,recommended_transfer,post_transfer_ending
+Mixer Grinder,Pune,150,803.6,780.8088,180,172.7912,-7.2088,8 inbound,180.7912
+Mixer Grinder,Noida,100,548.8,520.5392,120,128.2608,8.2608,8 outbound,120.2608
+Mixer Grinder,India Operations,250,1352.4,1301.348,300,301.052,1.052,0,301.052

@@ -1,0 +1,11 @@
+test_id,test,expected_result,evidence
+FS-T01,Calculate management P&L,Gross margin 202724.095392 and net income 88293.071544,P&L and independent calculation
+FS-T02,Duplicate direct labor in operating expense,Duplicate-cost control blocks approval,Negative-test evidence
+FS-T03,Calculate working-capital movements,AR increase 29789.82 inventory increase 15054.455392 AP increase 20000,Movement bridge
+FS-T04,Calculate indirect cash flow,CFO 83448.796152 net cash change -116551.203848 closing cash 383448.796152,Cash-flow reconciliation
+FS-T05,Calculate integrated balance sheet,Total assets and total liabilities plus equity both 3925793.071544 and control zero,Balance-sheet reconciliation
+FS-T06,Change depreciation,Net income CFO net PPE retained earnings and balance controls update consistently,Three-statement sensitivity
+FS-T07,Protect source and calculated cells,Unauthorized edits are rejected,Access test
+FS-T08,Rerun changed COGS scope,P&L cash retained earnings balance and reporting update and reconcile,Connected rerun evidence
+FS-T09,Rerun unchanged scope,Results repeat with no duplicate data movement,Repeatability evidence
+FS-T10,Move approved results to ApexPlan ASO,Reporting statements agree with reconciled Plan1 detail,Aggregate reconciliation

@@ -1,0 +1,9 @@
+Control ID,Control Point,Source / Expected Result,Target / Actual Result,Expected Total,Actual Total,Variance,Tolerance,Status,Owner,Evidence Link,Exception / Rerun ID,Approver,Comments
+REC-01,Final source extract,"Approved source cutoff, scope, record count, value total, and checksum",Staged input file,,,,0,Not Started,Source Data Owner,,,,
+REC-02,Metadata and mappings,Approved Product Entity Account and other member inventory,Accepted plus rejected staged members,,,,0,Not Started,Data Integration Lead,,,,
+REC-03,Plan1 actuals,Accepted staged value total,Loaded Plan1 Actual Final value total,,,,0,Not Started,Finance Data Owner,,,,
+REC-04,Plan1 opening state,Approved opening inventory cash balance and other carry-forward controls,Loaded and calculated opening state,,,,0,Not Started,Functional Lead,,,,
+REC-05,Plan1 calculations,Approved driver and calculation expectations,Calculated units revenue cost inventory workforce CapEx and statements,,,,0,Not Started,Planning Lead,,,,
+REC-06,Plan1 to ApexPlan ASO,Approved Plan1 publish POV and mapping,ApexPlan ASO published value total,,,,0,Not Started,Reporting Lead,,,,
+REC-07,Dashboards and Smart View,ApexPlan ASO reporting total,Dashboard and Smart View displayed total,,,,0,Not Started,Business Reporting Owner,,,,
+REC-08,Security and workflow,Approved positive and negative role behavior,Representative user results,,,,0,Not Started,Security Lead,,,,

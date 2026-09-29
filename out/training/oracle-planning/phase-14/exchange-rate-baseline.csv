@@ -1,0 +1,2 @@
+period,from_currency,to_currency,rate_quote,average_rate,ending_rate,rate_purpose,owner,status
+Jan-FY27,INR,USD,INR per USD,80,80,Controlled workshop rate; not a live market rate,Group Finance,Approved for training

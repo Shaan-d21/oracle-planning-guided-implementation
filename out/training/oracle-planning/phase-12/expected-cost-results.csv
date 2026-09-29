@@ -1,0 +1,13 @@
+metric,quantity,unit_cost,value,currency_context,control_reference
+Direct material,1,210,210,INR,Component total
+Direct labor,1,30,30,INR,0.05 hours × 600
+Variable overhead,1,15,15,INR,0.03 machine hours × 500
+Fixed overhead,1,20,20,INR,27048 ÷ 1352.4
+Manufacturing unit cost,1,275,275,INR,Sum of four components
+Beginning finished goods,250,270,67500,INR,Phase 11 opening quantity
+Current expected good output,1352.4,275,371910,INR,Phase 10 output quantity
+Goods available,1602.4,274.219920,439410,INR,Beginning plus current production
+COGS,1301.348,274.219920,356855.544608,INR,Approved demand × weighted average
+Ending finished goods,301.052,274.219920,82554.455392,INR,Phase 11 ending quantity
+Net revenue,1301.348,430,559579.64,INR,Phase 09 net price
+Gross margin,1301.348,155.780080,202724.095392,INR,Net revenue minus COGS

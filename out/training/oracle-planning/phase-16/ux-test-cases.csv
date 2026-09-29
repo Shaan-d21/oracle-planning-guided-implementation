@@ -1,0 +1,13 @@
+Test_ID,Channel,Test_Type,Role,Action,Expected_Result,Evidence,Status
+UXT-01,Web Form,Functional,Operations Planner,Enter 820 and 560 starts and save,Inputs save and protected calculations return expected results,Form and control capture,Not Run
+UXT-02,Web Form,Negative,Operations Planner,Enter a non-20-unit lot value,Save is blocked with actionable validation,Validation capture,Not Run
+UXT-03,Web Form,Security,Executive Reviewer,Attempt to edit production inputs,Write is blocked while review remains available,Role and negative write result,Not Run
+UXT-04,Rule Action,Functional,Operations Planner,Launch approved form rule,Resolved scope matches form and job completes,Prompt context and job ID,Not Run
+UXT-05,Rule Action,Negative,Operations Planner,Launch with invalid or missing context,Rule does not write and returns clear message,Message and unchanged data,Not Run
+UXT-06,Dashboard,Functional,Executive Reviewer,Filter and drill from a capacity exception,Context is preserved and supporting detail reconciles,Filter and drill evidence,Not Run
+UXT-07,Smart View,Functional,Finance Planner,Refresh edit submit refresh and reconcile,Only authorized values change and web totals agree,Workbook and web comparison,Not Run
+UXT-08,Smart View,Security,Reviewer,Attempt parent or protected submission,Submission is rejected without unrelated change,Negative submission result,Not Run
+UXT-09,Performance,Representative user,Open refresh save run filter and connect,Each measured action remains within approved threshold,Performance baseline,Not Run
+UXT-10,Accessibility,Planner,Complete task using keyboard and non-colour status,Focus labels status and actions remain usable,Accessibility checklist,Not Run
+UXT-11,Suppression,Planner,Compare form before and after suppression,Performance improves only if required rows and behavior remain correct,Before and after evidence,Not Run
+UXT-12,Recovery,Planner,Resolve a failed rule or submit and retry,No duplicate write and support evidence is retained,Recovery and rerun result,Not Run

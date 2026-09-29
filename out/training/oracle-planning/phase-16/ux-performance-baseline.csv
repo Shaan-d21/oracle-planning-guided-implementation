@@ -1,0 +1,5 @@
+Run_ID,Artifact,Channel,Role,Scenario,Version,Year,Period,Entity,Visible_Rows,Visible_Columns,Suppression,First_Open_Seconds,Repeated_Open_Seconds,Refresh_Seconds,Save_or_Submit_Seconds,Rule_Seconds,Threshold_Seconds,Outcome,Reviewer
+PERF-FRM,Plant Allocation,Web Form,Operations Planner,Forecast,Working,FY25,Selected,Selected,8,12,None,,,,,,5,Not Run,
+PERF-DASH,Integrated Planning Outlook,Dashboard,Executive Reviewer,Forecast,Working,FY25,Selected,Company,7,6,Approved,,,,,,5,Not Run,
+PERF-SV,Plant Allocation,Smart View,Operations Planner,Forecast,Working,FY25,Selected,Selected,8,12,Approved,,,,,,8,Not Run,
+PERF-SUPPRESS,Inventory Control,Web Form,Inventory Planner,Forecast,Working,FY25,Selected,Selected,20,12,Before and after test,,,,,,5,Not Run,

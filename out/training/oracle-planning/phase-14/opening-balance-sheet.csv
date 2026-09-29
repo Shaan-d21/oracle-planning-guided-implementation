@@ -1,0 +1,10 @@
+account,opening_value,closing_input_or_calculation,owner,status
+Cash,500000,Calculated from cash-flow statement,Treasury Manager,Approved
+Trade Receivables,250000,279789.82,Finance Business Partner,Approved assumption
+Finished Goods Inventory,67500,82554.455392,Cost Accounting Manager,Approved source
+Net PPE,2000000,Opening plus capital additions minus depreciation,Fixed Asset Controller,Approved
+Trade Payables,100000,120000,Finance Business Partner,Approved assumption
+Debt,1500000,Opening plus new debt,Treasury Manager,Approved
+Other Liabilities,200000,200000,Controller,Approved assumption
+Equity and Retained Earnings,1017500,Opening plus net income minus dividends,Controller,Approved
+Balance Control,0,Calculated assets minus liabilities and equity,Controller,Approved

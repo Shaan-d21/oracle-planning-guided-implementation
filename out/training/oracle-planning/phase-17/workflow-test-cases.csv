@@ -1,0 +1,9 @@
+Test_ID,Workflow,Starting_State,Role,Action,Control_or_Condition,Expected_State,Expected_Owner,Evidence,Actual_Result,Reviewer,Status
+WFT-01,Planning Approvals,Not Started,Service Administrator,Start,Cycle authorized,Under Review,Pune Preparer,Start timestamp and state change,,,Not Run
+WFT-02,Planning Approvals,Under Review,Pune Preparer,Submit,Critical exceptions zero and annotation complete,Under Review,Operations Reviewer,Validation and ownership change,,,Not Run
+WFT-03,Planning Approvals,Under Review,Operations Reviewer,Reject,Documented capacity issue,Not Signed Off or configured return state,Pune Preparer,Rejection reason and history,,,Not Run
+WFT-04,Planning Approvals,Returned,Pune Preparer,Correct and resubmit,Issue resolved and validation passed,Under Review,Operations Reviewer,Correction; rerun; resubmission,,,Not Run
+WFT-05,Planning Approvals,Under Review,Finance Approver,Approve,Balance and reporting variance zero,Approved,Finance Approver,Approval history and annotation,,,Not Run
+WFT-06,Task Manager,With Assignee,Operations Planner,Submit Task,Questions and attachments complete,With Approver,Operations Reviewer,Actual assignee; answers; attachments; timestamp,,,Not Run
+WFT-07,Task Manager,With Approver,Operations Reviewer,Reject,Incomplete capacity evidence,With Assignee,Operations Planner,Rejection reason and returned status,,,Not Run
+WFT-08,Reconciliation,Task complete,Process Owner,Compare task and approval state,Approval unit must also be approved,Reconciled,Process Owner,Task report; approval report; exception result,,,Not Run

@@ -1,0 +1,13 @@
+Result_ID,Stage,Measure,Grain,Expected_Value,Tolerance,Source_of_Truth,Independent_Formula_or_Control,Owner,Actual_Value,Variance,Status,Evidence
+ER-001,Integration,Source rows,Fixture,240,0,Approved clean fixture,Count immutable input rows,SIT Data Owner,,,Pending,
+ER-002,Integration,Mapped rows,Fixture,240,0,Workbench,Source rows minus approved rejects,Data Integration Owner,,,Pending,
+ER-003,Integration,Rejected rows,Fixture,0,0,Workbench and logs,No invalid members in clean fixture,Data Integration Owner,,,Pending,
+ER-004,Sales,Consensus demand units,Company FY25,1380,0,Approved driver controls,Independently calculate baseline plus approved changes,Sales Owner,,,Pending,
+ER-005,Production,Production starts,Company FY25,1380,0,Approved production control,Reconcile demand inventory yield and lot rounding,Operations Owner,,,Pending,
+ER-006,Production,Required hours,Company FY25,690,0.01,Approved productivity rate,1380 divided by 2,Operations Owner,,,Pending,
+ER-007,Reporting,Net Revenue,Company FY25,559579.64,0.01,Approved scenario control,Units price discounts and returns bridge,Sales and Finance Owners,,,Pending,
+ER-008,Reporting,Gross Margin,Company FY25,202724.10,0.01,Approved scenario control,Revenue minus governed COGS,Finance Owner,,,Pending,
+ER-009,Reporting,Net Income,Company FY25,88293.07,0.01,Approved scenario control,P&L bridge with tax and other lines,Finance Owner,,,Pending,
+ER-010,Reporting,Closing Cash,Company FY25,383448.80,0.01,Approved scenario control,Opening cash plus operating investing and financing flows,Treasury Owner,,,Pending,
+ER-011,Statements,Balance control,Company FY25,0,0,Full-precision statements,Assets minus liabilities and equity,Finance Owner,,,Pending,
+ER-012,Cubes,Plan1 to ApexPlan ASO variance,Common reporting POV,0,0,Source and target extracts,Plan1 total minus ASO total for every approved control,EPM Product Owner,,,Pending,

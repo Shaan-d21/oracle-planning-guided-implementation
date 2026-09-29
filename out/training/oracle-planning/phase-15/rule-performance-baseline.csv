@@ -1,0 +1,4 @@
+Run_ID,Rule_Version,Environment,Scenario,Version,Year,Period,Entity_Count,Product_Count,Account_Count,Edited_Cell_Count,Estimated_Intersections,Duration_Seconds,Result_Control,Threshold_Seconds,Outcome,Reviewer
+PERF-BASE,0.1,Training,Forecast,Working,FY25,Jan-Dec,2,4,10,0,960,,Pending,30,Not Run,
+PERF-EDIT,0.1,Training,Forecast,Working,FY25,Selected,2,4,3,8,24,,Pending,10,Not Run,
+PERF-RERUN,0.1,Training,Forecast,Working,FY25,Selected,2,4,3,8,24,,Zero variance,10,Not Run,

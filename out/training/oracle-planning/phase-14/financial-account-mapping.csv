@@ -1,0 +1,9 @@
+source_measure,target_account,statement,flow_type,storage_sign,presentation_sign,source_grain,target_grain,local_currency,reporting_currency,translation_rate_type,owner,status
+Net revenue,Net Revenue,P&L,Periodic,Positive,Positive,Product Market Channel Month,Entity Month,INR,USD,Average,Finance Systems Lead,Approved
+COGS,Cost of Goods Sold,P&L,Periodic,Positive,Expense positive,Product Entity Month,Entity Month,INR,USD,Average,Finance Systems Lead,Approved
+Ending inventory value,Finished Goods Inventory,Balance Sheet,Closing balance,Positive,Asset positive,Product Entity Month,Entity Month,INR,USD,Ending,Finance Systems Lead,Approved
+Capital investment,Capital Additions,Balance Sheet,Movement,Positive,Asset addition positive,Entity project-summary Month,Entity Month,INR,USD,Average,Finance Systems Lead,Approved
+Capital cash payment,Purchase of PPE,Cash Flow,Investing,Negative,Cash outflow negative,Entity project-summary Month,Entity Month,INR,USD,Average,Finance Systems Lead,Approved
+Depreciation,Depreciation Expense,P&L,Periodic,Positive,Expense positive,Entity Month,Entity Month,INR,USD,Average,Finance Systems Lead,Approved
+Depreciation,Accumulated Depreciation,Balance Sheet,Movement,Positive,Contra-asset movement,Entity Month,Entity Month,INR,USD,Ending,Finance Systems Lead,Approved
+New debt,Debt,Cash Flow and Balance Sheet,Financing and movement,Positive,Cash inflow and liability increase,Entity Month,Entity Month,INR,USD,Average for movement; Ending for closing balance,Finance Systems Lead,Approved

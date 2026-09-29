@@ -1,0 +1,9 @@
+step,activity,owner,input,control,expected_output
+1,Freeze scope and versions,Dependency Planner,Production cost and scenario approvals,Entity period Scenario Version dependency scenario and cutoff recorded,Controlled run header
+2,Validate workforce drivers,Plant HR Manager,Hours availability FTE skill rates and limits,Definitions effective dates and ownership approved,Workforce baseline
+3,Calculate workforce dependency,Dependency Planner,Required hours and workforce baseline,Exact and roster FTE capacity gap and rounding reconcile,Workforce requirement
+4,Compare workforce actions,Operations and HR,Gap and action alternatives,Eligibility timing constraint cost and residual risk reviewed,Approved workforce response
+5,Validate asset dependency,Plant Engineering,Capacity uptime mitigations asset and enablers,No double counting and timing feasibility confirmed,Residual asset gap
+6,Calculate CapEx impact,Finance Business Partner,Project cost payments in-service life and residual,Investment cash capitalization and depreciation schedules reconcile,CapEx business case
+7,Resolve scenario and rerun,Dependency Planner,Approved action and exceptions,Affected operational cost inventory and financial scopes rerun,Connected baseline
+8,Reconcile and approve,Independent Reviewer,All results jobs and movements,Detail aggregate repeatability security and evidence agree,Approved Phase 13 baseline

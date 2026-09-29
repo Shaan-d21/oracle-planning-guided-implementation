@@ -1,0 +1,9 @@
+control_id,control,source_value,planning_value,variance,status,reviewer,evidence_reference
+IR-01,Book less exclusions equals available opening inventory,,,,Open,,
+IR-02,Policy target independently recalculates,,,,Open,,
+IR-03,Opening plus output minus demand equals ending inventory,,,,Open,,
+IR-04,Projected days cover uses approved future demand basis,,,,Open,,
+IR-05,Pune plus Noida equals India Operations before and after transfer,,,,Open,,
+IR-06,Changed target agrees with Phase 10 rerun and updated ending inventory,,,,Open,,
+IR-07,Plan1 input total agrees with ApexPlan reporting aggregate,,,,Open,,
+IR-08,Unchanged rerun produces the same result without duplication,,,,Open,,

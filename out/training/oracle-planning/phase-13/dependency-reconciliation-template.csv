@@ -1,0 +1,9 @@
+control_id,control,source_value,planning_value,variance,status,reviewer,evidence_reference
+DR-01,Production starts divided by approved rate equals required hours,,,,Open,,
+DR-02,Paid hours times availability times current FTE equals workforce capacity,,,,Open,,
+DR-03,Exact FTE roster FTE gap hours action capacity and action cost reconcile,,,,Open,,
+DR-04,Existing capacity plus mitigations plus timely new capacity minus required hours equals headroom,,,,Open,,
+DR-05,Investment payment cash capitalization useful life residual and depreciation recalculate,,,,Open,,
+DR-06,Affected production cost inventory and financial reruns agree with approved dependency scenario,,,,Open,,
+DR-07,Plan1 detail agrees with ApexPlan reporting aggregate,,,,Open,,
+DR-08,Unchanged rerun produces the same result without duplicate movement,,,,Open,,

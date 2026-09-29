@@ -1,0 +1,9 @@
+Driver_ID,Version,Driver,Grain,Unit,Baseline,Change,Result_or_Input,Minimum,Maximum,Effective_Period,Source,Rationale,Owner,Reviewer,Status
+DRV-01,Upside,Demand Volume,Product Market Channel Entity Month,Percent,0,8,8,-20,15,FY25,Approved commercial outlook,Channel demand and distribution expansion,Sales Planner,Sales Reviewer,Draft
+DRV-02,Upside,Net Price,Product Market Channel Month,Percent,0,2,2,-5,5,FY25,Approved pricing assumption,Selective price realization,Sales Planner,Finance Reviewer,Draft
+DRV-03,Upside,Material Cost,Product Entity Month,Percent,0,3,3,-5,10,FY25,Supplier outlook,Moderate input cost pressure,Cost Planner,Procurement Reviewer,Draft
+DRV-04,Upside,Available Capacity,Entity Month,Hours,800,0,800,700,1000,FY25,Approved capacity calendar,No additional capacity assumed,Operations Planner,Operations Reviewer,Draft
+DRV-05,Downside,Demand Volume,Product Market Channel Entity Month,Percent,0,-12,-12,-20,15,FY25,Stress assumption,Demand contraction contingency,Sales Planner,Sales Reviewer,Draft
+DRV-06,Downside,Net Price,Product Market Channel Month,Percent,0,-1,-1,-5,5,FY25,Stress assumption,Discount pressure,Sales Planner,Finance Reviewer,Draft
+DRV-07,Downside,Material Cost,Product Entity Month,Percent,0,7,7,-5,10,FY25,Supplier risk,Material-cost shock,Cost Planner,Procurement Reviewer,Draft
+DRV-08,Downside,Available Capacity,Entity Month,Hours,800,0,800,700,1000,FY25,Approved capacity calendar,No capacity change,Operations Planner,Operations Reviewer,Draft

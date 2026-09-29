@@ -1,0 +1,11 @@
+test_id,test,expected_result,evidence
+IP-T01,Calculate Mixer Grinder target,Average 43.378267; cycle 281.958733; safety 66; approved target 300,Calculation and independent check
+IP-T02,Set demand horizon to zero,Rule blocks invalid denominator,Validation message
+IP-T03,Enter negative opening inventory,Form or rule rejects value,Negative-test capture
+IP-T04,Calculate Mixer Grinder balance,Ending 301.052; variance 1.052; cover about 6.94 days,Inventory bridge
+IP-T05,Run plant deployment,Recommend 8 units Noida to Pune; India Operations total unchanged,Pre and post transfer reconciliation
+IP-T06,Change service factor,Target recalculates using approved formula and pack rounding,Before and after result
+IP-T07,Protect source and calculated cells,Unauthorized edit is rejected,Access test
+IP-T08,Approve Electric Kettle target 225,Phase 10 scoped rerun is triggered and reconciled,Rerun job and bridge
+IP-T09,Rerun unchanged Mixer Grinder scope,Results repeat without duplicate movement,Repeatability evidence
+IP-T10,Aggregate Plan1 to ApexPlan ASO,Reporting total agrees with reconciled input cube,Aggregate reconciliation

@@ -1,0 +1,10 @@
+Control_ID,Control,Expected_Result,Tolerance,Source_of_Truth,Evidence_Owner,Review_Status
+ER-01,Role assignment,Only approved predefined and application roles are effective,Zero unexplained elevated roles,Approved security role matrix,Security Administrator,Pending
+ER-02,Pune planner write scope,Write only to Pune Forecast Working owned inputs,Zero unauthorized writable intersections,Member access matrix and executed tests,Operations Process Owner,Pending
+ER-03,Actual protection,Actual is read-only for planners,Zero successful planner writes,Integration ownership and executed tests,Finance Data Owner,Pending
+ER-04,Rule launch,Only approved groups launch each governed rule,Zero unauthorized launches,Artifact access matrix and job evidence,Calculation Owner,Pending
+ER-05,Smart View,Connected workbook matches effective web access,Zero channel-specific privilege gaps,Web and Smart View test evidence,EPM Product Owner,Pending
+ER-06,Approval ownership,Each state change transfers ownership according to the promotion path,Zero unexplained owner or state changes,Planning Approval history,Business Process Owner,Pending
+ER-07,Task orchestration,Tasks follow dependencies with actual assignee approver dates and evidence,Zero closed critical tasks missing evidence,Task Manager schedule report,Task Process Owner,Pending
+ER-08,Segregation,Preparers do not approve their own scope and administrators are not routine business approvers,Zero unapproved conflicts,SoD review and exception log,Risk Owner,Pending
+ER-09,Final reconciliation,Role data artifact rule approval and task evidence agree,Zero unexplained differences,Release reconciliation,Release Manager,Pending

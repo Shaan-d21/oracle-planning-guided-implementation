@@ -1,0 +1,11 @@
+TEST_ID,TEST_TYPE,TEST_DESCRIPTION,EXPECTED_RESULT,EVIDENCE_REQUIRED
+PP-T01,Positive,Calculate Mixer Grinder using approved demand inventory yield and lot size,Planned starts 1380 and projected ending FG 301.052,Inputs rule prompts job detail result and independent calculation
+PP-T02,Positive,Allocate Mixer Grinder production to valid plants,Pune 820 plus Noida 560 equals 1380 with no overload,Allocation form utilization and total reconciliation
+PP-T03,Negative,Set yield to zero,Calculation is blocked with a clear validation message,Input and blocking validation
+PP-T04,Negative,Set lot size to zero,Calculation is blocked and no result is written,Input validation and unchanged target
+PP-T05,Negative,Enter allocations totaling 1360 against planned starts 1380,Completion is blocked by a 20-unit allocation difference,Allocation form and validation evidence
+PP-T06,Negative,Enter Noida production for an invalid Product-to-plant intersection,Cell is read-only or rejected by the approved intersection control,POV access result and message
+PP-T07,Exception,Plan 1900 starts against total capacity 1600,300-unit shortfall is visible and requires owner action due date and disposition,Exception record and approval
+PP-T08,Security,Attempt to edit protected consensus demand or calculated capacity,Edit is denied while authorized allocation inputs remain writable,Allowed and denied access evidence
+PP-T09,Repeatability,Rerun the unchanged approved Product and month,Results and control totals are identical,Two job IDs and comparison
+PP-T10,Change,Replace the provisional target after Phase 11 approval,Only the authorized scope recalculates and the prior baseline remains traceable,Change reference before-after results and reconciliation

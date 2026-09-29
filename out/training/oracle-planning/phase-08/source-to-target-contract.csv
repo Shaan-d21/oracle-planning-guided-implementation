@@ -1,0 +1,12 @@
+SourceColumn,SourceMeaning,TargetDimension,TargetTreatment,Required,Owner
+ACCOUNT,Planning measure,Account,Explicit member mapping,Yes,Finance data owner
+ENTITY,Commercial responsibility,Entity,Explicit member mapping,Yes,Sales operations
+PRODUCT,Approved product,Product,Explicit member mapping,Yes,Product master owner
+MARKET,Commercial market,Market,Explicit member mapping,Yes,Sales operations
+CHANNEL,Sales channel,Channel,Explicit member mapping,Yes,Channel management
+PERIOD,Source month,Period,Explicit period mapping,Yes,Finance data owner
+YEAR,Fiscal year,Years,Explicit period mapping,Yes,Finance data owner
+SCENARIO,Actual data category,Scenario,Category mapping or explicit member mapping,Yes,Planning administrator
+VERSION,Approved actual-data version,Version,Explicit member mapping,Yes,Planning administrator
+CURRENCY,Currency-neutral unit member,Currency,Explicit member mapping,Yes,Finance data owner
+AMOUNT,Historical sales units,Amount,Numeric data value,Yes,Source system owner

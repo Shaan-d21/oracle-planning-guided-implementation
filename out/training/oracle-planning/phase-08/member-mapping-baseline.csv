@@ -1,0 +1,17 @@
+Dimension,SourceValue,TargetValue,MappingType,ProcessingOrder,Rationale
+Account,Historical_Sales_Units,Historical_Sales_Units,Explicit,10,Approved historical unit-demand account
+Entity,India_Operations,India_Operations,Explicit,10,Approved fixed Entity for commercial sales history
+Product,MIXER_GRINDER,MIXER_GRINDER,Explicit,10,Approved Product base member
+Product,ELECTRIC_KETTLE,ELECTRIC_KETTLE,Explicit,20,Approved Product base member
+Product,AIR_FRYER,AIR_FRYER,Explicit,30,Approved Product base member
+Product,INDUCTION_COOKTOP,INDUCTION_COOKTOP,Explicit,40,Approved Product base member
+Market,NORTH,NORTH,Explicit,10,Approved Market base member
+Market,CENTRAL,CENTRAL,Explicit,20,Approved Market base member
+Market,WEST,WEST,Explicit,30,Approved Market base member
+Market,SOUTH,SOUTH,Explicit,40,Approved Market base member
+Channel,DISTRIBUTOR,DISTRIBUTOR,Explicit,10,Approved Channel base member
+Channel,RETAIL,RETAIL,Explicit,20,Approved Channel base member
+Channel,ONLINE,ONLINE,Explicit,30,Approved Channel base member
+Scenario,Actual,Actual,Category / explicit,10,Approved read-only actuals Scenario
+Version,Final,Final,Explicit,10,Approved final actuals Version
+Currency,No Currency,No Currency,Explicit,10,Currency-neutral unit measure

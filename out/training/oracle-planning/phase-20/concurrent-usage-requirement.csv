@@ -1,0 +1,6 @@
+# Training example only. Validate the current Oracle-required format before creating the execution ZIP.
+# Type of Operation,Artifact Name,Number of Users,Input File,Additional Info
+Open Form,Library/ApexPlan/Sales Input,50,open_form_input.csv,
+Save Form,Library/ApexPlan/Sales Input,50,save_form_input.csv,
+Run Business Ruleset,Apex End-to-End Plan,3,run_ruleset_input.csv,
+Execute Reports,Library/ApexPlan/Executive Plan Review,25,execute_report_input.csv,

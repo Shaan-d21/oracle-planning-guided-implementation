@@ -1,0 +1,4 @@
+Control ID,Layer,Service or control,Metric,Threshold,Frequency,Source,Owner,Observed value,Status,Breach action,Evidence link,Reviewed at
+HC-MON-001,Technical,Actuals integration,Successful scheduled completion,100 percent for required runs,Per run,Process Details,Integration owner,TRAINING SAMPLE,Pending,Contain downstream cycle and investigate,Training reference,YYYY-MM-DD HH:MM
+HC-MON-002,Business control,Plan1 to ApexPlan ASO,Full-precision variance,Within approved tolerance,Per publish,Reconciliation form,Functional owner,TRAINING SAMPLE,Pending,Hold reporting acceptance,Training reference,YYYY-MM-DD HH:MM
+HC-MON-003,Experience,Planner form response,95th percentile,Within approved response target,Peak window,Performance evidence,Service owner,TRAINING SAMPLE,Pending,Open performance investigation,Training reference,YYYY-MM-DD HH:MM

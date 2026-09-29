@@ -1,0 +1,17 @@
+Result,Expected_Value,Unit,Currency_Context,Formula
+12M average,1010,Units,No Currency,Sum of 12 months divided by 12
+6M average,1070,Units,No Currency,Average of Jul through Dec
+3M average,1100,Units,No Currency,Average of Oct through Dec
+Weighted average,1046,Units,No Currency,1100 x 20 percent + 1070 x 30 percent + 1010 x 50 percent
+Baseline demand,1208.13,Units,No Currency,1046 x 1.05 x 1.10
+Promotion uplift,120.813,Units,No Currency,Baseline x 10 percent
+Price elasticity effect,-43.49268,Units,No Currency,Baseline x 3 percent x -1.2
+Cannibalization,-18.12195,Units,No Currency,Promotion uplift x -15 percent
+Halo,6.04065,Units,No Currency,Promotion uplift x 5 percent
+Promotional demand,1273.36902,Units,No Currency,Baseline plus promotion bridge
+Weighted consensus,1291.348,Units,No Currency,Weighted four-input consensus
+Final consensus,1301.348,Units,No Currency,Weighted consensus plus management adjustment
+Invoice price,445,INR per unit,INR,List price x 89 percent
+Net price,430,INR per unit,INR,Invoice price less returns and credits
+Gross revenue,650000,INR,INR,1300 x 500
+Net revenue,559000,INR,INR,1300 x 430

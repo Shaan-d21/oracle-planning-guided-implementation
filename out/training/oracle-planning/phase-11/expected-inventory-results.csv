@@ -1,0 +1,5 @@
+product,average_daily_demand,cycle_stock_target,safety_stock,approved_target,phase10_projected_ending,variance_to_approved_target,phase10_action
+Mixer Grinder,43.378267,281.958733,66.000000,300,301.052,1.052,No production change
+Electric Kettle,30.000000,210.000000,42.868257,225,220.500,-4.500,Rerun required
+Air Fryer,21.666667,173.333333,44.274146,180,187.800,7.800,Review surplus
+Induction Cooktop,16.666667,133.333333,33.000000,140,148.800,8.800,Review surplus

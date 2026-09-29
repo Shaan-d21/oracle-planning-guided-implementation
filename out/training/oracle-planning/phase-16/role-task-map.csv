@@ -1,0 +1,7 @@
+Role,Primary_Task,Decision,Artifact,Cube,Frequency,Input_or_Read,Upstream,Downstream,Owner
+Sales Planner,Maintain volume price and commercial assumptions,Is the sales plan complete and explainable,Sales planning forms,Plan1,Monthly,Input,Approved actuals and assumptions,Consensus demand,Sales Planning Lead
+Operations Planner,Allocate production and resolve capacity exceptions,Can demand be fulfilled feasibly,Production and capacity forms,Plan1,Monthly,Input and Review,Consensus demand and inventory policy,Cost and financial outlook,Operations Planning Lead
+Inventory Planner,Review policy projected stock and exceptions,Is service protected without excess inventory,Inventory control forms,Plan1,Monthly,Input and Review,Demand and production,Cost and working capital,Inventory Lead
+Finance Planner,Review cost margin statements and controls,Are financial outputs balanced and decision ready,Financial review forms and Smart View,Plan1,Monthly,Review and Controlled Input,Operational calculations,Management reporting,Finance Planning Lead
+Executive Reviewer,Review scenario KPI exceptions and decisions,Which scenario or intervention should be approved,Management dashboard,ApexPlan ASO,Monthly,Read,Reconciled Plan1 results,Decision and approval,Planning Product Owner
+EPM Administrator,Maintain forms dashboards navigation and connections,Are artifacts operational and supportable,Administration and monitoring,Plan1 and ApexPlan,As needed,Administration,Approved design and releases,Stable user experience,EPM Technical Lead

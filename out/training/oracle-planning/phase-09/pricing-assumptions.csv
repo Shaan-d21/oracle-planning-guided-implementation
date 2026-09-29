@@ -1,0 +1,9 @@
+Driver,Value,Unit,Currency_Context,Owner
+Consensus units,1300,Units,No Currency,Sales Planning
+List price,500,INR per unit,INR,Revenue Management
+Contract discount,5,Percent of list price,No Currency,Sales Operations
+Promotion discount,3,Percent of list price,No Currency,Marketing
+Volume discount,2,Percent of list price,No Currency,Sales Operations
+Channel discount,1,Percent of list price,No Currency,Channel Management
+Returns provision,10,INR per unit,INR,Finance
+Credits provision,5,INR per unit,INR,Finance

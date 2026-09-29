@@ -1,0 +1,2 @@
+Change_ID,Issue_ID,Baseline_Build,Optimized_Build,Measured_Root_Cause,Controlled_Change,Expected_Impact,Rollback,Equivalent_Workload,Before_P95_Seconds,After_P95_Seconds,Improvement_Percent,Before_Error_Rate,After_Error_Rate,Stability_Result,Functional_Reconciliation,Security_and_Workflow_Regression,Reviewer,Decision
+OPT-001,PERF-ISSUE-001,Release Candidate 1,Release Candidate 2,Pending,One approved change only,Pending,Restore baseline artifact version,WL-01,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Reviewer,Pending

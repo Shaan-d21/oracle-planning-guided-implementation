@@ -1,0 +1,11 @@
+Step,User_Action,Required_Control,Expected_Result,Evidence
+1,Connect to the approved ApexPlan Planning connection,Use intended role and authorized connection,Connection succeeds with assigned artifacts only,Connection and role capture
+2,Open the governed production allocation form,Confirm form name and Plan1 cube,Web and Smart View form definitions agree,Form and cube capture
+3,Set Forecast Working FY25 Period Product and Entity context,Keep POV visible and within access,Selected POV is valid and complete,POV capture
+4,Refresh before editing especially after POV change,Confirm displayed values belong to selected scope,Grid returns approved baseline values,Refresh timestamp and control total
+5,Edit only authorized level-zero input cells,Do not alter protected calculations or parents,Only intended cells become dirty,Before and after cell record
+6,Submit Data,Resolve validation and security messages,Authorized inputs are saved without unrelated writes,Submit result
+7,Launch the approved rule if required,Confirm resolved prompts or form context,Correct bounded job completes,Rule and job ID
+8,Refresh after submission and rule execution,Do not rely on stale workbook values,Calculated values and status update,Refresh timestamp
+9,Reconcile with the web form and expected results,Use approved control totals,Zero unexplained variance,Reconciliation record
+10,Perform assigned ad hoc analysis,Keep POV dimensions aliases and suppression visible,Analysis remains connected traceable and read-only where required,Controlled workbook evidence

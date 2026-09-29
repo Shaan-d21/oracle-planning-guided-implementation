@@ -1,0 +1,9 @@
+step,activity,owner,input,control,expected_output
+1,Freeze scope and versions,Inventory Planner,Demand and production approvals,Product period Scenario Version and cutoff recorded,Controlled run header
+2,Reconcile opening inventory,Inventory Controller,Book stock and exclusions,Source and cutoff bridge agrees,Available opening inventory
+3,Approve policy,Supply Chain Director,Policy inputs,Effective date ownership and validation complete,Approved policy version
+4,Calculate target,Inventory Planner,Approved policy,Scoped prompts and independent formula check,Pack-rounded target
+5,Project inventory,Inventory Planner,Opening output demand and target,Inventory equation and cover recalculate,Projected balance and exception
+6,Deploy by plant,Supply Planner,Plant balances and targets,Transfer timing and total conservation checked,Approved deployment
+7,Resolve and rerun,Production Planner,Changed target and exception,Phase 10 scope rerun and capacity recheck,Updated production and inventory
+8,Reconcile and approve,Independent Reviewer,All results and jobs,Control totals repeatability and aggregate agree,Approved Phase 11 baseline

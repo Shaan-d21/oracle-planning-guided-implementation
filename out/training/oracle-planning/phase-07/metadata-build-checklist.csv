@@ -1,0 +1,11 @@
+Stage,Control,Evidence,Owner,Status
+Readiness,Approved design baseline,Phase 06 reference,Build lead,Not started
+Readiness,Authorized training tenant,Tenant and change record,Environment owner,Not started
+Pre-build,Dimension exports and counts,Versioned export files,Builder,Not started
+Prepare,Source-to-target mapping,Mapping workbook,Data owner,Not started
+Import,File and option review,Run sheet and reviewer sign-off,Builder,Not started
+Import,Job result reviewed,Job ID log and error-file disposition,Builder,Not started
+Refresh,Approved window and options,Refresh job record,Administrator,Not started
+Validate,Hierarchy property and form smoke tests,Expected-versus-actual results,Tester,Not started
+Reconcile,Counts and post-build export,Reconciliation workbook,Reviewer,Not started
+Handoff,Open items and sign-off,Build summary and approvals,Build lead,Not started

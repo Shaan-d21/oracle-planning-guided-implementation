@@ -1,0 +1,8 @@
+Control_ID,Cube,Scenario,Version,Entity,Year_Period,Currency,Cutoff,Approval_Reference,Measure,Expected_Value,Actual_Value,Variance,Tolerance,Copy_Targets,Owner,Reviewer,Status
+BL-01,Plan1,Forecast,Final,India Operations,FY25,No Currency,,APPROVAL-REF,Production Starts,1380,,,0,Upside and Downside,Operations Process Owner,Finance Reviewer,Pending
+BL-02,Plan1,Forecast,Final,India Operations,FY25,No Currency,,APPROVAL-REF,Required Hours,690,,,0,Upside and Downside,Operations Process Owner,Finance Reviewer,Pending
+BL-03,Plan1,Forecast,Final,India Operations,FY25,INR,,APPROVAL-REF,Net Revenue,559579.64,,,0.01,Upside and Downside,Sales Process Owner,Finance Reviewer,Pending
+BL-04,Plan1,Forecast,Final,India Operations,FY25,INR,,APPROVAL-REF,Gross Margin,202724.10,,,0.01,Upside and Downside,Costing Owner,Finance Reviewer,Pending
+BL-05,Plan1,Forecast,Final,India Operations,FY25,INR,,APPROVAL-REF,Net Income,88293.07,,,0.01,Upside and Downside,Finance Process Owner,Finance Approver,Pending
+BL-06,Plan1,Forecast,Final,India Operations,FY25,INR,,APPROVAL-REF,Closing Cash,383448.80,,,0.01,Upside and Downside,Treasury Owner,Finance Approver,Pending
+BL-07,ApexPlan ASO,Forecast,Final,Apex Home Appliances,FY25,USD,,PUBLISH-JOB,Plan1 to ASO control,0,,,0,Upside and Downside,EPM Product Owner,Finance Reviewer,Pending

@@ -1,0 +1,9 @@
+ACCOUNT,ENTITY,PRODUCT,MARKET,CHANNEL,PERIOD,YEAR,SCENARIO,VERSION,CURRENCY,AMOUNT
+Historical_Sales_Units,India_Operations,MIXER_GRINDER,NORTH,RETAIL,Jan,FY26,Actual,Final,No Currency,145
+Historical_Sales_Units,India_Operations,UNKNOWN_PRODUCT,WEST,ONLINE,Jan,FY26,Actual,Final,No Currency,130
+Historical_Sales_Units,India_Operations,ELECTRIC_KETTLE,WEST,ONLINE,M13,FY26,Actual,Final,No Currency,100
+Historical_Sales_Units,India_Operations,AIR_FRYER,SOUTH,RETAIL,Jan,FY26,Actual,Final,No Currency,twelve
+Historical_Sales_Units,India_Operations,MIXER_GRINDER,,DISTRIBUTOR,Jan,FY26,Actual,Final,No Currency,140
+Historical_Sales_Units,India_Operations,INDUCTION_COOKTOP,CENTRAL,RETAIL,Jan,FY26,Actual,Final,No Currency,75
+Historical_Sales_Units,India_Operations,INDUCTION_COOKTOP,CENTRAL,RETAIL,Jan,FY26,Actual,Final,No Currency,75
+Historical_Sales_Units,India_Operations,ELECTRIC_KETTLE,NORTH,ONLINE,Jan,FY26,Actual,Final,INR,105

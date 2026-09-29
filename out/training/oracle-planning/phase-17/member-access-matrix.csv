@@ -1,0 +1,9 @@
+Access_ID,Group,Cube,Dimension,Member_or_Scope,Permission,Inheritance,Intersection_Control,Business_Reason,Owner,Expected_Result,Status
+MA-01,APX_OPERATIONS_PLANNERS,Plan1,Entity,Pune,Write,Descendants where approved,Forecast Working and valid Product Entity combinations,Prepare Pune production plan,Operations Process Owner,Writable,Draft
+MA-02,APX_OPERATIONS_PLANNERS,Plan1,Entity,Noida,Read,None,Forecast Working,Review cross-plant impact,Operations Process Owner,Read only,Draft
+MA-03,APX_OPERATIONS_PLANNERS,Plan1,Scenario,Actual,Read,None,All versions,Use reconciled history without modification,Finance Data Owner,Read only,Draft
+MA-04,APX_OPERATIONS_PLANNERS,Plan1,Version,Working,Write,None,Forecast only,Prepare working plan,Operations Process Owner,Writable within owned Entity,Draft
+MA-05,APX_FINANCE_REVIEWERS,Plan1,Entity,Apex Home Appliances,Read,Descendants,Forecast Working and Actual review,Review integrated plan,Finance Process Owner,Readable,Draft
+MA-06,APX_EXECUTIVE_VIEWERS,ApexPlan ASO,Entity,Apex Home Appliances,Read,Descendants,Approved USD reporting scope,Review management outlook,CFO,Readable,Draft
+MA-07,APX_EXECUTIVE_VIEWERS,Plan1,Scenario,Forecast,None,None,All,No detailed input authority,CFO,Denied,Draft
+MA-08,APX_OPERATIONS_PLANNERS,Plan1,Product,Invalid Product Entity pair,None,None,Valid intersection,Prevent impossible plant production,Product Data Owner,Hidden or read-only as designed,Draft

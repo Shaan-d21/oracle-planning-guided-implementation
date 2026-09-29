@@ -1,0 +1,9 @@
+Sequence,Decision Area,Required Evidence,Decision,Owner,Target,Escalation or Dependency,Meeting Record
+1,Context,Release build environment data cut register timestamp and attendance,,,,,
+2,Release blockers,Severity 1 and blocking Severity 2 business impact reproduction and evidence,,,,,
+3,Ageing and SLA,Open date last action target date blocked days and escalation history,,,,,
+4,Classification,Defect duplicate change request data correction access request training or support question,,,,,
+5,Fix and deployment,Root cause approved fix build unit evidence promotion record and rollback path,,,,,
+6,Retest and regression,Original reproduction expected result impacted regression reconciliation and tester,,,,,
+7,Deferral and residual risk,Workaround exposure owner target release rationale and authorized approver,,,,,
+8,Release recommendation,Zero-tolerance criteria open accepted risks approvals and next checkpoint,,,,,

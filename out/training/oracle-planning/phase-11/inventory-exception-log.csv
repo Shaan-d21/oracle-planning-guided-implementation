@@ -1,0 +1,3 @@
+exception_id,product,period,type,quantity,cause,response,owner,due_date,status,approval_reference
+IE-001,Electric Kettle,Jan-FY27,Target change,5,Approved policy target 225 replaces provisional target 220,Trigger scoped Phase 10 rerun and reconcile lot impact,Production Planner,2027-01-03,Open,
+IE-002,Mixer Grinder,Jan-FY27,Plant imbalance,8,Pune below target and Noida above target,Transfer 8 units Noida to Pune before service cutoff,Supply Planner,2027-01-02,Proposed,

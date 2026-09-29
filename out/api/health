@@ -1,0 +1,1 @@
+{"data":{"status":"ok","service":"bisp-production-sales-planning","runtime":"nextjs-route-handlers","capabilities":{"authentication":"on-hold","persistence":"local-browser-only","aiChat":"foundation-only","wordpressIdentity":"on-hold"},"deprecation":"Use /api/v1/health for new integrations."},"meta":{"apiVersion":"v1"}}

@@ -1,0 +1,9 @@
+control_id,control,source_value,planning_value,variance,status,reviewer,evidence_reference
+CR-01,Component quantity times effective rate equals material cost,,,,Open,,
+CR-02,Labor variable overhead and fixed overhead independently recalculate,,,,Open,,
+CR-03,Cost components sum to manufacturing unit cost,,,,Open,,
+CR-04,Beginning value plus production value equals goods available value,,,,Open,,
+CR-05,COGS plus ending inventory value equals goods available value and ending quantity agrees with Phase 11,,,,Open,,
+CR-06,Net revenue minus COGS equals gross margin,,,,Open,,
+CR-07,Plan1 detail agrees with ApexPlan reporting aggregate,,,,Open,,
+CR-08,Unchanged rerun produces the same result without duplicate movement,,,,Open,,

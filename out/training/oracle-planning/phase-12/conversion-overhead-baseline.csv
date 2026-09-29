@@ -1,0 +1,4 @@
+product,entity,cost_component,driver_quantity,driver_uom,rate,rate_uom,pool,absorption_units,cost_per_good_unit,currency_context,owner,status
+Mixer Grinder,India Operations,Direct labor,0.05,Hours,600,INR per hour,,,30,INR,Manufacturing Controller,Approved
+Mixer Grinder,India Operations,Variable overhead,0.03,Machine hours,500,INR per machine hour,,,15,INR,Manufacturing Controller,Approved
+Mixer Grinder,India Operations,Fixed overhead,,,INR,27048,1352.4,20,INR,Cost Accounting Manager,Approved

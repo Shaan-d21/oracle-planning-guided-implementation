@@ -1,0 +1,7 @@
+Driver,Value,Unit,Owner,Evidence
+Promotion Uplift,10,Percent,Marketing,Approved campaign brief
+Price Change,3,Percent,Sales,Approved price action
+Price Elasticity,-1.2,Ratio,Revenue Management,Approved elasticity study
+Cannibalization,15,Percent of promotion uplift,Category Manager,Approved portfolio assumption
+Halo,5,Percent of promotion uplift,Category Manager,Approved portfolio assumption
+
